@@ -8,11 +8,14 @@ Rails.application.routes.draw do
   # get '/auth/failure', to: "user/omniauth_callbacks#failure"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  root 'home#index'
+  
   namespace :admin do
     resource :session, controller: "session"
   end
   resource :admin, controller: "admin"
+
+  resources :home
 
   namespace :backends do
     resource :system, controller: "system"
@@ -36,6 +39,8 @@ Rails.application.routes.draw do
 
   end
   resources :backends
+
+
 
   # 語言包管理
   resources :iye

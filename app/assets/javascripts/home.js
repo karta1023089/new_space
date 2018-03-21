@@ -1,3 +1,34 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+//= require home/js/jquery.min.js
+//= require home/js/jquery-ui.min.js
+//= require home/js/bootstrap.js
+//= require home/js/owl.carousel.js
+//= require home/js/jquery.sticky.js
+//= require home/js/TweenMax.min.js
+//= require home/js/cws_parallax.js
+//= require home/js/jquery.fancybox.pack.js
+//= require home/js/jquery.fancybox-media.js
+//= require home/js/isotope.pkgd.min.js
+//= require home/js/imagesloaded.pkgd.min.js
+//= require home/js/masonry.pkgd.min.js
+//= require home/rs-plugin/js/jquery.themepunch.tools.min.js
+//= require home/rs-plugin/js/jquery.themepunch.revolution.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.slideanims.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.navigation.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.parallax.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.video.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.actions.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.kenburn.min.js
+//= require home/rs-plugin/js/extensions/revolution.extension.migration.min.js
+//= require home/js/jquery.validate.min.js
+//= require home/js/jquery.form.min.js
+//= require home/js/script.js
+//= require home/js/bg-video/cws_self_vimeo_bg.js
+//= require home/js/bg-video/jquery.vimeo.api.min.js
+//= require home/js/bg-video/cws_YT_bg.js
+//= require home/js/jquery.tweet.js
+//= require home/js/jquery.scrollTo.min.js
+//= require home/js/jquery.flexslider.js
+//= require home/js/retina.min.js
+//= require home/slick/slick/slick.js
+//= require home/js/custom.js

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>樺一旅行社</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo-icon.png"/>
 
     <%= display_meta_tags %>
     <%= stylesheet_link_tag 'home' %>
     <%= javascript_include_tag 'home' %>
     <%= csrf_meta_tags %>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/plugins/html5shiv.js"></script>
-    <script src="/plugins/respond.min.js"></script>
-    <![endif]-->
-
-
+    
   </head>
-
-  <body style="font-family: '微軟正黑體'!important" >
-
+  <body>
+    
+    <%= render :partial =>"/home/common/header"%>
+    <%= yield%>
+    <%= render :partial =>"/home/common/footer"%>
+    
+    <div id="scroll-top"><i class="fa fa-angle-up"></i></div>
   </body>
 </html>
