@@ -7,10 +7,11 @@
 .cws-button.alt:hover{
 	color: #fff;
 }
+
 .magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action{
 	background: #2354a5;
 }
-.cws-button{
+.cws-button,.mn-sub{
 	border-color: #2354a5;
 }
 .features-tours-full-width.style4-4{
@@ -88,6 +89,22 @@ footer.footer .copyright{
 }
 .foot-a-con{
 	text-align: right;
+}
+#scroll-top:hover i{
+	color: #fff;
+}
+#scroll-top{
+	bottom: 70px;
+	opacity: 0.9;
+}
+.inner-nav.desktop-nav ul li .mn-sub li > a:not(.mn-group-title):before{
+	color: #fff;
+}
+.inner-nav.desktop-nav ul li.active .mn-sub li > a:not(.mn-group-title):before{
+	color: #fff;
+}
+.inner-nav ul li{
+	padding: 0 6px;
 }
 /*setting =============================================================*/
 .width100{
