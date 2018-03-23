@@ -29,6 +29,6 @@
 //= require home/js/jquery.tweet.js
 //= require home/js/jquery.scrollTo.min.js
 //= require home/js/jquery.flexslider.js
-//= require home/js/retina.min.js
+// require home/js/retina.min.js
 //= require home/slick/slick/slick.js
 //= require home/js/custom.js
