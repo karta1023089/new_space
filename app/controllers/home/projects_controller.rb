@@ -1,2 +1,2 @@
-class Home::ProjectsController < ApplicationController
+class Home::ProjectsController < HomeController
 end
