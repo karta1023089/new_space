@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   end
   resource :admin, controller: "admin"
 
+  namespace :home do 
+    resources :news
+    resources :project
+  end
   resources :home
 
   namespace :backends do
