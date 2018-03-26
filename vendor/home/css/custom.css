@@ -132,6 +132,21 @@ footer.footer .copyright{
 .news-list .blog-item{
 	max-width: initial;
 }
+.blog-tags{
+	border: 0;
+}
+.blog-nav-share{
+	float: left;
+}
+.blog-nav-share .cws-social:first-child{
+	margin-left: 0;
+}
+.inner-nav .mobile_menu_switcher{
+	background: #2454a5;
+}
+.inner-nav.mobile_nav > ul > li > a.active {
+    color: #2454a5 !important;
+}
 /*setting =============================================================*/
 .width100{
 	width: 100%;
@@ -153,6 +168,10 @@ footer.footer .copyright{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     font-weight: normal;
+}
+
+.cms-box img,.cms-box iframe{
+	max-width: 100%;
 }
 
 /*btn*/
