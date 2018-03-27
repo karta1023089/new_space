@@ -1,0 +1,54 @@
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+  <div class="container">
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">國內行程</a>
+      <h2>國內行程</h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+	<div class="container pt-60">
+		<div class="element-section mb-100 projects-list">
+	    <div class="tabs">
+	      <div class="menu-widget with-switch">
+	        <ul class="magic-line">
+	          <li class="current_item"><a class="tabs-btn" data-tabs-id="tabs1">北部</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs2">中部</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs3" >南部</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs4" >東部</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs5" >離島</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs6" >熱門</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs7" >最新</a></li>
+	          
+	        </ul>
+	      </div>
+	      <!-- tabs keeper-->
+	      <div class="tabs-keeper mt-30">
+	        <!-- tabs container-->
+	        <div data-tabs-id="cont-tabs1" class="container-tabs active">
+	          <div class="row">
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+							<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          </div>
+	        </div>
+	        
+	        <div data-tabs-id="cont-tabs2" class="container-tabs">
+	          <div class="row">
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+							<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show"%>
+	          </div>
+	        </div>
+	        
+	      </div>
+	      <!-- /tabs keeper-->
+	    </div>  
+	  </div>  
+  </div>
+</div>
