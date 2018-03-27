@@ -16,7 +16,7 @@ ins,.service-item:hover h3{
 .small-section2 {
     padding: 60px 0;
 }
-.magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action{
+.magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action,.menu-widget .magic-line #magic-line{
 	background: #2354a5;
 }
 .cws-button,.mn-sub{
@@ -184,6 +184,13 @@ footer.footer .copyright{
 }
 .product-issue-block{
 	min-height: 8em;
+}
+.projects-list .tabs .tabs-keeper{
+	padding: 0;
+	border: 0;
+}
+.recom-item{
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
 }
 /*setting =============================================================*/
 
