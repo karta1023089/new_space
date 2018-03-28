@@ -11,8 +11,13 @@
 #  image_alt  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  use_type   :integer          default(0)
 #
 
 class MyAd < ApplicationRecord
 	  mount_uploader :file, ::ImageUploader
+  enum use_type: {
+    index_pic: 0,
+    main_ad: 1
+  }
 end

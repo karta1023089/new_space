@@ -1,4 +1,4 @@
-class Backends::Images::MainAdsController < BackendsController
+class Backends::Images::IndexPicsController < BackendsController
 
     before_action :defind_slider
 	before_action :find_slider, except: %w(index)
@@ -12,12 +12,12 @@ class Backends::Images::MainAdsController < BackendsController
 	end
 
 	def create
-		@slide = MyAd.main_ad.new(slider_params_permit)
+		@slide = MyAd.index_pic.new(slider_params_permit)
     if @slide.valid?
       @slide.save
       flash[:success] = "建立成功."
 
-      redirect_to backends_images_main_ads_path ,flash: { success: '新增成功'}
+      redirect_to backends_images_index_pics_path ,flash: { success: '新增成功'}
     else
       flash[:error] = @slide.errors.full_messages.to_s
 
@@ -32,19 +32,19 @@ class Backends::Images::MainAdsController < BackendsController
 	def update
 		@slide.update(slider_params_permit)
 
-    redirect_to backends_images_main_ads_path,flash: { success: '更新成功'}
+    redirect_to backends_images_index_pics_path,flash: { success: '更新成功'}
 	end
 
 	def destroy
 		@slide.destroy
 
-    redirect_to backends_images_main_ads_path,flash: { success: '刪除成功'}
+    redirect_to backends_images_index_pics_path,flash: { success: '刪除成功'}
 	end
 
 	private
 
 	def defind_slider
-        @Slides = MyAd.main_ad
+        @Slides = MyAd.index_pic
 	end
 
 	def find_slider

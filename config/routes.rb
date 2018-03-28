@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     end
     namespace :images do
       resources :main_ads
+      resources :index_pics
     end
     resources :images do
       collection do
