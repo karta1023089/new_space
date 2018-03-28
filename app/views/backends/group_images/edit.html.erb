@@ -1,0 +1,39 @@
+<form action="<%= backends_group_image_path(@group_image) %>" method="post" class="form-horizontal" > 
+  <%= token_tag nil %>
+  <input type="hidden" name="_method" value="put" >
+  <div class="form-group">
+    <label class="col-lg-3 col-sm-3 control-label"><%= GroupImage.human_attribute_name('name') %></label>
+    <div class="col-lg-9">
+      <input type="text" class="form-control" name="group_image[name]" value="<%= @group_image.name %>" />
+    </div>
+  </div>
+		
+  <div class="form-group">
+    <label class="col-lg-3 col-sm-3 control-label"><%= GroupImage.human_attribute_name('remark') %></label>
+    <div class="col-lg-9">
+      <input type="text" class="form-control" name="group_image[remark]" value="<%= @group_image.remark %>" />
+    </div>
+  </div>  
+
+  <div class="form-group">
+    <label class="col-lg-3 col-sm-3 control-label"><%= GroupImage.human_attribute_name('width') %></label>
+    <div class="col-lg-9">
+      <input type="number" class="form-control" name="group_image[width]" value="<%= @group_image.width %>" />
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-lg-3 col-sm-3 control-label"><%= GroupImage.human_attribute_name('height') %></label>
+    <div class="col-lg-9">
+      <input type="number" class="form-control" name="group_image[height]" value="<%= @group_image.height %>" />
+    </div>
+  </div> 
+  
+  <div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"></label>
+    <div class="col-lg-9">
+      <button class="btn btn-danger">
+        Submit
+      </button>
+    </div>
+  </div>
+</form> 

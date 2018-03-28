@@ -20,6 +20,7 @@ class Backends::SystemController < Backends::ResourcesController
       :phone,
       :address, 
       :email,
+      :youtube
     ] + System.stored_attributes[:socials].map(&:to_sym)
   end  
 

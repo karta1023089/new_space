@@ -21,14 +21,28 @@
           </li>
         </ul>
       </li>  --> 
-
+      <li>
+        <a class="<%= active(controller_name, "main_ads") %>" href="<%= backends_images_main_ads_path %>">
+          <i class="fa fa-star"></i> <span>廣告</span>
+        </a>
+      </li>
+      <li>
+        <a class="<%= active(action_name, "index_youtube") %>" href="/backends/system/index_youtube">
+          <i class="fa fa-star"></i> <span>首頁影片</span>
+        </a>
+      </li>
+      <li>
+        <a class="<%= active(controller_name, "group_image") %>" href="<%= backends_group_images_path %>">
+          <i class="fa fa-star"></i> <span><%= GroupImage.model_name.human %></span>
+        </a>
+      </li>
       <li>
         <a class="<%= active(controller_name, "admin") %>" href="<%= edit_admin_path %>">
           <i class="fa fa-star"></i> <span><%= Admin.model_name.human %></span>
         </a>
       </li>
       <li >
-        <a class="<%= active(controller_name, "system") %>" href="<%= edit_backends_system_path %>" >
+        <a <%if action_name == "edit"%>class="<%= active(controller_name, "system") %>"<%end%> href="<%= edit_backends_system_path %>" >
           <i class="fa fa-star"></i> <span><%= System.model_name.human %></span>
         </a>
       </li>

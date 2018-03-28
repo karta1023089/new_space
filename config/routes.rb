@@ -22,12 +22,25 @@ Rails.application.routes.draw do
   resources :home
 
   namespace :backends do
-    resource :system, controller: "system"
-
+    resource :system, controller: "system" do
+      collection do
+        get :index_youtube
+      end
+    end
+    namespace :images do
+      resources :main_ads
+    end
     resources :images do
       collection do
         post :sort
         post :ck_upload
+        post :dropzone
+      end
+    end
+
+    resources :group_images do 
+      collection do 
+        get :events_group
       end
     end
 

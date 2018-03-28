@@ -1,0 +1,65 @@
+<div class="row">
+	<div class="col-lg-12">
+		<nav class="navbar navbar-inverse" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+				<a class="navbar-brand" href="#">活動剪影</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<%= link_to "新增" ,new_backends_group_image_path %>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    
+  </div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<section class="panel">
+			<header class="panel-heading">
+				活動花絮
+			</header>
+			<div class="table-responsive">
+				<table class="table table-bordered table-advance table-hover text-center">
+					<thead>
+						<tr>
+							<th class="text-center col-lg-1">#</th>
+							
+							<th class="text-center col-lg-2">名稱</th>
+							<th class="text-center col-lg-2">活動日期</th>
+						
+							<th class="text-center col-lg-1"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @group_images.each do |g| %>
+						<tr>
+							<td><%= g.id %></td>
+						    
+							<td><%= g.name %></td>
+					        <td><%=g.event_date%></td>
+							<td><a href="<%= backends_group_image_path(g) %>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> </a>
+							<%= link_to(backends_group_image_path(g),class: "btn btn-sm btn-danger", method: :delete,data:{confirm: "Are You sure?"}) do %><i class="fa fa-trash-o"></i><% end %></td>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</div>
+</div>
+

@@ -1,24 +1,21 @@
 # == Schema Information
 #
-# Table name: images
+# Table name: group_images
 #
 #  id         :integer          not null, primary key
-#  item_type  :string
-#  item_id    :integer
-#  file       :string
-#  priority   :integer          default(0)
+#  remark     :string
+#  width      :string
+#  height     :string
 #  deleted_at :datetime
+#  group_type :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  use_way    :integer          default("normal")
 #  name       :string
-#  url        :string
-#  image_alt  :string
 #
 
 require 'test_helper'
 
-class ImageTest < ActiveSupport::TestCase
+class GroupImageTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

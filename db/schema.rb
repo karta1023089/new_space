@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212062135) do
+ActiveRecord::Schema.define(version: 20180328070926) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20171212062135) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "group_images", force: :cascade do |t|
+    t.string "remark"
+    t.string "width"
+    t.string "height"
+    t.datetime "deleted_at"
+    t.integer "group_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "item_type"
     t.integer "item_id"
@@ -29,6 +40,10 @@ ActiveRecord::Schema.define(version: 20171212062135) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "use_way", default: 0
+    t.string "name"
+    t.string "url"
+    t.string "image_alt"
     t.index ["item_id"], name: "index_images_on_item_id"
     t.index ["item_type"], name: "index_images_on_item_type"
   end
@@ -59,6 +74,17 @@ ActiveRecord::Schema.define(version: 20171212062135) do
     t.index ["user_id"], name: "index_impressions_on_user_id"
   end
 
+  create_table "my_ads", force: :cascade do |t|
+    t.string "file"
+    t.integer "priority"
+    t.datetime "deleted_at"
+    t.string "name"
+    t.string "url"
+    t.string "image_alt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "systems", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -71,6 +97,7 @@ ActiveRecord::Schema.define(version: 20171212062135) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "youtube"
   end
 
   create_table "taggings", force: :cascade do |t|
