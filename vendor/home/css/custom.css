@@ -361,4 +361,7 @@ footer.footer .copyright{
 	.foot-a-con,footer.footer .copyright p{
 		text-align: center;
 	}
+	.project-page .single-product .summary{
+		margin-left: 0;
+	}
 }
