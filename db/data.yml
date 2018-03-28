@@ -1,0 +1,223 @@
+
+---
+admins:
+  columns:
+  - id
+  - name
+  - email
+  - password_digest
+  - deleted_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Admin
+    - service@playplus.solutions
+    - "$2a$10$TqoRAWjKr.pB7iVWKQb7b.NwyUo2z1MNgs6K/tdBDFSEnQBxw718W"
+    - 
+    - '2018-03-27 06:48:03.198833'
+    - '2018-03-27 06:48:03.198833'
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-03-23 03:37:39.851951'
+    - '2018-03-23 03:37:39.851951'
+
+---
+group_images:
+  columns:
+  - id
+  - remark
+  - width
+  - height
+  - deleted_at
+  - group_type
+  - created_at
+  - updated_at
+  - name
+  records: 
+  - - 1
+    - ''
+    - ''
+    - ''
+    - 
+    - 0
+    - '2018-03-28 07:24:11.109653'
+    - '2018-03-28 07:24:24.976925'
+    - 首頁輪播
+
+---
+images:
+  columns:
+  - id
+  - item_type
+  - item_id
+  - file
+  - priority
+  - deleted_at
+  - created_at
+  - updated_at
+  - use_way
+  - name
+  - url
+  - image_alt
+  records: 
+  - - 1
+    - GroupImage
+    - 1
+    - slide2.jpg
+    - 0
+    - 
+    - '2018-03-28 07:24:37.316205'
+    - '2018-03-28 07:24:37.316205'
+    - 0
+    - 
+    - 
+    - 
+  - - 2
+    - GroupImage
+    - 1
+    - slide2.jpg
+    - 0
+    - 
+    - '2018-03-28 07:24:43.985007'
+    - '2018-03-28 07:24:43.985007'
+    - 0
+    - 
+    - 
+    - 
+
+---
+my_ads:
+  columns:
+  - id
+  - file
+  - priority
+  - deleted_at
+  - name
+  - url
+  - image_alt
+  - created_at
+  - updated_at
+  - use_type
+  records: 
+  - - 1
+    - ad1.png
+    - 
+    - 
+    - 首頁下方廣告一(470/333)
+    - https://www.facebook.com/
+    - 
+    - '2018-03-28 07:21:55.955857'
+    - '2018-03-28 09:28:42.983876'
+    - 1
+  - - 2
+    - ad2.png
+    - 
+    - 
+    - 首頁廣告二號(670/330)
+    - https://www.facebook.com/
+    - 
+    - '2018-03-28 07:22:37.268871'
+    - '2018-03-28 09:28:42.998068'
+    - 1
+  - - 3
+    - 810-540-3.png
+    - 
+    - 
+    - 國內旅遊
+    - ''
+    - 
+    - '2018-03-28 09:32:08.953986'
+    - '2018-03-28 09:32:08.953986'
+    - 0
+  - - 4
+    - 810-540-3.png
+    - 
+    - 
+    - " 國外旅遊"
+    - ''
+    - 
+    - '2018-03-28 09:32:36.321712'
+    - '2018-03-28 09:32:36.321712'
+    - 0
+  - - 5
+    - 810-540-3.png
+    - 
+    - 
+    - 海島旅遊
+    - ''
+    - 
+    - '2018-03-28 09:32:55.172740'
+    - '2018-03-28 09:32:55.172740'
+    - 0
+  - - 6
+    - 810-540-3.png
+    - 
+    - 
+    - 自由行
+    - ''
+    - 
+    - '2018-03-28 09:33:26.542734'
+    - '2018-03-28 09:33:26.542734'
+    - 0
+  - - 7
+    - 810-540-3.png
+    - 
+    - 
+    - 票券
+    - ''
+    - 
+    - '2018-03-28 09:33:46.259543'
+    - '2018-03-28 09:33:46.259543'
+    - 0
+  - - 8
+    - 810-540-3.png
+    - 
+    - 
+    - 套裝行程
+    - ''
+    - 
+    - '2018-03-28 09:34:02.397349'
+    - '2018-03-28 09:34:02.397349'
+    - 0
+
+---
+systems:
+  columns:
+  - id
+  - title
+  - description
+  - keywords
+  - name
+  - email
+  - phone
+  - address
+  - socials
+  - deleted_at
+  - created_at
+  - updated_at
+  - youtube
+  records: 
+  - - 1
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-03-27 06:48:03.081442'
+    - '2018-03-28 07:24:07.745489'
+    - <iframe width="560" height="315" src="https://www.youtube.com/embed/yib7tvIrL6k"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
