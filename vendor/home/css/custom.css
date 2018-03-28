@@ -1,14 +1,22 @@
-.inner-nav > ul > li.slash,.star-rating:before, .stars:before{
+html, body{
+	color: #333;
+}
+.inner-nav > ul > li.slash,.star-rating:before, .stars:before,.title-section.gray span,.service-item.color-icon .cws-icon{
 	color: #2354a5;
 }
-.cws_divider, hr{
+.cws_divider, hr,.service-item.border:hover{
 	border-color: #00a0e9;
+}
+ins,.service-item:hover h3{
+	color: #00a0e9;
 }
 .cws-button.alt:hover{
 	color: #fff;
 }
-
-.magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action{
+.small-section2 {
+    padding: 60px 0;
+}
+.magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action,.menu-widget .magic-line #magic-line,.single-product .pic:before{
 	background: #2354a5;
 }
 .cws-button,.mn-sub{
@@ -147,7 +155,80 @@ footer.footer .copyright{
 .inner-nav.mobile_nav > ul > li > a.active {
     color: #2454a5 !important;
 }
+.cws_divider.short2, hr.short2{
+	width: 40%;
+}
+.history-block{
+	background-color: rgba(255,255,255,0.6);
+	padding: 35px 45px;
+}
+.history-block ul li span{
+	position: absolute;
+	left: 0;
+}
+.history-block ul li{
+	padding-left: 4em;
+	margin-left: 0;color: #333;
+	position: relative;
+}
+.service-item-info{
+	margin-top: 20px;
+	padding-left: 65px;
+}
+.service-item-info ul li{
+	list-style-type: disc;
+	padding-left: 0;
+}
+.service-item h3{
+	min-height: 2.5em;
+}
+.product-issue-block{
+	min-height: 8em;
+}
+.projects-list .tabs .tabs-keeper{
+	padding: 0;
+	border: 0;
+}
+.recom-item{
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+
+.project-page .single-product .summary {
+    margin-left: 37%;
+}
+.project-page .single-product .images {
+    width: 35%;
+}
+.review-status2 div{
+	display: inline-block;
+}
+.review-status2 div:before{
+	content: "";
+    height: 14px;
+    display: inline-block;
+    border-left: 1px solid #b5b5b5;
+    margin:0 10px;
+    vertical-align: middle;
+}
+.review-status2 div:first-child:before{
+	display: none;
+}
+.single-product .summary .shop-price{
+	color: #2454a5;
+	font-weight: 900;
+	font-size: 2.4rem;
+    margin-top: 10px;
+}
 /*setting =============================================================*/
+.bg-center{
+	background-size: cover;background-position: center;
+}
+.pic4-3{
+	padding-top: 75%;
+}
+.text-black,ul li{
+	color: #333;
+}
 .width100{
 	width: 100%;
 	height: auto;
@@ -230,7 +311,15 @@ footer.footer .copyright{
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
 	background: rgba(0,0,0,0.3);
 }
+.row2{
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.row2 .col-xs-1,.row2 .col-sm-1,.row2 .col-md-1,.row2 .col-lg-1,.row2 .col-xs-2,.row2 .col-sm-2,.row2 .col-md-2,.row2 .col-lg-2,.row2 .col-xs-3,.row2 .col-sm-3,.row2 .col-md-3,.row2 .col-lg-3,.row2 .col-xs-4,.row2 .col-sm-4,.row2 .col-md-4,.row2 .col-lg-4,.row2 .col-xs-5,.row2 .col-sm-5,.row2 .col-md-5,.row2 .col-lg-5,.row2 .col-xs-6,.row2 .col-sm-6,.row2 .col-md-6,.row2 .col-lg-6,.row2 .col-xs-7,.row2 .col-sm-7,.row2 .col-md-7,.row2 .col-lg-7,.row2 .col-xs-8,.row2 .col-sm-8,.row2 .col-md-8,.row2 .col-lg-8,.row2 .col-xs-9,.row2 .col-sm-9,.row2 .col-md-9,.row2 .col-lg-9,.row2 .col-xs-10,.row2 .col-sm-10,.row2 .col-md-10,.row2 .col-lg-10,.row2 .col-xs-11,.row2 .col-sm-11,.row2 .col-md-11,.row2 .col-lg-11,.row2 .col-xs-12,.row2 .col-sm-12,.row2 .col-md-12,.row2 .col-lg-12{
+	padding-left: 8px;
+	padding-right: 8px;
 
+}
 /*rwd============================================================================*/
 @media (max-width: 1024px){
 	.page{
@@ -252,9 +341,13 @@ footer.footer .copyright{
 	footer.footer .copyright a + a{
 		margin-left: 5px;
 	}
-	.page{
-		padding: 
+	.project-page .single-product .images{
+		width: 270px;
 	}
+	.project-page .single-product .summary{
+		margin-left: 300px;
+	}
+	
 }
 @media (max-width: 768px) {
 	.features-tours-full-width.style4-4 .features-tours-wrap .features-tours-item{
@@ -267,5 +360,8 @@ footer.footer .copyright{
 @media (max-width: 767px){
 	.foot-a-con,footer.footer .copyright p{
 		text-align: center;
+	}
+	.project-page .single-product .summary{
+		margin-left: 0;
 	}
 }

@@ -10,7 +10,7 @@
           <li><a href="/" class="mn-has-sub active">首頁</a></li>
           <li class="slash">/</li>
 
-          <li><a href="#" class="mn-has-sub">國內旅遊 <i class="fa fa-angle-down button_open"></i></a>
+          <li><a href="<%= home_projects_path %>" class="mn-has-sub">國內旅遊 <i class="fa fa-angle-down button_open"></i></a>
             <ul class="mn-sub">
               <li><a href="#">行程</a></li>
               <li><a href="#">行程</a></li>
@@ -44,21 +44,7 @@
           <li class="slash">/</li>
           <li><a href="#">與我聯絡</a></li>
          
-          <li class="search"><a href="#" class="mn-has-sub">關於樺一</a>
-            <ul class="search-sub">
-              <li>
-                <div class="container">
-                  <div class="mn-wrap">
-                    <form method="post" class="form">
-                      <div class="search-wrap">
-                        <input type="text" placeholder="Where will you go next?" class="form-control search-field"><i class="flaticon-suntour-search search-icon"></i>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="close-button"><span>Search</span></div>
-                </div>
-              </li>
-            </ul>
+          <li class="search"><a href="<%= home_about_path  %>" class="mn-has-sub">關於樺一</a>   
           </li>
           <!-- End Search-->
         </ul>

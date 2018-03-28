@@ -105,7 +105,7 @@ function search_open() {
 
 	$('.main-nav .inner-nav .search > a').on('click', function() {
 		$('.main-nav').addClass('open-search');
-		return false;
+		// return false;
 	})
 
 	$('.main-nav .inner-nav .search .close-button').on('click', function() {
