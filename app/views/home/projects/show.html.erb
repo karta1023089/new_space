@@ -62,14 +62,13 @@
             <a href="#" class="cws-button small alt add-to-cart ">我有興趣</a>
             
           </div>
-          <!-- ! main description product-->
-          <!-- tabs-->
+          
+          <!-- 內容 -->
           <div class="tabs mt-30 mb-50">
             <div class="block-tabs-btn clearfix">
               <div data-tabs-id="tabs1" class="tabs-btn active">詳述</div>
-             
             </div>
-            <!-- tabs keeper-->
+           
             <div class="tabs-keeper">
               <!-- tabs container-->
               <div data-tabs-id="cont-tabs1" class="container-tabs active">
@@ -79,9 +78,19 @@
               </div>
              
             </div>
-            <!-- /tabs keeper-->
           </div>
-          <!-- /tabs-->
+          <!-- 推薦-->
+          <div class="mt-50 mb-50">
+            <div class="title-carousel clearfix">
+              <h3 class="carousel-heading">推薦行程</h3>
+            </div>
+            <div class="cws_divider mb-50"></div>
+            <div class="row">
+              <%= render :partial=>"/home/projects/show"%>
+              <%= render :partial=>"/home/projects/show"%>
+            </div>
+          </div>
+          <!-- ! post carousel-->
         </div>
         
        
