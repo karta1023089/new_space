@@ -3,12 +3,11 @@
       <!-- slide -->
       <div class="tp-banner-container">
         <div class="banner-slide">
+        <%@slide.images.each do |i|%>
           <div class="slide-item">
-            <img class="width100" src="/img/slide2.jpg">
+            <img class="width100" src="<%=i.file%>">
           </div>
-          <div class="slide-item">
-            <img class="width100" src="/img/slide2.jpg">
-          </div>
+        <%end%>
         </div>
       </div>
       <!-- service -->
@@ -22,60 +21,18 @@
               <p class="mb-50">更多好康豐富的旅行情報都在樺一旅社</p>
               <div class="features-tours-full-width style4-4">
                 <div class="features-tours-wrap clearfix">
+                <%@cover.each do |c|%>
                   <div class="features-tours-item">
                     <a href="#">
-                    <div class="features-media"><img src="/img/810-540.png"  alt>
+                    <div class="features-media"><img src="<%=c.file%>"  alt>
                       <div class="features-info-bot">
-                        <h4 class="title">國內旅遊</h4>
+                        <h4 class="title"><%=c.name%></h4>
                       </div>
                     </div>
                     </a>
                   </div>
-                  <div class="features-tours-item">
-                    <a href="#">
-                    <div class="features-media"><img src="/img/810-540-2.png"  alt>
-                      <div class="features-info-bot">
-                        <h4 class="title">國外旅遊</h4>
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                  <div class="features-tours-item">
-                    <a href="#">
-                    <div class="features-media"><img src="/img/810-540-3.png"  alt>
-                      <div class="features-info-bot">
-                        <h4 class="title">海島旅遊</h4>
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                  <div class="features-tours-item">
-                    <a href="#">
-                    <div class="features-media"><img src="/img/810-540-2.png"  alt>
-                      <div class="features-info-bot">
-                        <h4 class="title">自由行</h4>
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                  <div class="features-tours-item">
-                    <a href="#">
-                    <div class="features-media"><img src="/img/810-540-3.png"  alt>
-                      <div class="features-info-bot">
-                        <h4 class="title">票券</h4>
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                  <div class="features-tours-item">
-                    <a href="#">
-                    <div class="features-media"><img src="/img/810-540.png"  alt>
-                      <div class="features-info-bot">
-                        <h4 class="title">套裝行程</h4>
-                      </div>
-                    </div>
-                    </a>
-                  </div>
+                  <%end%>
+                  
                 </div>
               </div>
             </div>
@@ -147,12 +104,12 @@
           <div class="row mt-50">
             <div class="col-sm-5">
               <div class="ad-block">
-                <a href="#"><img class="width100 mb-10" src="/img/ad1.png"></a>
+                <a href="<%=@ads.first.url%>"><img class="width100 mb-10" src="<%=@ads.first.file%>"></a>
               </div>
             </div>
             <div class="col-sm-7">
               <div class="ad-block">
-                <a href="#"><img class="width100 mb-10" src="/img/ad2.png"></a>
+                <a href="<%=@ads.second.url%>"><img class="width100 mb-10" src="<%=@ads.second.file%>"></a>
               </div>
             </div>
           </div>
@@ -172,7 +129,8 @@
             </div>
             <div class="col-md-7">
               <div class="video-area">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yib7tvIrL6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/yib7tvIrL6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                <%=raw current_system.youtube%>
               </div>
             </div>
           </div>
