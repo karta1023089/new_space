@@ -19,7 +19,7 @@ ins,.service-item:hover h3{
 .magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action,.menu-widget .magic-line #magic-line,.single-product .pic:before{
 	background: #2354a5;
 }
-.cws-button,.mn-sub{
+.cws-button,.mn-sub,.cws-button.alt{
 	border-color: #2354a5;
 }
 .features-tours-full-width.style4-4{
