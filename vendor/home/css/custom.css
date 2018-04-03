@@ -19,7 +19,7 @@ ins,.service-item:hover h3{
 .magic-line-main .magic-line-main-li,.main-nav li.search:after,.inner-nav:after,.recom-item .recom-item-body .cws-button:before,.cws-button.alt,.recom-item .recom-item-body .action,.menu-widget .magic-line #magic-line,.single-product .pic:before{
 	background: #2354a5;
 }
-.cws-button,.mn-sub{
+.cws-button,.mn-sub,.cws-button.alt{
 	border-color: #2354a5;
 }
 .features-tours-full-width.style4-4{
@@ -219,6 +219,18 @@ footer.footer .copyright{
 	font-size: 2.4rem;
     margin-top: 10px;
 }
+.contact-page{
+	background-size: cover;
+	background-position: center;
+}
+ul.icon li i{
+	color: #02a0e9;
+	line-height: 27px;
+	top: 0;
+}
+.map-area iframe{
+	width: 100%;
+}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
@@ -249,6 +261,10 @@ footer.footer .copyright{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     font-weight: normal;
+}
+
+.mt-200{
+	margin-top: 200px;
 }
 
 .cms-box img,.cms-box iframe{
