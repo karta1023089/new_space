@@ -46,7 +46,14 @@ Rails.application.routes.draw do
         get :events_group
       end
     end
-
+    resources :categories,:projects do
+      collection do
+        post :sort
+      end
+      member do 
+        get :open
+      end
+    end
     # resources dry controllers
     resources :resources do
       collection do

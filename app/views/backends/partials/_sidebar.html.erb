@@ -21,6 +21,16 @@
           </li>
         </ul>
       </li>  --> 
+      <li>
+        <a class="<%= active(controller_name, "categories") %>" href="<%= backends_categories_path %>">
+          <i class="fa fa-star"></i> <span>分類管理</span>
+        </a>
+      </li>
+      <li>
+        <a class="<%= active(controller_name, "projects") %>" href="<%= backends_projects_path %>">
+          <i class="fa fa-star"></i> <span>行程</span>
+        </a>
+      </li>
        <li>
         <a class="<%= active(controller_name, "index_pics") %>" href="<%= backends_images_index_pics_path %>">
           <i class="fa fa-star"></i> <span>首頁大項封面</span>

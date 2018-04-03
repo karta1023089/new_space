@@ -1,0 +1,40 @@
+<%if category.parent_id && action_name == "edit"%>
+
+<div class="form-group ">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Category.human_attribute_name('parent_id') %></label>
+  <div class="col-lg-9">
+    <select class="form-control" name="category[parent_id]">
+      <%choose_parent.each do |c|%>
+      <option value="<%=c.id%>" <%=selected(c.id,category.parent_id)%>><%=c.name%></option>
+      <%end%>
+    </select>
+  </div>
+</div>
+<%else%>
+ <div class="form-group hidden">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Category.human_attribute_name('parent_id') %></label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="category[parent_id]" value="<%= category.parent_id %>" />
+  </div>
+</div> 
+<%end%>
+<div class="form-group hidden">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Category.human_attribute_name('category_type') %></label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="category[category_type]" value="<%= category.category_type %>" />
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Category.human_attribute_name('name') %></label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="category[name]" value="<%= category.name %>" />
+  </div>
+</div>
+<div class="form-group">
+<label class="col-lg-3 col-sm-3 control-label"></label>
+  <div class="col-lg-9">
+    <button class="btn btn-danger">
+      <%= t 'backends.submit' %>
+    </button>
+  </div>
+</div>

@@ -11,7 +11,7 @@
 #  image_alt  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  use_type   :integer          default(0)
+#  use_type   :integer          default("index_pic")
 #
 
 class MyAd < ApplicationRecord

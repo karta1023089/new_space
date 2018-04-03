@@ -1,0 +1,13 @@
+<div class="btn-group dropup">
+  <button class="btn btn-white btn-xs" type="button"><%= Article.human_attribute_name(article.status) %></button>
+  <button data-toggle="dropdown" class="btn btn-white btn-xs dropdown-toggle" type="button" aria-expanded="false"><span class="caret"></span></button>
+  <ul role="menu" class="dropdown-menu">
+    <% article.aasm.events(:permitted => true).map(&:name).each do |event| %> 
+        <li>
+      <%= link_to(event_backends_article_path(article,event: event, format: format),remote: remote, method: :post,data:{confirm: "確定#{Article.human_attribute_name(event)}?"}) do %>
+      <%= Article.human_attribute_name(event) %>
+      <% end %>              
+    </li>
+    <% end %>
+  </ul>
+</div> 

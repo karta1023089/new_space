@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328085717) do
+ActiveRecord::Schema.define(version: 20180403042422) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
     t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "category_type"
+    t.integer "parent_id"
+    t.integer "priority"
+    t.datetime "deleted_at"
+    t.boolean "open_mark"
+    t.string "cover_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,6 +96,38 @@ ActiveRecord::Schema.define(version: 20180328085717) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "use_type", default: 0
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "cover"
+    t.string "image1"
+    t.string "image2"
+    t.string "image4"
+    t.string "name"
+    t.integer "price"
+    t.text "intro"
+    t.text "content"
+    t.datetime "deleted_at"
+    t.integer "category_id"
+    t.string "the_group"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "cover"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "name"
+    t.integer "price"
+    t.text "intro"
+    t.text "content"
+    t.datetime "deleted_at"
+    t.integer "category_id"
+    t.string "the_group"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "systems", force: :cascade do |t|

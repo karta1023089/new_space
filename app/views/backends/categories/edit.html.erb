@@ -1,0 +1,5 @@
+<form action="<%= backends_category_path(@category) %>" method="post" class="form-horizontal" enctype="multipart/form-data" > 
+  <%= token_tag nil %>
+  <input type="hidden" name="_method" value="put" >
+  <%= render partial: "/backends/categories/form",locals: {category: @category,choose_parent:@choose_parent} %>
+</form> 

@@ -1,0 +1,87 @@
+<%= form_for([:backends,project],html: {multipart: true, class: "form-horizontal", id:"article_form"}) do |f| %>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Project.human_attribute_name('name') %></label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="project[name]" value="<%= project.name %>" required >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Project.human_attribute_name('image') %>
+ <!--  <small>建議尺寸</small> -->
+  </label>
+  <div class="col-lg-9">
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="project[cover]" data-default-file="<%= project.cover %>"> 
+    
+  </div>
+</div>
+<hr>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Category.model_name.human %></label>
+  <div class="col-lg-9">
+    <% select("project", "category_id", categories.collect{|k| [k.name,k.id]}, {selected: project.category_id}, {class: "form-control select2"}) %>
+    <select class="form-control select2" name="project[category_id]" required="" >
+      <option value="">請選擇分類</option>
+      <% Category.category_types.keys.each do |k| %>
+      <optgroup label="<%= Category.human_attribute_name(k) %>">
+        <% Category.send(k).each do |category| %>
+        <option value="<%= category.id %>" <%= selected(project.category_id, category.id) %>><%= category.name %></option>
+        <% end %>
+      </optgroup>
+      <% end %>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">其他圖片
+ <!--  <small>建議尺寸</small> -->
+  </label>
+  <div class="col-lg-9">
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="project[image1]" data-default-file="<%= project.image1 %>"> 
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="project[image2]" data-default-file="<%= project.image2%>"> 
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="project[image3]" data-default-file="<%= project.image3 %>"> 
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= Project.human_attribute_name('intro') %></label>
+  <div class="col-lg-9">
+    <textarea  class="form-control" name="project[intro]"><%= project.intro %></textarea>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">
+    <%= Project.human_attribute_name('content') %>
+  </label>
+  <div class="col-lg-9">
+    <textarea id="ckeditor" class="form-control" name="project[content]"><%= project.content %></textarea>
+  </div>
+</div> 
+<script type="text/javascript">
+  CKEDITOR.replace('ckeditor', {
+    filebrowserUploadUrl : '/backends/images/ck_upload',
+    height: '400px',
+  });  
+</script>
+<hr>
+<div class="form-group">
+  <div class="col-lg-9 col-lg-offset-3">
+    <button class="btn btn-danger">
+      Submit
+    </button>
+  </div>
+</div>
+
+<% end %>
+
+<script type="text/javascript">
+
+
+  $("input[name='article[posted_at]']").datetimepicker({
+    autoclose: true,
+    pickerPosition: "top-right"
+  }) 
+  $("input[name='article[end_at]']").datetimepicker({
+    autoclose: true,
+    pickerPosition: "top-right"
+  })    
+</script>

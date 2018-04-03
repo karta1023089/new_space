@@ -1,0 +1,80 @@
+<link href="/plugins/dropzone/basic.css" rel="stylesheet">
+<link href="/plugins/dropzone/dropzone.css" rel="stylesheet">
+<script src="/plugins/dropzone/dropzone.js"></script>
+<!-- 
+參數說明
+dropzone_images: Model.image
+target: 目標的表單，會把上傳成功的image.id，加到input去，submit後可更新
+imageable_type: Model.model_name.name
+imageable_id: Model.id
+-->
+<form id="myAwesomeDropzone" action="<%= dropzone_backends_photos_path %>" data-target="<%= target %>" method="post" class="dropzone">
+ <%=token_tag nil%>
+  <input name="photo[article_id]" type="hidden" value="<%= article_id %>" />
+  <input type="hidden" name="the_action" value="<%=the_action%>">
+  <div class="fallback">
+    <input name="photo[file]" type="file" multiple />
+
+  </div>
+</form>
+<div class="row dropzone-images sortable_items m-bot15" data-url="<%= sort_backends_photos_path %>" style="margin-top:20px;">
+  <% if dropzone_images %>
+  <% dropzone_images.order_by_priority_asc.each do |photo| %>
+  <div class="col-lg-3 dropzone-image m-bot15 handle" data-item="<%= photo.id %>" >
+    <%= link_to("#",data: {target: "#MyModal",action: edit_backends_photo_path(photo, :the_action => the_action),title: Image.model_name.human}) do %>
+    <img class="img-thumbnail" src="<%= photo.file.rect_300_200 %>">
+    <% end %>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<script>
+  Dropzone.options.myAwesomeDropzone = {
+    paramName : "photo[file]",
+    maxFilesize : 2, // MB
+    maxFilesize : 5,
+    acceptedFiles : "image/jpeg,image/png,image/jpg",
+    init : function() {
+      this.on("success", function(file, response) {
+        $("<div></div>").attr({
+            "class" : "col-lg-3 dropzone-image m-bot15",
+            "data-item" : response.id,
+            "data-url" : response.url,
+          }).html(
+            $("<a>").attr({
+                "href" : "#",
+                "data-action" : response.edit_url,
+                "data-title" : "<%= Photo.model_name.human %>",
+                "data-target": "#MyModal"
+              }).html(
+                $("<img>").attr({
+                    "class" : "img-thumbnail",
+                    "src" : response.file.url,
+                  })
+              )
+          ).appendTo(".dropzone-images");
+
+        var imageInput = $("<input>", {
+          "type" : "hidden",
+          "name" : "photos[]",
+          "value" : response.id,
+        }).appendTo($("#myAwesomeDropzone").data('target'));
+      });
+    },
+    dictDefaultMessage : "圖片上傳區，拖曳圖片或點選即可上傳。",
+  };
+  
+  //Remove Images
+  $(document).on("click", ".delete-image", function() {
+    if (confirm("Delete image?")) {
+      var image = $(this)
+      $.ajax({
+        url : $(this).data('url'),
+        type : 'DELETE',
+        success : function(result) {
+          image.remove();
+        }
+      });
+    }
+  })
+</script>
