@@ -8,7 +8,7 @@
     <% end %>
   </td>
   <td>
-    <%= "#{project.category.name}" if project.category %>
+    <%= "#{project.category.parent.name}" if project.category %>-<%= "#{project.category.name}" if project.category %>
   </td>
   <td>
     <%= "#{project.the_group}" %>
