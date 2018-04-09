@@ -4,8 +4,8 @@ class Backends::ProjectsController < BackendsController
   before_action :find_project,except: %w(index new create)
   before_action :find_categories
   def index
-    @projects = Project.order_by_created_at_desc
-
+    # @projects = Project.order_by_created_at_desc
+    @projects = Project.all.order("category_id")
     # category_id
     if @category = @categories.find_by(id: params[:category_id])
       @projects = @projects.where(category_id: @category)
@@ -54,7 +54,21 @@ class Backends::ProjectsController < BackendsController
   end
 
   def edit
-    
+    # (0..50).each do |i|
+    #   @pp = Project.first
+    #   @new_project = Project.new
+    #   @new_project.name = @pp.name
+    #   @new_project.cover = @pp.cover
+    #   @new_project.image1 = @pp.image1
+    #   @new_project.image2 = @pp.image2
+    #   @new_project.image3 = @pp.image3
+    #   @new_project.price = @pp.price
+    #   @new_project.intro = @pp.intro
+    #   @new_project.content = @pp.content
+    #   @new_project.the_group = ["中部","西部", "南部" ,"北部","東部"].sample
+    #   @new_project.category_id = Category.where.not(:parent_id => nil).sample.id
+    #   @new_project.save
+    # end
     add_breadcrumb "編輯", edit_backends_project_path(@project)
   end
 
