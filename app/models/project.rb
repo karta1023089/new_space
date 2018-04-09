@@ -24,4 +24,5 @@ class Project < ApplicationRecord
 	mount_uploader :image2, ImageUploader
 	mount_uploader :image3, ImageUploader
 	belongs_to :category
+	is_impressionable
 end

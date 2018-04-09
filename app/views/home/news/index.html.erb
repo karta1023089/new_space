@@ -9,13 +9,7 @@
   <div class="container page news-list">
     <div class="row">
       <div class="col-md-12 mb-60">
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
-        <%= render :partial => "/home/news/show"%>
+        <%= render :partial => "/home/news/show", collection: @contents, as: :content%>
       </div>
     </div>
   </div>

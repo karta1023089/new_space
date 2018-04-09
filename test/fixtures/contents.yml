@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: contents
+#
+#  id         :integer          not null, primary key
+#  cover      :string
+#  name       :string
+#  show_date  :date
+#  deleted_at :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cover: MyString
+  name: MyString
+  show_date: 2018-04-09
+  deleted_at: 2018-04-09 17:05:07
+
+two:
+  cover: MyString
+  name: MyString
+  show_date: 2018-04-09
+  deleted_at: 2018-04-09 17:05:07

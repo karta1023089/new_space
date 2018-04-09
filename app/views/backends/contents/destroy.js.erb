@@ -1,0 +1,6 @@
+$(document).ready(function(){
+  $("#content<%= @content.id %>").remove()
+  <% if @message %>
+    toastr.success("<%= @message %>")
+  <% end %>
+});

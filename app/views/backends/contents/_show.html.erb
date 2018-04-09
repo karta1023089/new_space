@@ -1,0 +1,24 @@
+<tr id="content<%= content.id %>">
+<td>
+<%=content.id%>
+</td>
+  <td> 
+    <% if content.cover %>
+    <img class="img-responsive" src="<%= content.cover %>">
+    <% end %>
+  </td>
+  <td>
+    <%= content.name %>
+  </td>
+  <td>
+  <%=content.show_date%>
+  </td>
+  <td>
+    <%= link_to(edit_backends_content_path(content),class: "btn btn-xs btn-warning") do %>
+    <i class="fa fa-pencil"></i>
+    <% end %>   
+    <%= link_to(backends_content_path(content),class: "btn btn-xs btn-danger", format: :js, remote: true, method: :delete,data:{confirm: "確認刪除文章?"}) do %>
+    <i class="fa fa-trash-o"></i>
+    <% end %>     
+  </td>  
+</tr>

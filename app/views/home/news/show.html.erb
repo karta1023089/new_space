@@ -13,15 +13,14 @@
             <!-- Blog Post image-->
             <div class="blog-item alt pb-20">
               
-              <div class="pic"><img class="width100" src="/img/n1.jpg" alt></div>
+              <div class="pic"><img class="width100" src="<%=@content.cover%>" alt></div>
               
               <div class="blog-item-data clearfix">
-                <h3 class="blog-title">消息標題</h3>
-                <p class="post-info">Mon, 03-23-2016</p>
+                <h3 class="blog-title"><%=@content.name%></h3>
+                <p class="post-info"><%=@content.show_date%></p>
               </div>
               <div class="cms-box">
-                <p class="mb-25">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In ac orci eu felis venenatis tincidunt. Phasellus et hendrerit nisi. Phasellus eleifend velit sed gravida elementum. Mauris elementum varius turpis, a dictum justo bibendum nec. Integer sollicitudin ipsum vitae orci fringilla, sit amet ultrices elit volutpat. Duis sed nulla laoreet, suscipit urna id, pretium leo. Maecenas ligula elit, tempus at erat nec, convallis iaculis neque. Nunc at viverra erat.</p>
-                <p>Donec tristique blandit urna, cursus eleifend urna. Aliquam ut enim sapien. Nulla dapibus facilisis arcu, eget auctor est venenatis vel.quam sed finibus ornare, tellus justo hendrerit dolor, eget commodo elit massa in nibh. Vestibulum et ligula nisl. Vivamus ornare suscipit ante, et convallis felis ultrices in. Nulla vehicula mollis nulla a ultrices. Donec at diam mattis quam ultricies pharetra. Suspendisse eu nisl nec sem eleifend pellentesque nec in orci. Suspendisse quis sem in purus blandit gravida. Vestibulum congue fermentum orci id mollis. Morbi accumsan ante id tortor ullamcorper, sit amet volutpat arcu consectetur.</p>
+                <%=raw @content.content%>
               </div>  
              
               <!-- Post Tags-->

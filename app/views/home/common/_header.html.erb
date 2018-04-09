@@ -8,32 +8,16 @@
         <ul class="clearlist">
           
           <li><a href="/" class="mn-has-sub active">首頁</a></li>
+          <%@categories.each do |c|%>
           <li class="slash">/</li>
-
-          <li><a href="<%= home_projects_path %>" class="mn-has-sub">國內旅遊 <i class="fa fa-angle-down button_open"></i></a>
+          <li><a  class="mn-has-sub"><%=c.name%><i class="fa fa-angle-down button_open"></i></a>
             <ul class="mn-sub">
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
+            <%c.children.each do |cc|%>
+              <li><a href="<%= home_projects_path(:category => cc.id) %>"><%=cc.name%></a></li>
+            <%end%>
             </ul>
           </li>
-          <li class="slash">/</li>
-          <li><a href="#" class="mn-has-sub">國外旅遊 <i class="fa fa-angle-down button_open"></i></a>
-            <ul class="mn-sub">
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
-            </ul>
-          </li>
-          <li class="slash">/</li>
-
-          <li><a href="#" class="mn-has-sub">海島 <i class="fa fa-angle-down button_open"></i></a>
-            <ul class="mn-sub">
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
-              <li><a href="#">行程</a></li>
-            </ul>
-          </li>
+          <%end%>
           <li class="slash">/</li>
           
           <li><a href="#">申請卡式台胞證</a></li>

@@ -1,7 +1,7 @@
 <section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">國內行程</a>
-      <h2>國內行程</h2>
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@category.parent.name%></a>
+      <h2><%=@category.name%></h2>
     </div>
   </div>
 </section>
@@ -14,7 +14,7 @@
           <!-- 圖片-->
           <div class="images">
             <a href="/img/800-250-2.png" class="fancy">
-              <div class="pic pic4-3 bg-center" style="background-image: url(/img/800-250-2.png);">
+              <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.cover%>);">
                 <div class="links"><i class="fa fa-expand"></i></div>
               </div>
             </a>
@@ -22,21 +22,21 @@
             	<div class="row row2">
             		<div class="col-xs-4">
             			<a href="/img/800-250-2.png" class="fancy">
-		                <div class="pic pic4-3 bg-center" style="background-image: url(/img/800-250-2.png);">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image1%>);">
 			                <div class="links"><i class="fa fa-expand"></i></div>
 			              </div>
 		              </a>
             		</div>		
             		<div class="col-xs-4">
             			<a href="/img/800-250-2.png" class="fancy">
-		                <div class="pic pic4-3 bg-center" style="background-image: url(/img/800-250-2.png);">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image2%>);">
 			                <div class="links"><i class="fa fa-expand"></i></div>
 			              </div>
 		              </a>
             		</div>		
             		<div class="col-xs-4">
             			<a href="/img/800-250-2.png" class="fancy">
-		                <div class="pic pic4-3 bg-center" style="background-image: url(/img/800-250-2.png);">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image3%>);">
 			                <div class="links"><i class="fa fa-expand"></i></div>
 			              </div>
 		              </a>
@@ -47,16 +47,16 @@
          	<!-- 行程-->
           <div class="summary clearfix">
             
-            <h2 class="product-title mt-0">白沙灣一日遊</h2>
+            <h2 class="product-title mt-0"><%=@project.name%></h2>
             
             <div class="review-status2">
-              <div><i class="fa fa-eye"></i>&nbsp;&nbsp;4人看過</div>
+              <div><i class="fa fa-eye"></i>&nbsp;&nbsp;<%=@project.impressionist_count%>人看過</div>
               <div>3日</div>
             </div>
-            <div class="shop-price">$3500 </div>
+            <div class="shop-price">$<%=@project.price%></div>
             <div class="cws_divider mb-10"></div>
             <div class="cms-box">
-            	<p>吉維尼小鎮算是屬於法國郊區，需要到巴黎的ST Lazare聖拉查車站出發，購買前往國鐵車票，車程只有短短50分鐘左右的時間，為了避免長時間等待，最好事先先上網查詢搭乘的時間，畢竟車次並不多，而法國國鐵車票必須要先自行過卡驗票後才上車吉維尼小鎮算是屬於法國郊區，需要到巴黎的ST Lazare聖拉查車站出發，購買前往國鐵車票，車程只有短短50分鐘左右的時間，為了避免長時間等待，最好事先先上網查詢搭乘的時間，畢竟車次並不多，而法國國鐵車票必須......</p>
+            	<p><%=@project.intro%></p>
             </div>
 
             <a href="#" class="cws-button small alt add-to-cart ">我有興趣</a>
@@ -73,7 +73,7 @@
               <!-- tabs container-->
               <div data-tabs-id="cont-tabs1" class="container-tabs active">
                 <div class="cms-box">
-                	<p>在充滿著藝術家的法國中，印象派最具代表的人物便是耳熟能詳的畫家『克勞德・莫內Claude Monet』，而莫內晚年大多都定居在吉維尼小鎮，喜歡莫內畫作的人，一定會希望能夠有一天來到莫內著名系列畫作「睡蓮」的實際場景，而睡蓮的取景就是在吉維尼小鎮的莫內花園當中，由於莫內花園中的花季有展期時間，通常是一年的3月份至10月底，詳細開放參觀時間可直接到官網上查詢。吉維尼小鎮算是屬於法國郊區，需要到巴黎的ST Lazare聖拉查車站出發，購買前往Vernon-Giverny的SNCF國鐵車票，車程只有短短50分鐘左右的時間，為了避免長時間等待，最好事先先上網查詢搭乘的時間，畢竟車次並不多，而法國國鐵車票必須要先自行過卡驗票後才上車。<br>抵達吉維尼後，跟著人群走，也會有熱情的法國司機大哥在火車的另一頭跟你揮手示意，是前往莫內花園的專車，不需要擔心會走錯或是迷路，更會看見莫內花園專車上會貼了莫內的畫作裝飾，回程也是在同樣地方等待專車接送回去火車站，只需注意回程專車發車時間即可。走路約莫五分鐘左右會抵達莫內花園的門口，門票成人：9.5歐、七歲以上學生：5.5歐、殘障優惠：4歐、七歲以下免費入場，參觀莫內花園可分為幾區，花園、莫內故居、池塘、紀念品專區，莫內花園內花花草草色彩繽紛，遇到陽光灑落時，拍照都令人驚艷，花園內許多花卉也都曾出現在莫內的畫作當中。</p>
+                	<%=raw @project.content%>
                 </div>
               </div>
              
@@ -86,8 +86,7 @@
             </div>
             <div class="cws_divider mb-50"></div>
             <div class="row">
-              <%= render :partial=>"/home/projects/show"%>
-              <%= render :partial=>"/home/projects/show"%>
+              <%= render :partial=>"/home/projects/show", collection: @sugg, as: :project%>
             </div>
           </div>
           <!-- ! post carousel-->

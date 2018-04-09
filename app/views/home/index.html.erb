@@ -61,43 +61,24 @@
           </div>
           <div class="tabs tour-tab">
             <div class="block-tabs-btn clearfix">
-              <div data-tabs-id="tabs1" class="tabs-btn active">國外旅遊</div>
-              <div data-tabs-id="tabs2" class="tabs-btn">國內旅遊</div>
-              <div data-tabs-id="tabs3" class="tabs-btn">海島旅遊</div>
+            <%@categories.each do |c|%>
+              <div data-tabs-id="tabs<%=c.id%>" class="tabs-btn <%if @categories.first == c%>active<%end%>"><%=c.name%></div>
+            <%end%>
+              
             </div>
             <!-- tabs keeper-->
             <div class="tabs-keeper">
               <!-- tabs container-->
-              <div data-tabs-id="cont-tabs1" class="container-tabs active">
+              <%@categories.each do |c|%>
+              <div data-tabs-id="cont-tabs<%=c.id%>" class="container-tabs <%if @categories.first == c%>active<%end%>">
                 <div class="row">
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
+                <%c.children.each do |cc|%>
+
+                  <%= render :partial =>"/home/projects/show", collection: cc.projects.first(2), as: :project%> 
+                <%end%>                 
                 </div>
               </div>
-              <div data-tabs-id="cont-tabs2" class="container-tabs">
-                <div class="row">
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                </div>
-              </div>
-              <div data-tabs-id="cont-tabs3" class="container-tabs">
-                <div class="row">
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                  <%= render :partial =>"/home/projects/show"%>
-                </div>
-              </div>
+              <%end%>
             </div>
             <!-- /tabs keeper-->
           </div>
