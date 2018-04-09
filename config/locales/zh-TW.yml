@@ -7,7 +7,7 @@ zh-TW:
       page: 頁面設定
       doctor: 醫療團隊
       doctor_cert: 證照
-      category: 診療分類
+      category: 分類
       product: 診療項目
       carousel: 主視覺輪播
       content: 內容管理
@@ -30,6 +30,12 @@ zh-TW:
         phone: "電話"
         email: "信箱"
         address: "地址"
+      project:
+        name: 名稱
+        cover: 封面
+        the_group: 組別
+        intro: 簡介
+        content: 詳介
     errors:
       messages:
         blank: "請填寫%{attribute}"

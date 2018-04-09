@@ -29,16 +29,16 @@
     <div class="pull-right" style="margin:20px 5px;">
       <form action="<%= backends_projects_path %>" method="get" class="form-inline" role="form">
         <div class="form-group">
-          <select class="form-control " name="category_id" >
-            <option value="">請選擇分類</option>
-            <% Category.category_types.keys.each do |k| %>
-            
-              <% Category.send(k).order_by_priority_asc.each do |category| %>
-              <option value="<%= category.id %>" <%= selected(params[:category_id], category.id) %>><%= category.name %></option>
-              <% end %>
-            
+          <select class="form-control =" name="category_id"  >
+          <option value="">請選擇分類</option>
+          <% @categories.each do |mother| %>
+          <optgroup label="<%= mother.name%>">
+            <% mother.children.each do |category| %>
+            <option value="<%= category.id %>" <%= selected(params[:category_id], category.id) %>><%= category.name %></option>
             <% end %>
-          </select>                  
+          </optgroup>
+          <%end%>
+        </select>                
         </div>
         <div class="form-group">
           <label class="sr-only" for="keyword"></label>
@@ -63,6 +63,7 @@
               <th class="text-center col-lg-1"></th>
               <th class="text-center col-lg-1"><%= Project.human_attribute_name('cover') %></th>
               <th class="text-center col-lg-2"><%= Category.model_name.human %></th>
+              <th class="text-center col-lg-2"><%= Project.human_attribute_name('the_group') %></th>
               <th class="text-center col-lg-2"><%= Project.human_attribute_name('name') %></th>
               <th class="text-center col-lg-2"></th>
             </tr>

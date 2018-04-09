@@ -107,7 +107,7 @@ class Backends::ProjectsController < BackendsController
 
   private
   def find_categories
-    @categories = Category.all
+    @categories = Category.where(:parent_id => nil)
   end
 
   def find_project
