@@ -1,5 +1,9 @@
 html, body{
 	color: #333;
+	font-family: 微軟正黑體;
+}
+.page{
+	padding-top: 80px;
 }
 .inner-nav > ul > li.slash,.star-rating:before, .stars:before,.title-section.gray span,.service-item.color-icon .cws-icon{
 	color: #2354a5;
@@ -231,6 +235,56 @@ ul.icon li i{
 .map-area iframe{
 	width: 100%;
 }
+.blog-item.boxed .blog-item-body{
+	background: #336fad;
+    color: #fff;
+}
+.blog-item.boxed .blog-item-body h6,.blog-item .blog-item-body .blog-button{
+	color: #fff;
+}
+table.doc-table thead tr{
+	background: #4e4e4e;
+	color: #fff;
+	text-align: center;
+}
+table.doc-table thead tr td{
+	padding: 25px 0;
+}
+table.doc-table tfoot tr{
+	background: #fff100;
+	color: #e4211d;
+	text-align: center;
+}
+table.doc-table tfoot tr td{
+	padding: 25px 0;
+}
+table.doc-table tbody tr td{
+	color: #333;
+}
+.doc-issue-area{
+	border: 1px solid #eee;
+	padding: 30px 40px;
+}
+.doc-issue-area .title{
+	color: #497fc9;
+	margin-bottom: 20px;
+}
+.doc-issue-area ul{
+	list-style-type: decimal-leading-zero;
+    padding-left: 45px;
+    line-height: 2.4;
+}
+.doc-issue-area ul li{
+	position: relative;
+	font-size: 1rem;
+
+}
+.doc-issue-area ul li:before{
+	content: "▶";
+	color: #007ffe;
+	position: absolute;
+	left: -54px;
+}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
@@ -238,8 +292,17 @@ ul.icon li i{
 .pic4-3{
 	padding-top: 75%;
 }
+.pic1-1{
+	padding-top: 100%;
+}
 .text-black,ul li{
 	color: #333;
+}
+.text-yellow{
+	color: #ebcb28;
+}
+.text-red{
+	color: #e4211d !important;
 }
 .width100{
 	width: 100%;
@@ -336,6 +399,30 @@ ul.icon li i{
 	padding-right: 8px;
 
 }
+.one-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: normal;
+    display: -moz-box;
+    display: box;
+    display: -ms-flexbox;
+}
+.two-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: normal;
+    display: -moz-box;
+    display: box;
+    display: -ms-flexbox;
+    min-height: 3.5em;
+}
+
 /*rwd============================================================================*/
 @media (max-width: 1024px){
 	.page{
