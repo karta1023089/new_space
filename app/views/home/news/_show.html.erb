@@ -1,13 +1,13 @@
 <div class="blog-item clearfix mb-30 border">
   <!-- Blog Image-->
-  <div class="blog-media"><a href="/home/news/1">
-      <div class="pic"><img src="/img/n1.jpg" alt width="360"></div></a></div>
+  <div class="blog-media"><a href="<%=home_news_path(content)%>">
+      <div class="pic"><img src="<%=content.cover%>" alt width="360"></div></a></div>
   <!-- blog body-->
   <div class="blog-item-body clearfix">
     <!-- title--><a href="blog-single.html">
-      <h6 class="blog-title">消息標題</h6></a>
-    <div class="blog-item-data">Mon, 03-23-2016</div>
+      <h6 class="blog-title"><%=content.name%></h6></a>
+    <div class="blog-item-data"><%=content.show_date%></div>
     <!-- Text Intro-->
-    <p class="two-line mb-20">Donec placerat in arcu non efficitur. Sed vehicula ac mi sit amet accumsan. Mauris blandit arcu justo, porta dictum tortor convallis vitae. Cras faucibus lorem nec urna congue, vel eleifend tellus blandit.Cras faucibus lorem nec urna congue, vel eleifend tellus blandit. </p><a href="/home/news/1" class="btn btn-blue pull-right">閱讀更多</a>
+    <p class="two-line mb-20"><%= sanitize(content.content, :tags=>[]).first(30)%></p><a href="<%=home_news_path(content)%>" class="btn btn-blue pull-right">閱讀更多</a>
   </div>
 </div>

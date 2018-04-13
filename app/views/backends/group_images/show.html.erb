@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars"></span>
+        </button>
+     
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      	
+      </div><!-- /.navbar-collapse -->
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <section class="panel">
+      <header class="panel-heading">
+       Photo
+      </header>    
+      <table class="table table-bordered table-advance table-hover text-center">
+
+        <tr>
+          <th class="col-md-3">名稱</th>
+          <td class="col-md-9"><%= @group_image.name %></td>
+        </tr>
+
+        <tr>
+        <th>Width</th>
+        <td><%= @group_image.width%></td>
+        </tr>
+        <tr>
+        <th>Height</th>
+        <td><%= @group_image.height%></td>
+        </tr>
+        <tr>
+          <th>Note</th>
+          <td><%= @group_image.remark %></td>
+        </tr>        
+      </table>
+    </section>
+  </div>
+  <div class="col-lg-9">
+    <section class="panel">
+      <div class="panel-body">
+        <%= render partial: "backends/images/dropzone/form",
+        locals: {
+        dropzone_images: @group_image.images,
+        target: "#group-image-form",
+        item_type: @group_image.model_name.name,
+        item_id: @group_image.id,
+        } %>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id            :integer          not null, primary key
+#  name          :string
+#  category_type :integer
+#  parent_id     :integer
+#  priority      :integer
+#  deleted_at    :datetime
+#  open_mark     :boolean
+#  cover_image   :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category_type: 1
+  parent_id: 1
+  priority: 1
+  deleted_at: 2018-04-03 11:13:45
+  open_mark: false
+  cover_image: MyString
+
+two:
+  name: MyString
+  category_type: 1
+  parent_id: 1
+  priority: 1
+  deleted_at: 2018-04-03 11:13:45
+  open_mark: false
+  cover_image: MyString

@@ -10,6 +10,10 @@
 #  deleted_at :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  use_way    :integer          default("normal")
+#  name       :string
+#  url        :string
+#  image_alt  :string
 #
 
 require 'test_helper'

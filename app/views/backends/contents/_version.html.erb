@@ -1,0 +1,9 @@
+<tr>
+  <td><%= version.created_at.strftime("%F %R") %></td>
+  <td><%= version.whodunnit %></td>
+  <td>
+    <% version.changeset.each do |key,value| %>
+    <%= Article.human_attribute_name(key) %></br>
+    <% end %>
+  </td>
+</tr>

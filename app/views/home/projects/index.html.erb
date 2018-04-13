@@ -1,7 +1,7 @@
 <section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">國內行程</a>
-      <h2>國內行程</h2>
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@category.parent.name%></a>
+      <h2><%=@category.name%></h2>
     </div>
   </div>
 </section>
@@ -11,41 +11,29 @@
 	    <div class="tabs">
 	      <div class="menu-widget with-switch">
 	        <ul class="magic-line">
-	          <li class="current_item"><a class="tabs-btn" data-tabs-id="tabs1">北部</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs2">中部</a></li>
+	        <%@the_group.each_with_index do |value,index|%>
+	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
+	        <%end%>
+	         <!--  <li><a class="tabs-btn" data-tabs-id="tabs2">中部</a></li>
 	          <li><a class="tabs-btn" data-tabs-id="tabs3" >南部</a></li>
 	          <li><a class="tabs-btn" data-tabs-id="tabs4" >東部</a></li>
 	          <li><a class="tabs-btn" data-tabs-id="tabs5" >離島</a></li>
 	          <li><a class="tabs-btn" data-tabs-id="tabs6" >熱門</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs7" >最新</a></li>
+	          <li><a class="tabs-btn" data-tabs-id="tabs7" >最新</a></li> -->
 	          
 	        </ul>
 	      </div>
 	      <!-- tabs keeper-->
 	      <div class="tabs-keeper mt-30">
 	        <!-- tabs container-->
-	        <div data-tabs-id="cont-tabs1" class="container-tabs active">
+	        <%@the_group.each_with_index do |value,index|%>
+	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
 	          <div class="row">
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-				<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
+	          	<%= render :partial=>"/home/projects/show", collection: @projects.where(:the_group => value), as: :project%>
 	          </div>
 	        </div>
-	        
-	        <div data-tabs-id="cont-tabs2" class="container-tabs">
-	          <div class="row">
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-				<%= render :partial=>"/home/projects/show"%>
-	          	<%= render :partial=>"/home/projects/show"%>
-	          </div>
-	        </div>
-	        
+	        <%end%>
+	       
 	      </div>
 	      <!-- /tabs keeper-->
 	    </div>  

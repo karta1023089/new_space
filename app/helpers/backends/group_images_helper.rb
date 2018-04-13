@@ -1,0 +1,2 @@
+module Backends::GroupImagesHelper
+end

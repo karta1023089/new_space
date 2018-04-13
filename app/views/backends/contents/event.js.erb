@@ -1,0 +1,6 @@
+$(document).ready(function(){
+  $("#content<%= @content.id %>").replaceWith('<%= escape_javascript(render(partial: "/backends/contents/show",locals:{content: @content})) %>');
+  <% if @message %>
+  toastr.success("<%= @message %>")
+  <% end %>
+});

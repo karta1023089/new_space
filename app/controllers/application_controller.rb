@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
       site_name: current_system&.title,
       type: 'website',
       url: request.original_url,
-      image: "",
+      image: "http://#{request.host}/img/logo2@2x.png",
     }
   end
 

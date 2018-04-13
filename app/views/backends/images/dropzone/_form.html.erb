@@ -1,0 +1,115 @@
+
+<!-- 
+參數說明
+dropzone_images: Model.image
+target: 目標的表單，會把上傳成功的image.id，加到input去，submit後可更新
+imageable_type: Model.model_name.name
+imageable_id: Model.id
+-->
+
+<div class="row dropzone-images sortable_items m-bot15" data-url="<%= sort_backends_images_path %>">
+ 
+	<% if dropzone_images %>
+	<% dropzone_images.each do |image| %>
+	<div class="col-lg-3 dropzone-image m-bot15" data-item="<%= image.id %>" >
+
+		<%= link_to("#MyModal",data: {action: edit_backends_image_path(image),title: "圖片"}) do %>
+		<img class="img-thumbnail" src="<%= image.file %>">
+		<% end %>
+	</div>
+	<% end %>
+	<% end %>
+</div>
+<form id="myAwesomeDropzone" action="<%= dropzone_backends_images_path %>" data-target="<%= target %>" method="post" class="dropzone" enctype="multipart/form-data">
+	<input name="image[item_type]" type="hidden" value="<%= item_type %>" />
+	<input name="image[item_id]" type="hidden" value="<%= item_id %>" />
+	<div class="fallback">
+		<input name="image[file]" type="file" multiple />
+	</div>
+</form>
+
+<script>
+$( document ).ready(function() {
+	Dropzone.options.myAwesomeDropzone = {
+		paramName : "image[file]",
+		maxFilesize : 2, // MB
+		maxFilesize : 5,
+		acceptedFiles : "image/jpeg,image/png,image/jpg",
+		init : function() {
+			this.on("success", function(file, response) {
+				console.log(response);
+				var dropzoneImage = $("<div></div>", {
+					"class" : "col-lg-3 dropzone-image m-bot15",
+					"data-item" : response.id
+				}).html($('<a>',{
+					"herf" : "#MyModal",
+					"data-action" : response.edit_url,
+					"data-title" : "圖片"
+				})).html($('<img>', {
+					"class" : "img-thumbnail",
+					"src" : response.file.url,
+				})).appendTo(".dropzone-images");
+				var imageInput = $("<input>", {
+					"type" : "hidden",
+					"name" : "images[]",
+					"value" : response.id,
+				}).appendTo($("#myAwesomeDropzone").data('target'));
+				//$(".dropzone-images").append(response.file.url)
+			});
+		},
+		dictDefaultMessage : "圖片上傳區，拖曳圖片或點選即可上傳。",
+	};
+	});
+	
+	//Remove Images
+	$(document).on("click", ".delete-image", function() {
+		if (confirm("Delete image?")) {
+			var image = $(this)
+			$.ajax({
+				url : $(this).data('url'),
+				type : 'DELETE',
+				success : function(result) {
+					image.remove();
+				}
+			});
+		}
+	})
+
+</script>
+<div class="modal fade " id="MyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          ×
+        </button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">
+          關閉
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  //呼叫 Modal
+  $(document).on('click',"[href='#MyModal']",function(e){
+    e.preventDefault();
+    var title = $(this).data('title');
+    var action = $(this).data('action');
+    var current_action = $("#MyModal").data('action');
+    if (current_action == action) {
+      $("#MyModal").modal('show')
+      return
+    }
+    $("#MyModal").data('action', action)
+    $("#MyModal .modal-title").text(title);
+    $("#MyModal .modal-body").load(action);
+    $("#MyModal").modal('show')   
+  })
+</script>

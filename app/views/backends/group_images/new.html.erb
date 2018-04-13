@@ -1,0 +1,56 @@
+
+<div class="row">
+	<div class="col-lg-12">
+		<nav class="navbar navbar-inverse" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+				<a class="navbar-brand" href="#">Nav</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="/backends/group_images/events_group" >Back</a>
+					</li>
+
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<section class="panel">
+			<header class="panel-heading">
+				New
+			</header>
+			<div class="panel-body">
+				
+				<form action="<%= backends_group_images_path %>" method="post" class="form-horizontal" > 
+  <%= token_tag nil %>
+ 
+  <div class="form-group">
+    <label class="col-lg-3 col-sm-3 control-label">Note</label>
+    <div class="col-lg-9">
+      <input type="text" class="form-control" name="group_image[remark]" value="" />
+    </div>
+  </div>  
+  
+  <div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"></label>
+    <div class="col-lg-9">
+      <button class="btn btn-danger">
+        送出
+      </button>
+    </div>
+  </div>
+</form> 
+			</div>
+		</section>
+	</div>
+</div>

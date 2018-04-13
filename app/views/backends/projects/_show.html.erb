@@ -1,0 +1,27 @@
+<tr id="project<%= project.id %>">
+<td>
+<%=project.id%>
+</td>
+  <td> 
+    <% if project.cover %>
+    <img class="img-responsive" src="<%= project.cover %>">
+    <% end %>
+  </td>
+  <td>
+    <%= "#{project.category.parent.name}" if project.category %>-<%= "#{project.category.name}" if project.category %>
+  </td>
+  <td>
+    <%= "#{project.the_group}" %>
+  </td>
+  <td>
+    <%= project.name %>
+  </td>
+  <td>
+    <%= link_to(edit_backends_project_path(project),class: "btn btn-xs btn-warning") do %>
+    <i class="fa fa-pencil"></i>
+    <% end %>   
+    <%= link_to(backends_project_path(project),class: "btn btn-xs btn-danger", format: :js, remote: true, method: :delete,data:{confirm: "確認刪除文章?"}) do %>
+    <i class="fa fa-trash-o"></i>
+    <% end %>     
+  </td>  
+</tr>

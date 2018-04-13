@@ -1,0 +1,5 @@
+<form action="<%= backends_image_path(@image) %>" method="post" class="form-horizontal" > 
+  <%= token_tag nil %>
+  <input type="hidden" name="_method" value="put" >
+  <%= render partial: "/backends/images/form",locals: {image: @image} %>
+</form> 
