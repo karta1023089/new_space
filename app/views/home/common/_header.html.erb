@@ -12,17 +12,19 @@
           <li class="slash">/</li>
           <li><a  class="mn-has-sub"><%=c.name%><i class="fa fa-angle-down button_open"></i></a>
             <ul class="mn-sub">
+
             <%c.children.each do |cc|%>
               <li><a href="<%= home_projects_path(:category => cc.id) %>"><%=cc.name%></a></li>
             <%end%>
+
             </ul>
           </li>
           <%end%>
           <li class="slash">/</li>
           
-          <li><a href="#">申請卡式台胞證</a></li>
+          <li><a href="<%= home_doc_path  %>">申請卡式台胞證</a></li>
           <li class="slash">/</li>
-          <li><a href="#">票券</a></li>
+          <li><a href="<%= home_tickets_path %>">票券</a></li>
           <li class="slash">/</li>
           <li><a href="<%= home_news_index_path %>">最新消息</a></li>
           <li class="slash">/</li>

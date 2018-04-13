@@ -18,8 +18,10 @@ Rails.application.routes.draw do
   namespace :home do 
     resources :news
     resources :projects
+    resources :tickets
     get :contact
     get :about
+    get :doc
   end
   resources :home
 

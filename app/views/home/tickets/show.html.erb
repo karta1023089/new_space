@@ -1,0 +1,47 @@
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+  <div class="container">
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="<%= home_tickets_path %>">票券</a><i>/</i><a href="#" class="last">九族文化村</a>
+      <h2>九族文化村</h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+  <div class="container page">
+    <div class="alt pb-20">
+     
+      <div class="pic"><img class="width100" src="/img/blog2.jpg" alt></div>
+      <!-- 說明 -->
+      <div class="mt-50 mb-50">
+        <div class="title-carousel clearfix">
+          <h3 class="carousel-heading">使用說明</h3>
+        </div>
+        <div class="cws_divider mb-50"></div>
+        <div class="cms-box">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <!-- 推薦 -->
+      <div class="mt-50 mb-50">
+        <div class="title-carousel clearfix">
+          <h3 class="carousel-heading">使用說明</h3>
+        </div>
+        <div class="cws_divider mb-50"></div>
+        <div class="row">
+          <%= render :partial=>"/home/tickets/show", locals:{col: "3"} %>
+          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
+          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
+          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
+        </div>
+      </div>
+
+      
+      
+    </div>
+    
+  </div>
+</div>
