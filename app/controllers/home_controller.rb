@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-	before_action :all_cat
+	before_action :all_cat 
 	def index
 		@slide = GroupImage.find(1)
 		@ads = MyAd.main_ad
