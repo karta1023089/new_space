@@ -3,8 +3,10 @@ class HomeController < ApplicationController
 	def index
 		@slide = GroupImage.find(1)
 		@ads = MyAd.main_ad
-		@cover = MyAd.index_pic
-		
+		@cover = MyAd.index_pic	
+	end
+	def about
+		@content = Conten.find(1)
 	end
 	private
 	def all_cat
