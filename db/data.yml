@@ -165,6 +165,37 @@ categories:
     - 
     - '2018-04-09 03:31:08.617151'
     - '2018-04-09 03:31:08.617151'
+  - - 13
+    - 團體行
+    - 0
+    - 2
+    - 
+    - 
+    - false
+    - 
+    - '2018-04-16 02:56:18.776469'
+    - '2018-04-16 02:56:18.776469'
+
+---
+contents:
+  columns:
+  - id
+  - cover
+  - name
+  - show_date
+  - deleted_at
+  - created_at
+  - updated_at
+  - content
+  records: 
+  - - 1
+    - wade1.jpg
+    - 最新消息一
+    - '2018-04-13'
+    - 
+    - '2018-04-13 08:13:37.017803'
+    - '2018-04-13 08:30:23.903588'
+    - "<p>內容內容內容</p>\r\n"
 
 ---
 group_images:
@@ -229,6 +260,116 @@ images:
     - 
     - 
     - 
+
+---
+impressions:
+  columns:
+  - id
+  - impressionable_type
+  - impressionable_id
+  - user_id
+  - controller_name
+  - action_name
+  - view_name
+  - request_hash
+  - ip_address
+  - session_hash
+  - message
+  - referrer
+  - params
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Project
+    - 18
+    - 
+    - projects
+    - show
+    - 
+    - 8133769c90d73b136cca0a05cde27cf2610324b1ed14a3dddd07705ef5bf15b5
+    - 125.227.156.156
+    - bbbab645dda387e951baedf7cf55c49b
+    - 
+    - http://space_tours.playplus.solutions/home/projects?category=9
+    - 
+    - '2018-04-09 10:34:56.117020'
+    - '2018-04-09 10:34:56.117020'
+  - - 2
+    - Project
+    - 18
+    - 
+    - projects
+    - show
+    - 
+    - 8133769c90d73b136cca0a05cde27cf2610324b1ed14a3dddd07705ef5bf15b5
+    - 125.227.156.156
+    - bbbab645dda387e951baedf7cf55c49b
+    - 
+    - http://space_tours.playplus.solutions/home/projects?category=9
+    - 
+    - '2018-04-09 10:34:56.143522'
+    - '2018-04-09 10:34:56.143522'
+  - - 3
+    - Project
+    - 18
+    - 
+    - projects
+    - show
+    - 
+    - 2d46c9f134a0a2098aa9625cad06c0e0a9dc11eab952f7345ecbddaca84ab7c8
+    - 125.227.156.156
+    - bbbab645dda387e951baedf7cf55c49b
+    - 
+    - http://space_tours.playplus.solutions/home/projects/18
+    - 
+    - '2018-04-09 10:34:56.634405'
+    - '2018-04-09 10:34:56.634405'
+  - - 4
+    - Project
+    - 18
+    - 
+    - projects
+    - show
+    - 
+    - 2d46c9f134a0a2098aa9625cad06c0e0a9dc11eab952f7345ecbddaca84ab7c8
+    - 125.227.156.156
+    - bbbab645dda387e951baedf7cf55c49b
+    - 
+    - http://space_tours.playplus.solutions/home/projects/18
+    - 
+    - '2018-04-09 10:34:56.657004'
+    - '2018-04-09 10:34:56.657004'
+  - - 5
+    - Project
+    - 1
+    - 
+    - projects
+    - show
+    - 
+    - df0549dc4770322d981f75b71afc2720187f25c198538b032bb2f260af42d53f
+    - 36.227.44.21
+    - 8d88e3edd81f9c6c938a012be7e38b89
+    - 
+    - http://space_tours.playplus.solutions/home/projects?category=12
+    - 
+    - '2018-04-14 08:46:48.279508'
+    - '2018-04-14 08:46:48.279508'
+  - - 6
+    - Project
+    - 1
+    - 
+    - projects
+    - show
+    - 
+    - df0549dc4770322d981f75b71afc2720187f25c198538b032bb2f260af42d53f
+    - 36.227.44.21
+    - 8d88e3edd81f9c6c938a012be7e38b89
+    - 
+    - http://space_tours.playplus.solutions/home/projects?category=12
+    - 
+    - '2018-04-14 08:46:48.305828'
+    - '2018-04-14 08:46:48.305828'
 
 ---
 my_ads:
@@ -324,6 +465,25 @@ my_ads:
     - '2018-03-28 09:34:02.397349'
     - '2018-03-28 09:34:02.397349'
     - 0
+
+---
+pages:
+  columns:
+  - id
+  - name
+  - content
+  - deleted_at
+  - intro
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 關於樺一
+    - <p class="mb-30">樺一旅行社有限公司，成立於1992年2月1日，為一專業旅遊服務公司。由總經理彭鴻湘先生領導服務團隊。以航空票務為根基，擴展至全面性的旅遊產品服務。2000年9月更與環洋旅行社股份有限公司(www.acits.com.tw)相互投資，進而推展至旅遊產品總代理業務及多家航空公司TC業務代理。鑒於觀光局鼓勵國人國內旅遊，加入環島鐵路聯營中心，推廣國內外旅遊不遺餘力。</p>
+    - 
+    - 
+    - '2018-04-18 03:45:09.450825'
+    - '2018-04-18 03:47:21.737795'
 
 ---
 projects:
@@ -1246,16 +1406,18 @@ systems:
   - youtube
   records: 
   - - 1
+    - 樺一旅行社
+    - 樺一旅行社
     - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - 樺一旅行社
+    - 樺一旅行社
+    - 樺一旅行社
+    - 樺一旅行社
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      facebook: 樺一旅行社
     - 
     - '2018-03-27 06:48:03.081442'
-    - '2018-03-28 07:24:07.745489'
+    - '2018-04-13 08:51:59.531078'
     - <iframe width="560" height="315" src="https://www.youtube.com/embed/yib7tvIrL6k"
       frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
