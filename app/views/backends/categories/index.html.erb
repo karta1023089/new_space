@@ -61,14 +61,6 @@
           <i class="fa fa-plus"></i>
         </a>
         
-        <a data-target="#MyModal" data-title="編輯分類" data-action="<%= edit_backends_category_path(category) %>" class="btn btn-xs btn-warning">
-          <i class="fa fa-pencil"></i>
-        </a>
-        
-        <%= link_to(backends_category_path(category),class: "btn btn-xs btn-danger", method: :delete,data:{confirm: "Are You sure?"}) do %>
-          <i class="fa fa-trash-o"></i>
-        <% end %>
-        
       </div></h4>
     </div>
     <div id="category<%= category.id %>" class="panel-collapse collapse in">
@@ -83,12 +75,8 @@
                 </div>
                 <a><%= child.name %></a>
               <div class="pull-right">
-                <a data-target="#MyModal" data-title="編輯分類" data-action="<%= edit_backends_category_path(child) %>" class="btn btn-xs btn-warning">
-                  <i class="fa fa-pencil"></i>
-                </a>
-                <%= link_to(backends_category_path(child),class: "btn btn-xs btn-danger", method: :delete,data:{confirm: "Are You sure?"}) do %>
-                  <i class="fa fa-trash-o"></i>
-                <% end %>
+                
+                
               </div></h4>
             </div>
           </div>
