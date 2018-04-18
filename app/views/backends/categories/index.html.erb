@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
 
-          <li>
+          <!-- <li>
             <%= link_to( t('backends.new'),"#",
               data: {
                 target: "#MyModal",
@@ -23,7 +23,7 @@
                 no_turbolink: true,  
               },
             ) %>
-          </li>
+          </li> -->
         
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -56,11 +56,6 @@
       </a>
 
       <div class="pull-right">
-        
-        <a data-target="#MyModal" data-title="新增分類" data-action="<%= new_backends_category_path(parent_id: category.id) %>" class="btn btn-xs btn-success">
-          <i class="fa fa-plus"></i>
-        </a>
-        
       </div></h4>
     </div>
     <div id="category<%= category.id %>" class="panel-collapse collapse in">
