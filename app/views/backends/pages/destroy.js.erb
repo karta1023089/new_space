@@ -1,0 +1,6 @@
+$(document).ready(function(){
+  $("#page<%= @page.id %>").remove()
+  <% if @message %>
+    toastr.success("<%= @message %>")
+  <% end %>
+});

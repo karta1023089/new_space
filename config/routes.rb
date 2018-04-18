@@ -46,7 +46,7 @@ Rails.application.routes.draw do
         get :events_group
       end
     end
-    resources :categories,:projects,:contents do
+    resources :categories,:projects,:contents,:pages do
       collection do
         post :sort
       end

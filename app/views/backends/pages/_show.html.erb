@@ -1,0 +1,11 @@
+<tr id="page<%= page.id %>">
+  <td>
+    <%= page.name %>
+  </td>
+  <td>
+    <%= link_to(edit_backends_page_path(page),class: "btn btn-xs btn-warning") do %>
+    <i class="fa fa-pencil"></i>
+    <% end %>   
+    
+  </td>  
+</tr>
