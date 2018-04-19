@@ -285,6 +285,26 @@ table.doc-table tbody tr td{
 	position: absolute;
 	left: -54px;
 }
+.prize-issue{
+	margin-top: 20px;
+}
+.prize-issue li{
+	margin-left: 0;
+	padding-left: 0;
+}
+.prize-issue li span{
+	display: inline-block;
+	min-width: 15rem;
+	vertical-align: middle;
+	font-size: 1.1rem;
+}
+.prize-issue li .shop-price{
+	display: inline-block;
+	vertical-align: middle;
+}
+.m-icon:before{
+	content: '$'
+}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
