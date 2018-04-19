@@ -15,7 +15,7 @@
 //= require jquery-ui-daterangepicker/jquery.comiseo.daterangepicker.js
 //= require jquery-ui-daterangepicker/moment.js
 //= require backend_template/assets/fancybox/source/jquery.fancybox.js
-
+//= require backend_template/js/jquery.multi-select.js
 //= require select2
 
 //= require backend_template/js/common-scripts.js

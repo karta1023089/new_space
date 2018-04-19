@@ -1,0 +1,2 @@
+module Backends::CombineProjectsHelper
+end

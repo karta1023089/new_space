@@ -19,7 +19,7 @@
  *= require backend_template/css/slidebars.css
  *= require backend_template/css/style.css 
  *= require backend_template/css/style-responsive.css
-
+ *= require backend_template/css/multi-select.css
  * require_self
  */
 

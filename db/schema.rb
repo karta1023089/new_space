@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418030942) do
+ActiveRecord::Schema.define(version: 20180418082206) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,31 @@ ActiveRecord::Schema.define(version: 20180418030942) do
     t.datetime "deleted_at"
     t.boolean "open_mark"
     t.string "cover_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "combine_projects", force: :cascade do |t|
+    t.text "tour"
+    t.text "traffic"
+    t.text "hotel"
+    t.integer "category_id"
+    t.boolean "price1_mark", default: false
+    t.integer "price1"
+    t.boolean "price2_mark", default: false
+    t.integer "price2"
+    t.boolean "price3_mark", default: false
+    t.integer "price3"
+    t.boolean "price4_mark", default: false
+    t.integer "price4"
+    t.string "cover"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.integer "day"
+    t.string "name"
+    t.text "content"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

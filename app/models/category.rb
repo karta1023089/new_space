@@ -20,6 +20,7 @@ class Category < ApplicationRecord
   belongs_to :parent, class_name: 'Category', foreign_key: 'parent_id', optional: true
   has_many :children, class_name: 'Category', foreign_key: 'parent_id'
   has_many :projects
+  has_many :combine_projects
   scope :open,-> {where(open_mark: true)}
   enum category_type:{
     origin: 0,

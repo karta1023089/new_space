@@ -1,0 +1,48 @@
+# == Schema Information
+#
+# Table name: combine_projects
+#
+#  id          :integer          not null, primary key
+#  tour        :text
+#  traffic     :text
+#  hotel       :text
+#  category_id :integer
+#  price1_mark :boolean          default(FALSE)
+#  price1      :integer
+#  price2_mark :boolean          default(FALSE)
+#  price2      :integer
+#  price3_mark :boolean          default(FALSE)
+#  price3      :integer
+#  price4_mark :boolean          default(FALSE)
+#  price4      :integer
+#  cover       :string
+#  image1      :string
+#  image2      :string
+#  image3      :string
+#  day         :integer
+#  name        :string
+#  content     :text
+#  deleted_at  :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tour: MyText
+  traffic: MyText
+  hotel: MyText
+  price1_mark: false
+  price1: 1
+  cover: MyString
+  deleted_at: 2018-04-18 16:22:06
+
+two:
+  tour: MyText
+  traffic: MyText
+  hotel: MyText
+  price1_mark: false
+  price1: 1
+  cover: MyString
+  deleted_at: 2018-04-18 16:22:06

@@ -31,6 +31,30 @@
           <i class="fa fa-star"></i> <span>行程</span>
         </a>
       </li>
+      <li class="sub-menu dcjq-parent-li">
+        <a href="javascript:;" class="dcjq-parent <%= active(controller_name, "combine_projects") %>">
+          <i class="fa fa-tasks"></i>
+          <span>組合行程</span>
+          <span class="dcjq-icon"></span>
+        </a>
+        <ul class="sub">
+          <li <%if params[:category_id].to_i == 1%>class="active"<%end%>>
+            <a href="<%=backends_combine_projects_path(:category_id => 1)%>">
+              <i class="fa fa-star"></i> <span>國內</span>
+            </a>
+          </li>
+          <li <%if params[:category_id].to_i == 2%>class="active"<%end%>>
+            <a href="<%=backends_combine_projects_path(:category_id => 2)%>">
+              <i class="fa fa-star"></i> <span>國外</span>
+            </a>
+          </li>
+          <li <%if params[:category_id].to_i == 3%>class="active"<%end%>>
+            <a href="<%=backends_combine_projects_path(:category_id => 3)%>">
+              <i class="fa fa-star"></i> <span>海島</span>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li>
         <a class="<%= active(controller_name, "contents") %>" href="<%= backends_contents_path %>">
           <i class="fa fa-star"></i> <span>最新消息</span>

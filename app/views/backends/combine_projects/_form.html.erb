@@ -1,0 +1,180 @@
+<%= form_for([:backends,combine_project],html: {multipart: true, class: "form-horizontal", id:"article_form"}) do |f| %>
+<input type="hidden" name="combine_project[category_id]" value="<%=@the_category.id%>">
+<div class="form-group">
+  <label class="control-label col-md-3">行程</label>
+  <div class="col-md-9">
+      <select multiple="multiple" class="multi-select" id="my_multi_select1" name="combine_project[tour][]">
+      <%@the_category.children.first.projects.group_by(&:the_group).each do |group, projects|%>
+          <optgroup label="<%=group%>">
+          <%projects.each do |p|%>
+              <option value="<%=p.id%>" <%="selected" if combine_project.tour.include?(p.id.to_s)%> ><%=p.name%></option>
+          <%end%>
+              
+          </optgroup>
+          <%end%>
+          
+      </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-md-3">交通</label>
+  <div class="col-md-9">
+      <select multiple="multiple" class="multi-select" id="my_multi_select2" name="combine_project[traffic][]">
+      <%@the_category.children.second.projects.group_by(&:the_group).each do |group, projects|%>
+          <optgroup label="<%=group%>">
+          <%projects.each do |p|%>
+              <option value="<%=p.id%>" <%="selected" if combine_project.traffic.include?(p.id.to_s)%>><%=p.name%></option>
+          <%end%>
+              
+          </optgroup>
+          <%end%>
+          
+      </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-md-3">住宿</label>
+  <div class="col-md-9">
+      <select multiple="multiple" class="multi-select" id="my_multi_select3" name="combine_project[hotel][]">
+      <%@the_category.children.third.projects.group_by(&:the_group).each do |group, projects|%>
+          <optgroup label="<%=group%>">
+          <%projects.each do |p|%>
+              <option value="<%=p.id%>" <%="selected" if combine_project.hotel.include?(p.id.to_s)%>><%=p.name%></option>
+          <%end%>
+              
+          </optgroup>
+          <%end%>
+          
+      </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= CombineProject.human_attribute_name('name') %></label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="combine_project[name]" value="<%= combine_project.name %>" required >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label"><%= CombineProject.human_attribute_name('image') %>
+ <!--  <small>建議尺寸</small> -->
+  </label>
+  <div class="col-lg-9">
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="combine_project[cover]" data-default-file="<%= combine_project.cover %>"> 
+    
+  </div>
+</div>
+<hr>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">其他圖片
+ <!--  <small>建議尺寸</small> -->
+  </label>
+  <div class="col-lg-9">
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="combine_project[image1]" data-default-file="<%= combine_project.image1 %>"> 
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="combine_project[image2]" data-default-file="<%= combine_project.image2%>"> 
+    <input accept="image/*" type="file" class="form-control dropify" data-max-file-size="3M" name="combine_project[image3]" data-default-file="<%= combine_project.image3 %>"> 
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">行程 + 交通</label>
+  <div class="col-lg-9">
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price1_mark]"  value="1" <%if combine_project.price1_mark == true%>checked=""<%end%>>
+        顯示
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price1_mark]"  value="0" <%if combine_project.price1_mark == false%>checked=""<%end%>>
+        隱藏
+    </label>
+  </div>
+    <input type="integer" class="form-control" name="combine_project[price1]" value="<%= combine_project.price1 %>"  >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">行程 + 住宿</label>
+  <div class="col-lg-9">
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price2_mark]"  value="1" <%if combine_project.price2_mark == true%>checked=""<%end%>>
+        顯示
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price2_mark]"  value="0" <%if combine_project.price2_mark == false%>checked=""<%end%>>
+        隱藏
+    </label>
+  </div>
+    <input type="integer" class="form-control" name="combine_project[price2]" value="<%= combine_project.price2 %>"  >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">住宿 + 交通</label>
+  <div class="col-lg-9">
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price3_mark]"  value="1" <%if combine_project.price3_mark == true%>checked=""<%end%>>
+        顯示
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price3_mark]"  value="0" <%if combine_project.price3_mark == false%>checked=""<%end%>>
+        隱藏
+    </label>
+  </div>
+    <input type="integer" class="form-control" name="combine_project[price3]" value="<%= combine_project.price3 %>"  >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">行程 + 住宿 + 交通</label>
+  <div class="col-lg-9">
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price4_mark]"  value="1" <%if combine_project.price4_mark == true%>checked=""<%end%>>
+        顯示
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+        <input type="radio" name="combine_project[price4_mark]"  value="0" <%if combine_project.price4_mark == false%>checked=""<%end%>>
+        隱藏
+    </label>
+  </div>
+    <input type="integer" class="form-control" name="combine_project[price4]" value="<%= combine_project.price4 %>"  >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">
+    <%= CombineProject.human_attribute_name('content') %>
+  </label>
+  <div class="col-lg-9">
+    <textarea id="ckeditor" class="form-control" name="combine_project[content]"><%= combine_project.content %></textarea>
+  </div>
+</div> 
+<script type="text/javascript">
+  CKEDITOR.replace('ckeditor', {
+    filebrowserUploadUrl : '/backends/images/ck_upload',
+    height: '400px',
+  });  
+</script>
+<hr>
+<div class="form-group">
+  <div class="col-lg-9 col-lg-offset-3">
+    <button class="btn btn-danger">
+      Submit
+    </button>
+  </div>
+</div>
+
+<% end %>
+<script type="text/javascript">
+  // $('#my_multi_select2').multiSelect('select', String|Array);
+  $('#my_multi_select1').multiSelect();
+  $('#my_multi_select2').multiSelect();
+  $('#my_multi_select3').multiSelect();
+</script>
+
