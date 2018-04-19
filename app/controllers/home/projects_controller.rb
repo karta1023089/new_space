@@ -11,4 +11,5 @@ class Home::ProjectsController < HomeController
 		@sugg = Project.where.not(:id => @project.id).where(:category_id => @project.category.parent.children.pluck(:id)).first(2)
 		impressionist(@project)
 	end
+	
 end
