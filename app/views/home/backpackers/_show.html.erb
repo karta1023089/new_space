@@ -4,8 +4,7 @@
     <a href="/home/backpackers/<%=combine.id%>">
         <div class="pic">
         <%if combine.cover.present?%>
-       
-        <div class="p-img" style="background-image: url(<%=combine.cover%>);"></div> 
+        <img src="<%=combine.cover%>" alt>
         <%else%>
         <img src="/img/800-250-2.png" alt>
         <%end%>

@@ -3,7 +3,7 @@
     <div class="recom-media"><a href="/home/projects/<%=project.id%>">
         <div class="pic">
         <%if project.cover.present?%>
-        <div class="p-img" style="background-image: url(<%=project.cover%>);"></div> 
+        <img src="<%=project.cover%>" alt>
         <%else%>
         <img src="/img/800-250-2.png" alt>
         <%end%>
