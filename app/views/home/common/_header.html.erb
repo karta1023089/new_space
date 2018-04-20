@@ -16,7 +16,7 @@
             <%c.children.each do |cc|%>
               <li><a href="<%= home_projects_path(:category => cc.id) %>"><%=cc.name%></a></li>
             <%end%>
-
+              <li><a href="<%= home_backpackers_path(:category => c.id) %>"><%=c.name%>自由行</a></li>
             </ul>
           </li>
           <%end%>

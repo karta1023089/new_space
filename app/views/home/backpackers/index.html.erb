@@ -1,0 +1,35 @@
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+  <div class="container">
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@the_category.name%></a>
+      <h2><%=@the_category.name%></h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+	<div class="container pt-60">
+		<div class="element-section mb-100 projects-list">
+	    <div class="tabs">
+	      <div class="menu-widget with-switch">
+	        <ul class="magic-line">
+	        <%@the_group.each_with_index do |value,index|%>
+	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
+	        <%end%>
+	        </ul>
+	      </div>
+	      <!-- tabs keeper-->
+	      <div class="tabs-keeper mt-30">
+	        <!-- tabs container-->
+	        <%@the_group.each_with_index do |value,index|%>
+	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
+	          <div class="row">
+	          	<%= render :partial=>"/home/backpackers/show", collection: @combines.where(:the_group => value), as: :combine%>
+	          </div>
+	        </div>
+	        <%end%>
+	       
+	      </div>
+	      <!-- /tabs keeper-->
+	    </div>  
+	  </div>  
+  </div>
+</div>
