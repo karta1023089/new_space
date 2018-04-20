@@ -27,7 +27,7 @@ class Backends::CombineProjectsController < BackendsController
       flash[:success] = "新增成功."
       @combine_project.save
 
-      redirect_to backends_combine_projects_path
+      redirect_to backends_combine_projects_path(:category_id => @combine_project.category_id)
     else
       flash[:error] = @combine_project.errors.full_messages.join('</br>')
       
