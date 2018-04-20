@@ -9,6 +9,8 @@ zh-TW:
       doctor_cert: 證照
       category: 分類
       product: 診療項目
+      project: 行程
+      combine_project: 組合行程
       carousel: 主視覺輪播
       content: 內容管理
       activity: 活動快報
@@ -34,6 +36,11 @@ zh-TW:
         name: 名稱
         cover: 封面
         the_group: 組別
+        intro: 簡介
+        content: 詳介
+      combine_project:
+        name: 組合名稱
+        cover: 封面
         intro: 簡介
         content: 詳介
     errors:
