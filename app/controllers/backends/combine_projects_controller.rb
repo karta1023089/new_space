@@ -6,7 +6,7 @@ class Backends::CombineProjectsController < BackendsController
   def index
     # @projects = Project.order_by_created_at_desc
     @the_category = Category.find(params[:category_id])
-    @combine_projects = the_category.combine_projects.order("category_id")
+    @combine_projects = @the_category.combine_projects.order("category_id")
 
     @combine_projects = @combine_projects.page(params[:page])
 
