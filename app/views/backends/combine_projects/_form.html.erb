@@ -48,10 +48,17 @@
       </select>
   </div>
 </div>
+
 <div class="form-group">
   <label class="col-lg-3 col-sm-3 control-label"><%= CombineProject.human_attribute_name('name') %></label>
   <div class="col-lg-9">
     <input type="text" class="form-control" name="combine_project[name]" value="<%= combine_project.name %>" required >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">群組</label>
+  <div class="col-lg-9">
+    <input type="text" class="form-control" name="combine_project[the_group]" value="<%= combine_project.the_group %>" placeholder="請輸入群組名稱" >
   </div>
 </div>
 <div class="form-group">
@@ -145,6 +152,12 @@
     </label>
   </div>
     <input type="integer" class="form-control" name="combine_project[price4]" value="<%= combine_project.price4 %>" placeholder="請輸入價格" >
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-3 col-sm-3 control-label">幾日</label>
+  <div class="col-lg-9">
+    <input type="integer" class="form-control" name="combine_project[day]" value="<%= combine_project.day %>" placeholder="請輸入天數" >
   </div>
 </div>
 <div class="form-group">

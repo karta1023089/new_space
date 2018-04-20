@@ -25,6 +25,7 @@
 #  deleted_at  :datetime
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  the_group   :string
 #
 
 require 'test_helper'
