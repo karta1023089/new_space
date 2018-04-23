@@ -305,6 +305,13 @@ table.doc-table tbody tr td{
 .m-icon:before{
 	content: '$'
 }
+.p-img{
+	background-size: cover;width: 100%;padding-top: 30%;background-position: center;
+}
+.recom-item .recom-media .pic img{
+	max-height: 251px;
+	width: auto;
+}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
