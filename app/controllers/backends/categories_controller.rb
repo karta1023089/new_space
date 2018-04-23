@@ -2,7 +2,7 @@ class Backends::CategoriesController < BackendsController
   before_action :find_category
   helper_method :current_cart
   def index
-    Category.category_type.create(:parent_id => 2,:name => "團體行程")
+    Category.origin.create(:parent_id => 2,:name => "團體行程")
     if Category.category_types.keys.include?(params[:category_type])
       @categories = Category.send(params[:category_type]).where(parent_id: nil).order_by_priority_asc
     else
