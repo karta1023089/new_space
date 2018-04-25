@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     get :contact
     get :about
     get :doc
+    get :doc_new
   end
   resources :home
 
