@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180420064542) do
+ActiveRecord::Schema.define(version: 20180426040837) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -78,6 +78,15 @@ ActiveRecord::Schema.define(version: 20180420064542) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+  end
+
+  create_table "id_cards", force: :cascade do |t|
+    t.string "name"
+    t.string "cover"
+    t.text "content"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -215,6 +224,21 @@ ActiveRecord::Schema.define(version: 20180420064542) do
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string "name"
+    t.string "cover"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.datetime "deleted_at"
+    t.text "intro"
+    t.text "content"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "versions", force: :cascade do |t|

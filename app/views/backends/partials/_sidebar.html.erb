@@ -27,6 +27,16 @@
         </a>
       </li>
       <li>
+        <a class="<%= active(controller_name, "tickets") %>" href="<%= backends_tickets_path %>">
+          <i class="fa fa-star"></i> <span>票券</span>
+        </a>
+      </li>
+       <li>
+        <a class="<%= active(controller_name, "id_cards") %>" href="<%= backends_id_cards_path %>">
+          <i class="fa fa-star"></i> <span>申請台胞證</span>
+        </a>
+      </li>
+      <li>
         <a class="<%= active(controller_name, "projects") %>" href="<%= backends_projects_path %>">
           <i class="fa fa-star"></i> <span>行程</span>
         </a>

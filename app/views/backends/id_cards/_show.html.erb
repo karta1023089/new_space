@@ -1,0 +1,21 @@
+<tr id="id_card<%= id_card.id %>">
+<td>
+<%=id_card.id%>
+</td>
+  <td> 
+    <% if id_card.cover %>
+    <img class="img-responsive" src="<%= id_card.cover %>">
+    <% end %>
+  </td>
+  <td>
+    <%= id_card.name %>
+  </td>
+  <td>
+    <%= link_to(edit_backends_id_card_path(id_card),class: "btn btn-xs btn-warning") do %>
+    <i class="fa fa-pencil"></i>
+    <% end %>   
+    <%= link_to(backends_id_card_path(id_card),class: "btn btn-xs btn-danger", format: :js, remote: true, method: :delete,data:{confirm: "確認刪除?"}) do %>
+    <i class="fa fa-trash-o"></i>
+    <% end %>     
+  </td>  
+</tr>

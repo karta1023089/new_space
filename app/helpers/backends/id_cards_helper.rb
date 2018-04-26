@@ -1,0 +1,2 @@
+module Backends::IdCardsHelper
+end

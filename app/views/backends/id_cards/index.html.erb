@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars"></span>
+        </button>
+        <a class="navbar-brand" href="#"><%= t('backends.nav') %></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <%= link_to t('backends.new') ,new_backends_id_card_path %>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <%= paginate @id_cards %>
+  </div>
+  <div class="col-lg-8">
+    <div class="pull-right" style="margin:20px 5px;">
+    </div>    
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <section class="panel">
+      <header class="panel-heading">
+        <%= IdCard.model_name.human %>
+      </header>
+      <div class="table-responsive">
+        <table class="table table-bordered table-advance table-hover text-center">
+          <thead>
+            <tr>
+              <th class="text-center col-lg-1"></th>
+              <th class="text-center col-lg-1"><%= IdCard.human_attribute_name('cover') %></th>
+              <th class="text-center col-lg-2"><%= IdCard.human_attribute_name('name') %></th>
+              <th class="text-center col-lg-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: "/backends/id_cards/show",collection: @id_cards,as: :id_card %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+

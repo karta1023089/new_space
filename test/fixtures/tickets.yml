@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: tickets
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  cover      :string
+#  image1     :string
+#  image2     :string
+#  image3     :string
+#  image4     :string
+#  deleted_at :datetime
+#  intro      :text
+#  content    :text
+#  price      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cover: MyString
+  image1: MyString
+  deleted_at: 2018-04-26 10:58:04
+  intro: MyText
+  content: MyText
+  price: 1
+
+two:
+  name: MyString
+  cover: MyString
+  image1: MyString
+  deleted_at: 2018-04-26 10:58:04
+  intro: MyText
+  content: MyText
+  price: 1

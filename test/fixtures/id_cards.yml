@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: id_cards
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  cover      :string
+#  content    :text
+#  deleted_at :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cover: MyString
+  content: MyText
+  deleted_at: 2018-04-26 12:08:37
+
+two:
+  name: MyString
+  cover: MyString
+  content: MyText
+  deleted_at: 2018-04-26 12:08:37
