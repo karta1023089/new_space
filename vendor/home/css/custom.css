@@ -312,6 +312,13 @@ table.doc-table tbody tr td{
 	max-height: 251px;
 	width: auto;
 }
+.doc-new-page .portfolio-item:not(.big){
+	max-width: 100%;
+}
+.doc-issue-area.style2{
+	border: none;
+    padding: 0 15px; 
+}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
@@ -330,6 +337,9 @@ table.doc-table tbody tr td{
 }
 .text-red{
 	color: #e4211d !important;
+}
+.text-blue{
+	color: #2454a5;
 }
 .width100{
 	width: 100%;
