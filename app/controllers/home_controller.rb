@@ -8,6 +8,9 @@ class HomeController < ApplicationController
 	def about
 		@content = Page.find(1)
 	end
+	def doc
+		@id_cards = IdCard.all
+	end
 	private
 	def all_cat
 		@categories = Category.where(:parent_id => nil)
