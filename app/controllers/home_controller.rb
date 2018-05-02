@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 		@cover = MyAd.index_pic	
 	end
 	def about
-		@content = Content.find(1)
+		@content = Page.find(1)
 	end
 	private
 	def all_cat

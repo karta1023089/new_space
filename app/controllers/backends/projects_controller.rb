@@ -7,8 +7,9 @@ class Backends::ProjectsController < BackendsController
     # @projects = Project.order_by_created_at_desc
     @projects = Project.all.order("category_id")
     # category_id
-    if @category = @categories.find_by(id: params[:category_id])
-      @projects = @projects.where(category_id: @category)
+    if params[:category_id].present?
+      @category = Category.find(params[:category_id])
+      @projects = @projects.where(category_id: @category.id)
     end
     # tag
 

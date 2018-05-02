@@ -5,7 +5,8 @@ class BackendsController < ApplicationController
   def index
 
   end
-
+  def my_pdf
+  end
   private
 
   def login?
