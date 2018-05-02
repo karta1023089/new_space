@@ -5,6 +5,6 @@ class Home::TicketsController < HomeController
 	end
 	def show
 		@ticket = Ticket.find(params[:id])
-		@sugg = Ticket.where.not(:id => @ticket.id).where(:the_group => @sugg.the_group)
+		@sugg = Ticket.where.not(:id => @ticket.id).where(:the_group => @ticket.the_group)
 	end
 end
