@@ -11,38 +11,21 @@
 	    <div class="tabs">
 	      <div class="menu-widget with-switch">
 	        <ul class="magic-line">
-	          <li class="current_item"><a class="tabs-btn" data-tabs-id="tabs1">全部</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs2">餐券</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs3" >泡湯</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs4" >門票</a></li>
-	         
-	          
+	        <%@the_group.each_with_index do |value,index|%>
+	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
+	        <%end%>     
 	        </ul>
 	      </div>
 	      <!-- tabs keeper-->
 	      <div class="tabs-keeper mt-30">
+	      <%@the_group.each_with_index do |value,index|%>
 	        <!-- tabs container-->
-	        <div data-tabs-id="cont-tabs1" class="container-tabs active">
+	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
 	          <div class="row">
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-				<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
+	          	<%= render :partial=>"/home/tickets/show", collection: @tickets.where(:the_group => value), as: :ticket, locals:{col: "4"}%>
 	          </div>
 	        </div>
-	        
-	        <div data-tabs-id="cont-tabs2" class="container-tabs">
-	          <div class="row">
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-				<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          	<%= render :partial=>"/home/tickets/show",locals:{col:"4"}%>
-	          </div>
-	        </div>
+	      <%end%>
 	        
 	      </div>
 	      <!-- /tabs keeper-->

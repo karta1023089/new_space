@@ -1,7 +1,7 @@
 <section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="<%= home_tickets_path %>">票券</a><i>/</i><a href="#" class="last">九族文化村</a>
-      <h2>九族文化村</h2>
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="<%= home_tickets_path %>">票券</a><i>/</i><a href="#" class="last"><%=@ticket.name%></a>
+      <h2><%=@ticket.name%></h2>
     </div>
   </div>
 </section>
@@ -11,30 +11,30 @@
       <div class="project-page">
         <div class="main single-product">
           <div class="images">
-            <a href="/img/800-250-2.png" class="fancy">
-              <div class="pic pic4-3 bg-center" style="background-image: url(/img/blog2.jpg);">
+            <a href="<%=@ticket.image1%>" class="fancy">
+              <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image1%>);">
                 <div class="links"><i class="fa fa-expand"></i></div>
               </div>
             </a>
             <div class="thumbnails clearfix">
               <div class="row row2">
                 <div class="col-xs-4">
-                  <a href="/img/800-250-2.png" class="fancy">
-                    <div class="pic pic4-3 bg-center" style="background-image: url(/img/blog2.jpg);">
+                  <a href="<%=@ticket.image2%>" class="fancy">
+                    <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image2%>);">
                       <div class="links"><i class="fa fa-expand"></i></div>
                     </div>
                   </a>
                 </div>    
                 <div class="col-xs-4">
-                  <a href="/img/800-250-2.png" class="fancy">
-                    <div class="pic pic4-3 bg-center" style="background-image: url(/img/blog2.jpg);">
+                  <a href="<%=@ticket.image3%>" class="fancy">
+                    <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image3%>);">
                       <div class="links"><i class="fa fa-expand"></i></div>
                     </div>
                   </a>
                 </div>    
                 <div class="col-xs-4">
-                  <a href="/img/800-250-2.png" class="fancy">
-                    <div class="pic pic4-3 bg-center" style="background-image: url(/img/blog2.jpg);">
+                  <a href="<%=@ticket.image4%>" class="fancy">
+                    <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image4%>);">
                       <div class="links"><i class="fa fa-expand"></i></div>
                     </div>
                   </a>
@@ -44,9 +44,9 @@
           </div>
           <div class="summary clearfix">
               
-            <h2 class="product-title mt-0">水之都</h2>
+            <h2 class="product-title mt-0"><%=@ticket.name%></h2>
             <div class="cws_divider mb-40"></div>
-            <h4 class="text-blue">產品內容</h4>
+            <!-- <h4 class="text-blue">產品內容</h4>
             <div class="cms-box mb-20">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -59,7 +59,8 @@
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               </p>
-            </div>
+            </div> -->
+            <%=raw @ticket.content%>
             
             <a href="#" class="cws-button small alt add-to-cart ">我有興趣</a>
             
@@ -73,12 +74,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <%=raw @ticket.article1%>
         </div>
       </div>
       <!--國籍使用限制 -->
@@ -88,7 +84,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>無</p>
+          <%=raw @ticket.article2%>
         </div>
       </div>
       <!--注意事項 -->
@@ -98,7 +94,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>無</p>
+          <%=raw @ticket.article3%>
         </div>
       </div>
       <!--票券可領取方式 -->
@@ -108,7 +104,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>無</p>
+          <%=raw @ticket.article4%>
         </div>
       </div>
       <!--退換貨說明 -->
@@ -118,7 +114,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>無</p>
+          <%=raw @ticket.article5%>
         </div>
       </div>
       <!--適用地點 -->
@@ -128,7 +124,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="cms-box">
-          <p>無</p>
+          <%=raw @ticket.article6%>
         </div>
       </div>
       <!-- 推薦 -->
@@ -138,10 +134,7 @@
         </div>
         <div class="cws_divider mb-50"></div>
         <div class="row">
-          <%= render :partial=>"/home/tickets/show", locals:{col: "3"} %>
-          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
-          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
-          <%= render :partial=>"/home/tickets/show", locals:{col: "3"}%>
+          <%= render :partial=>"/home/tickets/show", collection: @sugg.first(4), as: :ticket, locals:{col: "3"}%>
         </div>
       </div>
 
