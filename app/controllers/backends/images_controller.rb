@@ -6,9 +6,18 @@ class Backends::ImagesController < BackendsController
     @image = Image.create(file: params[:upload])
 
     # render :text=>u.obj_tmp.url
-    render  :text=> "<script>window.parent.CKEDITOR.tools.callFunction(#{params[:CKEditorFuncNum]},\"#{@image.file.url}\")</script>"
-    return
-  end  
+    respond_to do |format|
+      format.js {
+
+      }
+      format.html {
+        #render :template => "backends/images/ck_upload.text"
+        #render layout: false, plain: "<script>window.parent.CKEDITOR.tools.callFunction(#{params[:CKEditorFuncNum]},\"#{@image.file.url}\")</script>"
+        render layout: false, plain: %Q(<html><body><script type="text/javascript">window.parent.CKEDITOR.tools.callFunction('#{params[:CKEditorFuncNum]}', "#{@image.file.url}\");</script></body></html>)
+        return
+      }
+    end
+  end
   def dropzone
     @image = Image.create!(image_params_permit)
 

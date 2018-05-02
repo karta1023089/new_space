@@ -132,7 +132,13 @@ class Backends::TicketsController < BackendsController
 	  :name,       
 	  :price,       
 	  :intro,       
-	  :content,     
+	  :content,
+    :article1,
+    :article2,
+    :article3,
+    :article4,
+    :article5,
+    :article6,     
     )  
   end
 end

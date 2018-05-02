@@ -15,6 +15,12 @@
 #  price      :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  article1   :text
+#  article2   :text
+#  article3   :text
+#  article4   :text
+#  article5   :text
+#  article6   :text
 #
 
 class Ticket < ApplicationRecord

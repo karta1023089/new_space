@@ -115,7 +115,8 @@ class Backends::IdCardsController < BackendsController
   def id_card_params_permit
     params.require(:id_card).permit(
 	  :cover,           
-	  :name,            
+	  :name, 
+    :make_day,           
 	  :content,     
     )  
   end
