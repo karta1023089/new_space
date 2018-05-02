@@ -21,6 +21,7 @@
 #  article4   :text
 #  article5   :text
 #  article6   :text
+#  the_group  :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

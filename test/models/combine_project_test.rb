@@ -26,6 +26,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  the_group   :string
+#  cost        :integer
 #
 
 require 'test_helper'

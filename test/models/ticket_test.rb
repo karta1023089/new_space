@@ -21,6 +21,7 @@
 #  article4   :text
 #  article5   :text
 #  article6   :text
+#  the_group  :string
 #
 
 require 'test_helper'
