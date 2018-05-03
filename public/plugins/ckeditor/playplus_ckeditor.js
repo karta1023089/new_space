@@ -43,7 +43,7 @@ CKEDITOR.config.toolbar = [
 [ 'NumberedList', 'BulletedList'],
 ['Indent', 'Outdent', 'Blockquote'],
 ['Link','Unlink'],
-['Image',"Youtube",'Table'],
+['Image',"Youtube",'Table', 'CreateDiv'],
 ] 
 
 //語言，語言內容至zh.js更改
