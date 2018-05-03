@@ -319,6 +319,7 @@ table.doc-table tbody tr td{
 	border: none;
     padding: 0 15px; 
 }
+.shop-item .shop-media .pic img{height: 250px;}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
