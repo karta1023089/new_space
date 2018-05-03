@@ -2,7 +2,11 @@
   <div class="shop-item">
     <!-- Shop Image-->
     <div class="shop-media">
+    <%if project.cover.present?%>
       <div class="pic"><img src="<%=project.cover%>"  alt></div>
+    <%else%>
+      <div class="pic"><img src="/img/800-250-2.png"  alt></div>
+    <%end%>
       
     </div>
     <!-- Shop Content-->
