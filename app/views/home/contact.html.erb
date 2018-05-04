@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="input-container">
-            <textarea name="message" cols="40" rows="4" placeholder="留言" aria-invalid="false" aria-required="true"></textarea>
+            <textarea name="message" cols="40" rows="4" placeholder="留言" aria-invalid="false" aria-required="true"><%if params[:word].present?%>我對於<%=params[:word]%>有興趣,<%end%></textarea>
           </div>
           <input type="submit" value="送出" class="cws-button alt">
         </form>

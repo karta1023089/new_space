@@ -14,8 +14,8 @@
     <div class="recom-item-body"><a href="/home/projects/<%=project.id%>">
         <h6 class="blog-title"><%=project.name%></h6></a>
       
-      <div class="recom-price"><span class="font-4 nt-icon"><%=project.price%></span>&nbsp;兩天三夜</div>
-      <p class="mb-30 two-line"><%=project.intro.first(30)%></p><a href="<%=home_project_path(project)%>" class="recom-button">閱讀更多</a><a href="#" class="cws-button small alt">馬上訂購</a>
+      <div class="recom-price"><span class="font-4 nt-icon"><%=project.price%></span>&nbsp;<%=project.addon%></div>
+      <p class="mb-30 two-line"><%=project.intro.first(30)%></p><a href="<%=home_project_path(project)%>" class="recom-button">閱讀更多</a><a href="/home/contact?word=<%=project.name%>" class="cws-button small alt">馬上訂購</a>
       <%if project.cost.present?%>
       <div class="action font-2"><%=project.cost%>%</div>
       <%else%>

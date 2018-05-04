@@ -143,7 +143,8 @@ class Backends::ProjectsController < BackendsController
 	  :intro,       
 	  :content,     
 	  :category_id, 
-	  :the_group,   
+	  :the_group,
+    :addon   
     )  
   end
 end
