@@ -1018,12 +1018,12 @@ if ($(".contact-form").length) {
 				$(this).parent().children(".alert.alert-danger").slideDown('fast');
 				$("#feedback-form-success").slideUp('fast');
 			},
-			submitHandler: function(form)
-			{
-				$(form).parent().children(".alert.alert-danger").slideUp('fast');
-				var $form = $(form).ajaxSubmit();
-				submit_handler($form, $(form).parent().children(".email_server_responce") );
-			}
+			// submitHandler: function(form)
+			// {
+			// 	$(form).parent().children(".alert.alert-danger").slideUp('fast');
+			// 	var $form = $(form).ajaxSubmit();
+			// 	submit_handler($form, $(form).parent().children(".email_server_responce") );
+			// }
 		});
 	})
 

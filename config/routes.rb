@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :backpackers
     resources :tickets
+    resources :contacts
     get :contact
     get :about
     get :doc
@@ -50,7 +51,7 @@ Rails.application.routes.draw do
         get :events_group
       end
     end
-    resources :categories,:projects,:contents,:pages,:combine_projects,:tickets,:id_cards do
+    resources :categories,:projects,:contents,:pages,:combine_projects,:tickets,:id_cards,:contacts do
       collection do
         post :sort
       end

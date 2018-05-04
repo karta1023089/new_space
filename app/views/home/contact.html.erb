@@ -32,21 +32,22 @@
       <div class="widget-contact-form pb-0 mt-200">
         <!-- contact-form-->
         <div class="email_server_responce"></div>
-        <form id="contact" action="php/contacts-process.php" method="post" class="form contact-form alt clearfix">
+        <form  action="<%=home_contacts_path%>" method="post" class="form contact-form alt clearfix">
+        <%=token_tag nil%>
           <div class="row">
             <div class="col-md-6 clearfix">
               <div class="input-container">
-                <input type="text" name="name" value="" size="40" placeholder="姓名" aria-invalid="false" aria-required="true" class="form-row form-row-first">
+                <input type="text" name="contact[name]" value="" size="40" placeholder="姓名" aria-invalid="false" aria-required="true" class="form-row form-row-first">
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-container">
-                <input type="text" name="email" value="" size="40" placeholder="信箱" aria-required="true" class="form-row form-row-last">
+                <input type="email" name="contact[email]" value="" size="40" placeholder="信箱" aria-required="true" class="form-row form-row-last">
               </div>
             </div>
           </div>
           <div class="input-container">
-            <textarea name="message" cols="40" rows="4" placeholder="留言" aria-invalid="false" aria-required="true"><%if params[:word].present?%>我對於<%=params[:word]%>有興趣,<%end%></textarea>
+            <textarea name="contact[content]" cols="40" rows="4" placeholder="留言" aria-invalid="false" aria-required="true"><%if params[:word].present?%>我對於<%=params[:word]%>有興趣,<%end%></textarea>
           </div>
           <input type="submit" value="送出" class="cws-button alt">
         </form>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  name: MyString
+  content: MyText
+  deleted_at: 2018-05-04 13:46:48
+  status: 1
+  reply_mark: false
+  reply: MyText
+
+two:
+  email: MyString
+  name: MyString
+  content: MyText
+  deleted_at: 2018-05-04 13:46:48
+  status: 1
+  reply_mark: false
+  reply: MyText

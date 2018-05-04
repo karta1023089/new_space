@@ -32,3 +32,4 @@
 // require home/js/retina.min.js
 //= require home/slick/slick/slick.js
 //= require home/js/custom.js
+//= require backend_template/assets/toastr-master/toastr.js

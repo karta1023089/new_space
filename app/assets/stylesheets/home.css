@@ -14,4 +14,5 @@
   *= require home/slick/slick/slick.css
   *= require home/slick/slick/slick-theme.css   
   *= require home/css/custom.css
+  *= require backend_template/assets/toastr-master/toastr.css
 */
