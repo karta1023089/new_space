@@ -16,7 +16,7 @@
         <h6 class="blog-title"><%=combine.name%></h6></a>
       
       <div class="recom-price"><span class="font-4 nt-icon"><%=combine.price4%></span>&nbsp;<%=combine.addon%></div>
-      <p class="mb-30 two-line"><%=sanitize(combine.content, :tags=>[]).first(30)%></p><a href="<%=home_backpacker_path(combine)%>" class="recom-button">閱讀更多</a><a href="/home/contact?word=<%=combine.name%>" class="cws-button small alt">馬上訂購</a>
+      <p class="mb-30 two-line"><%=sanitize(combine.content, :tags=>[]).first(30)%></p><a href="<%=home_backpacker_path(combine)%>" class="recom-button">閱讀更多</a><a href="/home/contact?word=<%=combine.name%>#contact" class="cws-button small alt">馬上訂購</a>
       <div class="action font-2"><%=combine.cost%>%</div>
     </div>
     <!-- Recomended Image-->
