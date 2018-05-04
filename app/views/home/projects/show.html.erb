@@ -20,7 +20,7 @@
             </a>
             <div class="thumbnails clearfix">
             	<div class="row row2">
-              <%@project.image1.present?%>
+              <%if @project.image1.present?%>
             		<div class="col-xs-4">
             			<a href="<%=@project.image1%>" class="fancy">
 		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image1%>);">
@@ -29,7 +29,7 @@
 		              </a>
             		</div>
               <%end%>		
-              <%@project.image2.present?%>
+              <%if @project.image2.present?%>
             		<div class="col-xs-4">
             			<a href="<%=@project.image2%>" class="fancy">
 		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image2%>);">
@@ -38,7 +38,7 @@
 		              </a>
             		</div>
               <%end%>	
-              <%@project.image3.present?%>
+              <%if @project.image3.present?%>
             		<div class="col-xs-4">
             			<a href="<%=@project.image3%>" class="fancy">
 		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image3%>);">

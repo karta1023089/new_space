@@ -18,7 +18,7 @@
             </a>
             <div class="thumbnails clearfix">
               <div class="row row2">
-              <%@ticket.image2.present?%>
+              <%if @ticket.image2.present?%>
                 <div class="col-xs-4">
                   <a href="<%=@ticket.image2%>" class="fancy">
                     <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image2%>);">
@@ -27,7 +27,7 @@
                   </a>
                 </div>   
                 <%end%> 
-                <%@ticket.image3.present?%>
+                <%if @ticket.image3.present?%>
                 <div class="col-xs-4">
                   <a href="<%=@ticket.image3%>" class="fancy">
                     <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image3%>);">
@@ -36,7 +36,7 @@
                   </a>
                 </div> 
                 <%end%>
-                <%@ticket.image4.present?%>   
+                <%if @ticket.image4.present?%>   
                 <div class="col-xs-4">
                   <a href="<%=@ticket.image4%>" class="fancy">
                     <div class="pic pic4-3 bg-center" style="background-image: url(<%=@ticket.image4%>);">
