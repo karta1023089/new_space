@@ -5,7 +5,7 @@
         <div class="banner-slide">
         <%@slide.images.each do |i|%>
           <div class="slide-item">
-            <img class="width100" src="<%=i.file%>">
+            <div class="bg-center s-img" style="background-image: url(<%=i.file%>);"></div>
           </div>
         <%end%>
         </div>
@@ -85,7 +85,8 @@
           <div class="row mt-50">
             <div class="col-sm-5">
               <div class="ad-block">
-                <a href="<%=@ads.first.url%>"><img class="width100 mb-10" src="<%=@ads.first.file%>"></a>
+                <a href="<%=@ads.first.url%>"><div class="bg-center mb-10 ad-img" style="background-image: url(<%=@ads.first.file%>);">
+                </div></a>
               </div>
             </div>
             <div class="col-sm-7">

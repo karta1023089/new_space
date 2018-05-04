@@ -323,9 +323,13 @@ table.doc-table tbody tr td{
 .shop-item .shop-item-body .shop-title{padding-right: 37px;
     margin-bottom: 10px;
     line-height: 1.4;}
+.s-img{padding-top: 40%}
 /*setting =============================================================*/
 .bg-center{
 	background-size: cover;background-position: center;
+}
+.ad-img{
+	height: 250px;
 }
 .pic4-3{
 	padding-top: 75%;
