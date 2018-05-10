@@ -1,222 +1,73 @@
-<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+<%= render :partial=>"/home/common/banner_title",locals:{title:"關於我們"}%>
+<div class="main-wraper  padd-90">
   <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">關於樺一</a>
-      <h2>關於樺一</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="second-title">
+          <h4 class="subtitle color-dr-blue-2 underline">海島旅遊專家</h4>
+          <h2><span class="color-orange">WODESY</span>  豪德希旅遊</h2>
+          <p class="mt20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="swiper-container" data-autoplay="0" data-loop="0" data-speed="1000" data-slides-per-view="responsive" data-mob-slides="1" data-xs-slides="2" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="icon-block style-2 bg-white">
+                <img class="icon-img bg-dr-blue-2 border-grey-2" src="/img/home_8/icon_1.png" alt="">
+                <h5 class="icon-title color-dark-2">用心服務</h5>
+                <div class="icon-text color-dark-2-light">Sed sit amet leo orci. Fusce tincidunt accumsan pretium. Donec fermentum, ex non placerat.</div>
+                <a href="#" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>view more</span></a>
+              </div>            
+            </div>
+            <div class="swiper-slide">
+              <div class="icon-block style-2 bg-white">
+                <img class="icon-img bg-dr-blue-2 border-grey-2" src="/img/home_8/icon_2.png" alt="">
+                <h5 class="icon-title color-dark-2">旅遊交通規劃</h5>
+                <div class="icon-text color-dark-2-light">Sed sit amet leo orci. Fusce tincidunt accumsan pretium. Donec fermentum, ex non placerat.</div>
+                <a href="#" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>view more</span></a>
+              </div>          
+            </div>
+            <div class="swiper-slide">
+              <div class="icon-block style-2 bg-white">
+                <img class="icon-img bg-dr-blue-2 border-grey-2" src="/img/home_8/icon_3.png" alt="">
+                <h5 class="icon-title color-dark-2">代辦簽證</h5>
+                <div class="icon-text color-dark-2-light">Sed sit amet leo orci. Fusce tincidunt accumsan pretium. Donec fermentum, ex non placerat.</div>
+                <a href="#" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>view more</span></a>
+              </div>          
+            </div>
+            <div class="swiper-slide">
+              <div class="icon-block style-2 bg-white">
+                <img class="icon-img bg-dr-blue-2 border-grey-2" src="/img/home_8/icon_4.png" alt="">
+                <h5 class="icon-title color-dark-2">各國海島行程</h5>
+                <div class="icon-text color-dark-2-light">Sed sit amet leo orci. Fusce tincidunt accumsan pretium. Donec fermentum, ex non placerat.</div>
+                <a href="#" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>view more</span></a>
+              </div>          
+            </div>
+          </div>
+        <div class="pagination poin-style-2"></div>  
+      </div>
+    </div>        
   </div>
-</section>
-<div class="content-body">
-  <!-- 關於 -->
-  <section class="small-section cws_prlx_section bg-white-80 pb-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mb-md-60">
-          <!-- section title-->
-          <h2 class="title-section-top alt gray">關於</h2>
-          <h2 class="title-section alt gray mb-20 font-bold"><span>樺一</span>旅社</h2>
-          <!-- ! section title-->
-          <!-- <p class="mb-30">樺一旅行社有限公司，成立於1992年2月1日，為一專業旅遊服務公司。由總經理彭鴻湘先生領導服務團隊。以航空票務為根基，擴展至全面性的旅遊產品服務。2000年9月更與環洋旅行社股份有限公司(www.acits.com.tw)相互投資，進而推展至旅遊產品總代理業務及多家航空公司TC業務代理。鑒於觀光局鼓勵國人國內旅遊，加入環島鐵路聯營中心，推廣國內外旅遊不遺餘力。</p> -->
-          <%=raw @content.content%>
-          <div class="cws_divider short2 mb-30"></div>
-        </div>
-        <div class="col-md-5 col-md-offset-1 flex-item-end"><img src="/img/b3.png" alt class="mt-minus-100"></div>
-      </div>
-    </div>
-  </section>
-  <!-- 歷史-->
-  <section class="small-section2 cws_prlx_section"><img src="/img/bg3.jpg" alt class="cws_prlx_layer setting2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4  mb-md-60">
-          <div class="history-block">
-            <h5>歷史里程碑</h5>
-            <ul>
-              <li><span>1992年</span> 台北市旅行商業同業公會會員</li>
-              <li><span>1992年</span> 中華民國旅行業品質保障協會會員</li>
-              <li><span>1993年</span> 加入IATA成為國際航空運輸協會會員</li>
-              <li><span>1994年</span> 起多次榮獲中華航空業績優越獎</li>
-              <li><span>1999年</span> 榮獲瑞士航空及達美航空業績優越獎</li>
-              <li><span>2000年</span> 與環洋旅行社(www.acits.com.tw)相互投資擴展業務</li>
-              <li><span>2002年</span> 環島鐵路聯營中心會員</li>
-              <li><span>2002年</span> 環島鐵路旅遊推廣卓越獎</li>
-              <li><span>2002年</span> 成立土城分公司 (台北縣土城市廣福街9號1樓,電話:02-82610988)</li>
-              <li><span>2004年</span> 總經理彭鴻湘先生當選中華民國旅行業品質保障協會理事</li>
-              <li><span>2005年</span> 總經理彭鴻湘先生榮任環島鐵路聯營中心執行長,致力推廣東西部彩繪觀光列車旅遊</li>
-              <li><span>2007年</span> 總經理彭鴻湘先生再度當選中華民國旅行業品質保障協會理事暨會員資格審查委員會主任委員</li>
-              <li><span>2010年</span> 總經理彭鴻湘先生當選中華民國旅行業品質保障協會常務理事暨旅遊糾紛調處委員會主任委員</li>
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <!-- 經營/服務 -->
-  <section class="small-section pb-70">
-    <div class="container">
-      <div class="row mb-100">
-        <div class="col-md-8">
-          <h2 class="title-section"><span>經營理念</span></h2>
-          <div class="cws_divider mb-25 mt-5"></div>
-          <p class="text-black">樺一旅行社成立的宗旨乃在提供專業旅遊服務，並創造一個具競爭性且永續經營的事業。樺一旅行社的成員均具有豐富的旅遊工作經驗，本著，<ins>誠信、主動、積極</ins>的態度，完成旅客委託代辦事項。</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <h2 class="title-section"><span>服務項目</span></h2>
-          <div class="cws_divider mb-25 mt-5"></div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- service item-->
-        <div class="col-sm-6 mb-40">
-          <div class="service-item icon-right color-icon"><i class="flaticon-suntour-world cws-icon type-1 color-2"></i>
-            <h3>接受委託代售國外海、陸、空運輸事業之客票或代旅客購買國外客票</h3>
-            <div class="service-item-info">
-              <ul>
-                <li>個人旅遊機票、船票</li>
-                <li>團體旅遊機票、船票</li>
-                <li>包機服務</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-40">
-          <div class="service-item icon-right color-icon"><i class="flaticon-suntour-fireworks cws-icon type-1 color-2"></i>
-            <h3>自行組團安排旅客出國觀光旅遊、食宿及提供有關服務</h3>
-            <div class="service-item-info">
-              <ul>
-                <li>商務、參訪團體</li>
-                <li>招待、旅遊團體</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="service-item icon-right color-icon"><i class="flaticon-suntour-car cws-icon type-1 color-2"></i>
-            <h3>代理綜合旅行業招攬國外觀光旅遊、食宿及提供有關服務</h3>
-            <div class="service-item-info">
-              <ul>
-                <li>參加綜合旅行社旅遊團</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-6 mb-40">
-          <div class="service-item icon-right color-icon"><i class="flaticon-suntour-airplane cws-icon type-1 color-2"></i>
-            <h3>接受旅客委託代辦出、入國境及簽證手續</h3>
-            <div class="service-item-info">
-              <ul>
-                <li>中華民國護照</li>
-                <li>各國簽證</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-  </section>
-  <!-- 專業 -->
-  <section class="small-section cws_prlx_section pb-100"><img src="/img/bg4.jpg" alt class="cws_prlx_layer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h2 class="title-section alt">專業產品</h2>
-        </div>
-      </div>
-      <div class="row">
-        <!-- service item-->
-        <div class="col-md-4  mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-world cws-icon type-1 color-2"></i>
-            <h3>航空公司票務</h3>
-            <div class="product-issue-block">
-              <p class="mb-0">擁有復興航空(GE)、大韓航空(KE) 、夏威夷航空(HA)、達美航空(DL)、巴西航空(RG)之TC代理。並致力經營各大航空公司票務代理。團票、個人票操作經驗豐富。</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4  mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-fireworks cws-icon type-1 color-2"></i>
-            <h3>各大航空公司自由行產品及迪士尼自由行, 渡假旅館, 遊輪</h3>
-            <div class="product-issue-block">
-              <p class="mb-0">各種門票、餐券、住宿優惠打折，與多家企業公司配合，提供各式票券給消費者</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-4  mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-hotel cws-icon type-1 color-2"></i>
-            <h3>台灣環島鐵路旅遊及自由行</h3>
-            <div class="product-issue-block">
-              <p class="mb-0">花蓮 觀光列車<br>台東 溫泉公主號<br>屏東 墾丁之星</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <!-- 案例 -->
-  <section class="small-section pb-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h2 class="title-section"><span>服務案例列舉</span></h2>
-          <div class="cws_divider mb-25 mt-5"></div>
-          <div class="ex-block">
-            <li>裕隆企業商務考察</li>
-            <li>再興中小學教職員港澳旅遊</li>
-            <li>喬治亞人壽招待團</li>
-            <li>聯華電子消防人員奧地利受訓</li>
-            <li>新加坡商英特威藥品花蓮員工旅遊</li>
-            <li>蘆洲仁愛國中教職員長江三峽遊</li>
-            <li>土城獅子會韓國旅遊</li>
-            <li>世華銀行台東二日遊</li>
-            <li>土城市義消大隊大陸華東旅遊</li>
-            <li>全錄公司海外員工旅遊</li>
-            <li>聯致科技公司國內員工旅遊</li>
-            <li>眾福科技公司海外旅遊</li>
-            <li>職棒LA NEW球團海外旅遊</li>
-            <li>鋼琴調音師公會在台年會活動</li>
-            <li>中國利樂公司來台商務考察</li>
-          </div>
-        </div>
-        <div class="col-md-5 flex-item-end"><img src="/img/b4.jpg" alt class=""></div>
-      </div>
-    </div>
-  </section>
-  <!-- 願景 -->
-  <section class="small-section cws_prlx_section pb-100"><img src="/img/bg5.jpg" alt class="cws_prlx_layer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h2 class="title-section alt">未來願景</h2>
-        </div>
-      </div>
-      <div class="row">
-        <!-- service item-->
-        <div class="col-sm-4 mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-world cws-icon type-1 color-2"></i>
-            <h3 class="mb-0">建立兩岸旅遊產品服務通路</h3>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-fireworks cws-icon type-1 color-2"></i>
-            <h3 class="mb-0">建立網路服務通路</h3>
-          </div>
-        </div>
-      
-        <div class="col-sm-4 mb-40">
-          <div class="service-item icon-center color-icon border"><i class="flaticon-suntour-hotel cws-icon type-1 color-2"></i>
-            <h3 class="mb-0">達到一通電話服務到底的目標</h3>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
 </div>
-
+<div class="main-wraper padd-90">
+  <img class="center-image" src="/img/p4.jpg" alt="">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="second-title style2">
+          <h4 class="subtitle color-white underline">關於 WODESY 豪德希</h4>
+          <h3 class="color-white mb30">海島旅遊專家，享受愜意海島時光</h3>
+          <a class="c-button b-40 bg-blue-2 hv-blue-2-o"><span>聯絡我們</span></a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,13 +1,16 @@
-<div class="blog-item clearfix mb-30 border">
-  <!-- Blog Image-->
-  <div class="blog-media"><a href="<%=home_news_path(content)%>">
-      <div class="pic"><img src="<%=content.cover%>" alt width="360"></div></a></div>
-  <!-- blog body-->
-  <div class="blog-item-body clearfix">
-    <!-- title--><a href="blog-single.html">
-      <h6 class="blog-title"><%=content.name%></h6></a>
-    <div class="blog-item-data"><%=content.show_date%></div>
-    <!-- Text Intro-->
-    <p class="two-line mb-20"><%= sanitize(content.content, :tags=>[]).first(30)%></p><a href="<%=home_news_path(content)%>" class="btn btn-blue pull-right">閱讀更多</a>
+<div class="col-sm-6">    
+  <div class="blog-list-entry">
+    <div class="blog-list-top">
+      <div class="img-box n-img" style="background-image: url(/img/<%= pic%>);"></div>   
+    </div>
+    <h4 class="blog-list-title"><a class="color-dark-2 link-dr-blue-2" href="#"><%= title%></a></h4>
+    <div class="tour-info-line clearfix">
+      <div class="tour-info fl">
+        <img src="img/calendar_icon_grey.png" alt="">
+        <span class="font-style-2 color-dark-2">03/07/2015</span>
+      </div>
+    </div>
+    <div class="blog-list-text color-grey-3 two-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
+    <a href="#" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>了解更多</span></a>                
   </div>
 </div>

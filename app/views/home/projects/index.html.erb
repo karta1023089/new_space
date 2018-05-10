@@ -1,42 +1,60 @@
-<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+<%= render :partial=>"/home/common/banner_title",locals:{title:"巴拉望-住宿"}%>
+<div class="main-wraper pd-50 tabs-page">
   <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@category.parent.name%></a>
-      <h2><%=@category.name%></h2>
-    </div>
-  </div>
-</section>
-<div class="content-body">
-	<div class="container pt-60">
-		<div class="element-section mb-100 projects-list">
-	    <div class="tabs">
-	      <div class="menu-widget with-switch">
-	        <ul class="magic-line">
-	        <%@the_group.each_with_index do |value,index|%>
-	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
-	        <%end%>
-	         <!--  <li><a class="tabs-btn" data-tabs-id="tabs2">中部</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs3" >南部</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs4" >東部</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs5" >離島</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs6" >熱門</a></li>
-	          <li><a class="tabs-btn" data-tabs-id="tabs7" >最新</a></li> -->
-	          
-	        </ul>
-	      </div>
-	      <!-- tabs keeper-->
-	      <div class="tabs-keeper mt-30">
-	        <!-- tabs container-->
-	        <%@the_group.each_with_index do |value,index|%>
-	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
-	          <div class="row">
-	          	<%= render :partial=>"/home/projects/show", collection: @projects.where(:the_group => value), as: :project%>
-	          </div>
-	        </div>
-	        <%end%>
-	       
-	      </div>
-	      <!-- /tabs keeper-->
-	    </div>  
-	  </div>  
-  </div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="simple-tab type-2 tab-wrapper">
+					<div class="tab-nav-wrapper">
+						<div  class="nav-tab  clearfix">
+							<div class="nav-tab-item active">
+								五星酒店
+							</div>
+							<div class="nav-tab-item">
+								四星酒店
+							</div>
+							<div class="nav-tab-item">
+								民宿
+							</div>	                                                        
+						</div>
+					</div>
+					<div class="tabs-content tabs-wrap-style no-border clearfix">
+							<div class="tab-info active">
+							  <div class="row">
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+				
+							  </div>
+							</div>
+
+							<div class="tab-info">
+								<div class="row">
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+							  
+							  </div>
+							</div>
+							<div class="tab-info">
+								<div class="row">
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
+							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+							  
+							  </div>
+							</div>
+							
+				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
 </div>
