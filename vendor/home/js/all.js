@@ -802,7 +802,7 @@ $(function() {
 	$('nav.menu .fa-angle-down, nav.menu a').on( "click", function() {
 		$(this).parent('li').toggleClass('active');
 		$(this).next('.dropmenu').slideToggle();
-		return false;
+		
 	});
 
 	$('.nav-menu-icon a').on('click', function() {
@@ -815,7 +815,7 @@ $(function() {
 		  	$(this).addClass('active');
 		  	$('body').toggleClass('menu_opened');
 	  }
-		return false;
+		
 	 });
 	
 	/***********************************/

@@ -1,6 +1,9 @@
 *{
 	font-family: 微軟正黑體,arial;
 }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+  font-family: 微軟正黑體;
+}
 .main-slider-6 .swiper-slide{
 	min-height: 550px;
 }
@@ -50,6 +53,7 @@ footer.type-2 .footer-block h6{padding-bottom: 12px;
 .visa-slide .swiper-arrow-left,.visa-slide .swiper-arrow-right{margin-top: 0;}
 .visa-slide .tour-layer{opacity: 0.8;}
 .no-visa ul li{display: inline-block; margin: 0 5px}
+.simple-tab.type-2 .nav-tab-item{min-width: 5rem}
 
 /*setting ================================================================*/
 .color-orange{color: #eb6648}
@@ -91,6 +95,11 @@ footer.type-2 .footer-block h6{padding-bottom: 12px;
   width: 100%;
   margin-bottom: -5px;
 }
+.custom-block img{
+  max-width: 100%;
+  width: 50%; /*你要設定的寬度*/
+  height: auto
+}
 /*RWD ================================================================*/
 @media screen and (max-width: 1199px){
   .list-content.fight-list .hotel-item .c-button{
@@ -112,4 +121,7 @@ footer.type-2 .footer-block h6{padding-bottom: 12px;
   .gal-item.col10{margin-bottom: 20px}
   .visa-page .second-title{padding-top: 80px}
   .xs-pd0,.second-title.style-3.xs-pd0{padding-top: 0;}
+  .fight-list.list-content .radius-top{ width: 46.333333%;margin: 0 auto;}
+  .footer-block{margin-bottom: 10px}
+  .visa-modal .modal-dialog{width: 90vw;}
 }
