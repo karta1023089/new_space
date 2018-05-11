@@ -1,63 +1,47 @@
-<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
-  <div class="container">
-    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">聯絡我們</a>
-      <h2>聯絡我們</h2>
-    </div>
-  </div>
-</section>
-<div class="content-body contact-page" style="background-image: url(/img/bg6.jpg);">
-  <div class="container page">
-    <div class="contact-item">
-      <h2 class="title-section "><span class="font-bold">Contacts</span></h2>
-      <div class="cws_divider mb-25 mt-5"></div>
-      <!-- contact list -->
+<%= render :partial=>"/home/common/banner_title",locals:{title:"聯絡我們"}%>
+<div class="detail-wrapper">
+  <!-- CONTACT-FORM -->
+  <div class="main-wraper padd-40">
+    <div class="container">
       <div class="row">
-      	<div class="col-sm-6">
-      		<ul class="icon">
-            <li> <a href="mailto:spacetk@ms47.hinet.net">spacetk@ms47.hinet.net<i class="fa fa-envelope"></i></a></li>
-            <li> <a href="tel:(02)2504-8008">台北總公司 客服電話：(02)2504-8008<i class="fa fa-phone"></i></a></li>
-            <li> <a href="tel:(02)8261-0988">北區分公司 (土城) 客服電話：(02)8261-0988<i class="fa fa-phone"></i></a></li>
-            <li> 台北總公司：台北市中山區長安東路2段110號7樓之一<i class="fa fa-map-marker"></i></li>
-            <li> 北區分公司：新北市土城區廣福街9號1樓<i class="fa fa-map-marker"></i></li>
-          </ul>
-      	</div>
-      	<div class="col-sm-6">
-      		<ul class="icon">
-            <li> 匯款帳號：瑞興銀行（101）長安分行 0075-21-1128280<i class="fa fa-credit-card"></i></li>
-            <li>戶名：樺一旅行社有限公司</li>
-          </ul>
-      	</div>
-      </div>
-      <!-- contact form -->
-      <div class="widget-contact-form pb-0 mt-200">
-        <!-- contact-form-->
-        <div class="email_server_responce"></div>
-        <form  action="<%=home_contacts_path%>" method="post" class="form contact-form alt clearfix">
-        <%=token_tag nil%>
-          <div class="row">
-            <div class="col-md-6 clearfix">
-              <div class="input-container">
-                <input type="text" name="contact[name]" value="" size="40" placeholder="姓名" aria-invalid="false" aria-required="true" class="form-row form-row-first">
+        <div class="col-xs-12 col-sm-8">
+          <form class="contact-form" action="#">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="input-style-1 type-2 color-2">
+                    <input type="text" required="" placeholder="輸入姓名">
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-container">
-                <input type="email" name="contact[email]" value="" size="40" placeholder="信箱" aria-required="true" class="form-row form-row-last">
+              <div class="col-xs-12 col-sm-6">
+                <div class="input-style-1 type-2 color-2">
+                    <input type="email" required="" placeholder="輸入信箱">
+                </div>
               </div>
-            </div>
+              
+              <div class="col-xs-12">
+                <textarea class="area-style-1 color-1" required="" placeholder="輸入留言"></textarea>
+                <button type="submit" class="c-button bg-dr-blue-2 hv-dr-blue-2-o"><span>送出</span></button>
+              </div>
+            </div>          
+          </form>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="contact-about">
+            <h4 class="color-dark-2"><strong>豪德希旅遊</strong></h4>
+            <p class="color-grey-3">夏威夷旅遊的專家，長年經營夏威夷與各海島旅遊線，是太平洋島嶼旅遊的專家，提供您最專業的行程與服務。</p>         
           </div>
-          <div class="input-container">
-            <textarea name="contact[content]" cols="40" rows="4" placeholder="留言" aria-invalid="false" aria-required="true"><%if params[:word].present?%>我對於<%=params[:word]%>有興趣,<%end%></textarea>
+          <div class="contact-info">
+            <h4 class="color-dark-2"><strong>聯絡資訊</strong></h4>
+            <div class="contact-line color-grey-3"><img src="/img/phone_icon_2_dark.png" alt=""><a class="color-dark-2" href="tel:02-7702-1699">(02)7702-1699</a></div>          
+            <div class="contact-line color-grey-3"><img src="/img/mail_icon_b_dark.png" alt=""><a class="color-dark-2 tt" href="mailto:service@wodesy.com">service@wodesy.com</a></div>          
+            <div class="contact-line color-grey-3"><img src="/img/loc_icon_dark.png" alt=""><span class="color-dark-2 tt">台北總公司: 台北市中山區龍江路108號3樓之一</span></div>
           </div>
-          <input type="submit" value="送出" class="cws-button alt">
-        </form>
-        <!-- /contact-form-->
+          
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- map -->
-<div class="map-area">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d115729.23840028113!2d121.45676519999999!3d24.981804826358136!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5c262e897533562!2z5qi65LiA5peF6KGM56S-5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1522641064551" width="600" height="450" frameborder="0" style="border:0; margin-bottom: -8px" allowfullscreen></iframe>
-	<div class="clearfix"></div>
+  <div class="map-area">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.443680426895!2d121.53805731500667!3d25.052946983963537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abde29523245%3A0x29d14da8c180c9e0!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDpvo3msZ_ot68xMDjomZ_mqJPkuYvkuIA!5e0!3m2!1szh-TW!2stw!4v1525852270037" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
 </div>

@@ -1,26 +1,17 @@
-<div class="col-md-6 ">
-  <div class="recom-item">
-    <div class="recom-media"><a href="/home/projects/<%=project.id%>">
-        <div class="pic">
-        <%if project.cover.present?%>
-        <img src="<%=project.cover%>" alt>
-        <%else%>
-        <img src="/img/800-250-2.png" alt>
-        <%end%>
-        </div></a>
-      <div class="location"><i class="flaticon-suntour-map"></i><%=project.the_group%></div>
+<div class="col-mob-12 col-xs-6 col-sm-4">
+    <div class="hotel-item style-4 mb20">
+        <div class="radius-top">
+          <div class="img-box c-img" style="background-image: url(/img/<%= pic%>);"></div>         
+        </div>
+        <div class="title">
+          <div class="hotel-place color-dark-2 clearfix">三天兩夜<span class="hotel-hot color-dark-2-light fr nt-icon">3200</span></div>
+          <h4><b>巴拉望三日遊</b></h4>
+
+          <div class="clearfix">
+            <a href="#" class="c-button bg-grey-3-t hv-grey-3-t fl">閱讀更多</a>
+            <a href="#" class="c-button bg-sea hv-sea-o fr">馬上訂購</a>
+          </div>
+      </div>
+
     </div>
-    <!-- Recomended Content-->
-    <div class="recom-item-body"><a href="/home/projects/<%=project.id%>">
-        <h6 class="blog-title"><%=project.name%></h6></a>
-      
-      <div class="recom-price"><span class="font-4 nt-icon"><%=project.price%></span>&nbsp;<%=project.addon%></div>
-      <p class="mb-30 two-line"><%=project.intro.first(30)%></p><a href="<%=home_project_path(project)%>" class="recom-button">閱讀更多</a><a href="/home/contact?word=<%=project.name%>#contact" class="cws-button small alt">馬上訂購</a>
-      <%if project.cost.present?%>
-      <div class="action font-2"><%=project.cost%>%</div>
-      <%else%>
-      <%end%>
-    </div>
-    <!-- Recomended Image-->
-  </div>
 </div>

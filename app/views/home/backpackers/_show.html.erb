@@ -1,26 +1,16 @@
-<div class="col-md-6 ">
-  <div class="recom-item">
-    <div class="recom-media">
-    <a href="/home/backpackers/<%=combine.id%>">
-        <div class="pic">
-        <%if combine.cover.present?%>
-        <img src="<%=combine.cover%>" alt>
-        <%else%>
-        <img src="/img/800-250-2.png" alt>
-        <%end%>
-        </div></a>
-      <div class="location"><i class="flaticon-suntour-map"></i><%=combine.the_group%></div>
+<div class="col-mob-12 col-xs-6 col-sm-3">
+    <div class="hotel-item style-4 mb20">
+        <div class="radius-top">
+          <div class="img-box c-img" style="background-image: url(/img/<%=pic%>);"></div>         
+        </div>
+        <div class="title">
+          <div class="hotel-place color-dark-2 clearfix">五天四夜<span class="hotel-hot color-dark-2-light fr nt-icon">3200</span></div>
+          <h4><b>巴拉望跳島自由行</b></h4>
+          <div class="clearfix">
+            
+            <a href="#" class="c-button bg-sea hv-sea-o fr">閱讀更多</a>
+          </div>
+        </div>
+
     </div>
-    <!-- Recomended Content-->
-    <div class="recom-item-body"><a href="/home/backpackers/<%=combine.id%>">
-        <h6 class="blog-title"><%=combine.name%></h6></a>
-      
-      <div class="recom-price"><span class="font-4 nt-icon"><%=combine.price4%></span>&nbsp;<%=combine.addon%></div>
-      <p class="mb-30 two-line"><%=sanitize(combine.content, :tags=>[]).first(30)%></p><a href="<%=home_backpacker_path(combine)%>" class="recom-button">閱讀更多</a><a href="/home/contact?word=<%=combine.name%>#contact" class="cws-button small alt">馬上訂購</a>
-      <%if combine.cost.present?%>
-      <div class="action font-2"><%=combine.cost%>%</div>
-      <%end%>
-    </div>
-    <!-- Recomended Image-->
-  </div>
 </div>
