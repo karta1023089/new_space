@@ -10,6 +10,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  make_day   :integer
+#  the_group  :string
 #
 
 require 'test_helper'

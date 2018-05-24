@@ -1,11 +1,15 @@
 <div class="col-mob-12 col-xs-6 col-sm-4">
     <div class="hotel-item style-4 mb20">
         <div class="radius-top">
-          <div class="img-box c-img" style="background-image: url(/img/<%=pic%>);"></div>         
+        <%if combine.cover.present?%>
+        <div class="img-box c-img" style="background-image: url(<%=combine.cover%>);"></div>
+        <%else%>
+          <div class="img-box c-img" style="background-image: url(/img/b1.jpg);"></div>
+        <%end%>         
         </div>
         <div class="title">
-          <div class="hotel-place color-dark-2 clearfix">五天四夜<span class="hotel-hot color-dark-2-light fr nt-icon">3200</span></div>
-          <h4><b>巴拉望跳島自由行</b></h4>
+          <div class="hotel-place color-dark-2 clearfix"><%=combine.the_group%><span class="hotel-hot color-dark-2-light fr nt-icon"><%=combine.price%></span></div>
+          <h4><b><%=combine.name%></b></h4>
           <div class="clearfix">
             
             <a href="#" class="c-button bg-sea hv-sea-o fr">閱讀更多</a>

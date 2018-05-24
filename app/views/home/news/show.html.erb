@@ -4,32 +4,20 @@
     <div class="row padd-90">
       <div class="col-xs-12 col-md-9">
         <div class="detail-header style-2">
-          <h2 class="detail-title color-dark-2">五月夏威夷自由行優惠活動</h2>
+          <h2 class="detail-title color-dark-2"><%=@content.name%></h2>
           <div class="tour-info-line clearfix">
             <div class="tour-info fl">
               <img src="/img/calendar_icon_grey.png" alt="">
-              <span class="font-style-2 color-dark-2">03/07/2015</span>
+              <span class="font-style-2 color-dark-2"><%=@content.show_date%></span>
             </div>
           </div>              
         </div>
         <div class="detail-content">
           <div class="detail-content-block">
             <div class="embed-responsive embed-responsive-16by9">
-              <div class="img-box n-img" style="background-image: url(/img/p2.jpg);"></div> 
+              <div class="img-box n-img" style="background-image: url(<%=@content.cover%>);"></div> 
             </div>          
-            <h3>General Information About tour</h3>
-            <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque ac turpis egestas, varius justo et, condimentum augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              
-            <h5>interesting for you</h5>
-
-            <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque varius justo et, condimentum augue.</p>
-
-            <h5>my listing deactivated</h5>
-
-            <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque varius justo et, condimentum augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            
-            <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque ac turpis egestas, varius justo et, condimentum augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <%=raw @content.content%>
           </div>                    
         </div>                  
       </div>

@@ -117,7 +117,8 @@ class Backends::IdCardsController < BackendsController
 	  :cover,           
 	  :name, 
     :make_day,           
-	  :content,     
+	  :content, 
+    :the_group    
     )  
   end
 end

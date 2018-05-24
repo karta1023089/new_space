@@ -1,28 +1,20 @@
 # == Schema Information
 #
-# Table name: projects
+# Table name: repair_items
 #
 #  id          :integer          not null, primary key
-#  cover       :string
-#  image1      :string
-#  image2      :string
-#  image3      :string
 #  name        :string
-#  price       :integer
-#  intro       :text
 #  content     :text
+#  happen_date :date
 #  deleted_at  :datetime
-#  category_id :integer
-#  the_group   :string
+#  repair_id   :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  cost        :integer
-#  addon       :string
 #
 
 require 'test_helper'
 
-class ProjectTest < ActiveSupport::TestCase
+class RepairItemTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

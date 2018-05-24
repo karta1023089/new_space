@@ -22,6 +22,9 @@
 #  article5   :text
 #  article6   :text
 #  the_group  :string
+#  go_date    :date
+#  backe_date :date
+#  url        :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
