@@ -6,41 +6,22 @@
 				<div class="simple-tab type-2 tab-wrapper">
 					<div class="tab-nav-wrapper">
 						<div  class="nav-tab  clearfix">
-							<div class="nav-tab-item active">
-								夏威夷
+						<%@the_group.each_with_index do |value,index|%>
+							<div class="nav-tab-item <%if index == 0%>active<%end%>">
+								<%=value%>
 							</div>
-							<div class="nav-tab-item">
-								紐西蘭
-							</div>
-							<div class="nav-tab-item">
-								巴拉望
-							</div>	                                                        
+						<%end%> 
+							                                                        
 						</div>
 					</div>
 					<div class="tabs-content tabs-wrap-style no-border  clearfix">
-							<div class="tab-info active">
+					<%@the_group.each_with_index do |value,index|%>
+							<div class="tab-info <%if index == 0%>active<%end%>">
 							  <div class="list-content fight-list clearfix">
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-  							</div>   						 						  						
-  						</div>
-					
-							<div class="tab-info">
-								<div class="list-content fight-list clearfix">
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-  							</div>
-							</div>
-							<div class="tab-info">
-								<div class="list-content fight-list clearfix">
-		  						<%= render :partial=>"/home/tickets/show"%>
-		  						<%= render :partial=>"/home/tickets/show"%>
-  							</div>
-							</div>
+		  						<%= render :partial=>"/home/tickets/show",collection: @tickets.where(:the_group => value), as: :ticket%>
+  							  </div>   						 						  						
+  						    </div>
+  					<%end%>
 					</div>
 				</div>
 			</div>

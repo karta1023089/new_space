@@ -16,93 +16,65 @@
           </li> -->
           <li class="type-1"><a href="#">精緻海島<span class="fa fa-angle-down"></span></a>
             <ul class="dropmenu">
-              
+              <%@cat1.each do |c|%>
               <li>
-                <a>夏威夷 <span class="fa fa-chevron-right"></span></a>
+                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
                  <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
+                 <%c.children.each do |cc|%>
+                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
+                  <%end%>     
+                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>         
                 </ul>
               </li>
-              <li>
-                <a>紐西蘭 <span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
-                </ul>
-              </li>
+              <%end%>
             </ul>
           </li>
           <li class="type-1"><a href="#">品味海島<span class="fa fa-angle-down"></span></a>
             <ul class="dropmenu">
+              <%@cat2.each do |c|%>
               <li>
-                <a>巴拉望 <span class="fa fa-chevron-right"></span></a>
+                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
                  <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
+                 <%c.children.each do |cc|%>
+                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
+                  <%end%>     
+                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>        
                 </ul>
               </li>
-              <li>
-                <a>模里西斯 <span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
-                </ul>
-              </li>
+              <%end%>
               
             </ul>
           </li>
           <li class="type-1"><a href="#">風情海島<span class="fa fa-angle-down"></span></a>
             <ul class="dropmenu">
-               <li>
-                <a>大溪地 <span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
-                </ul>
-              </li>
+               <%@cat3.each do |c|%>
               <li>
-                <a>斐濟 <span class="fa fa-chevron-right"></span></a>
+                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
                  <ul class="dropmenu">
-                  <li><a href="#">住宿</a></li>
-                  <li><a href="#">行程</a></li>       
-                  <li><a href="#">餐食</a></li>       
-                  <li><a href="#">地面接待</a></li>       
-                  <li><a href="#">自由行</a></li>        
+                 <%c.children.each do |cc|%>
+                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
+                  <%end%>     
+                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>        
                 </ul>
               </li>
+              <%end%>
 
             </ul>
           </li>
           <li >
-            <a href="#">機票</a>
+            <a href="/home/tickets">機票</a>
           </li>
           <li >
-            <a href="#">全球簽證</a>
+            <a href="/home/doc">全球簽證</a>
           </li>
           <li >
-            <a href="#">最新消息</a>
+            <a href="/home/news">最新消息</a>
           </li>
           <li >
-            <a href="#">聯絡我們</a>
+            <a href="/home/contact">聯絡我們</a>
           </li>
           <li >
-            <a href="#">關於我們</a>
+            <a href="/home/about">關於我們</a>
           </li>
         </ul>
        </nav>

@@ -1,15 +1,15 @@
 <div class="col-mob-12 col-xs-6 col-sm-4">
     <div class="hotel-item style-4 mb20">
         <div class="radius-top">
-          <div class="img-box c-img" style="background-image: url(/img/<%= pic%>);"></div>         
+          <div class="img-box c-img" style="background-image: url(<%=project.cover%>);"></div>         
         </div>
         <div class="title">
-          <div class="hotel-place color-dark-2 clearfix">三天兩夜<span class="hotel-hot color-dark-2-light fr nt-icon">3200</span></div>
-          <h4><b>巴拉望三日遊</b></h4>
+          <div class="hotel-place color-dark-2 clearfix"><%=project.the_group%><span class="hotel-hot color-dark-2-light fr nt-icon"><%=project.price%></span></div>
+          <h4><b><%=project.name%></b></h4>
 
           <div class="clearfix">
             
-            <a href="#" class="c-button bg-sea hv-sea-o fr">閱讀更多</a>
+            <a href="/home/projects?category=<%=project.id%>" class="c-button bg-sea hv-sea-o fr">閱讀更多</a>
           </div>
       </div>
 

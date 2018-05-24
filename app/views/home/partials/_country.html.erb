@@ -1,13 +1,13 @@
-<div class="swiper-slide" data-val="<%= val%>">
-	<a data-toggle="modal" data-target="<%= modal%>">
+<div class="swiper-slide" data-val="<%= id_card.id%>">
+	<a data-toggle="modal" data-target="visa<%= id_card.id%>">
 	  <div class="offers-block radius-mask">
 			<div class="clip">
-				<div class="bg bg-bg-chrome act" style="background-image:url(/img/<%= pic%>)">
+				<div class="bg bg-bg-chrome act" style="background-image:url(<%=id_card.cover%>)">
 				</div>
 			</div>
 		 	<div class="tour-layer delay-1"></div>
 			<div class="vertical-center text-center width100">
-				<h3><%= title%></h3>
+				<h3><%=id_card.name%></h3>
 			</div>
 
 	  </div> 

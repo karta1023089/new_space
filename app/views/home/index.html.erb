@@ -2,21 +2,14 @@
   <div class="arrows">
     <div class="swiper-container main-slider-6" data-autoplay="0" data-loop="1" data-speed="900" data-center="0" data-slides-per-view="1">
       <div class="swiper-wrapper">
-        <div class="swiper-slide active" data-val="0">
+      <%@slide.images.each_with_index do |i,index|%>
+        <div class="swiper-slide <%if index == 0%>active<%end%>" data-val="<%=index+1%>">
             <div class="clip">
-              <div class="bg bg-bg-chrome act" style="background-image:url(/img/p5.jpg)"></div>
+              <div class="bg bg-bg-chrome act" style="background-image:url(<%=i.file%>)"></div>
             </div>      
         </div>
-        <div class="swiper-slide" data-val="1">
-            <div class="clip">
-              <div class="bg bg-bg-chrome act" style="background-image:url(/img/p3.jpg)"></div>
-            </div>       
-        </div>
-        <div class="swiper-slide" data-val="1">
-            <div class="clip">
-              <div class="bg bg-bg-chrome act" style="background-image:url(/img/p6.jpg)"></div>
-            </div>       
-        </div>
+        <%end%>
+        
       </div>    
       <div class="pagination pagination-hidden poin-style-1"></div>
         <div class="arrow-wrapp arr-s-4">
@@ -51,14 +44,8 @@
           </div>
         </div>
         <div class="row">
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p5.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p4.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p5.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p4.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p5.jpg"}%>
-          <%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+          <%= render :partial=>"/home/projects/show", collection: @projects, as: :project%>
+         
         </div>  
   </div>
       
@@ -91,27 +78,33 @@
     </div>
     <div class="isotope-container row row10">
       <div class="grid-sizer col-mob-12 col-xs-6 col-sm-3"></div>
+      <%@cover.each do |c|%>
+      <%if @cover.first == c%>
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-6">
-        <a class="black-hover" href="detail.html">
-          <div class="img-box r-img" style="background-image: url(/img/p3.jpg);"></div>   
+        <a class="black-hover" href="<%=c.url%>">
+          <div class="img-box r-img" style="background-image: url(<%=c.file%>);"></div>   
           <div class="tour-layer delay-1"></div>
           <div class="vertical-align">
             <div class="date color-white">New Zealand</div>
-            <h4 class="color-white"><b>紐西蘭</b></h4>
+            <h4 class="color-white"><b><%=c.name%></b></h4>
           </div>
         </a>
       </div>
+      <%else%>
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
-        <a class="black-hover" href="detail.html">
-          <div class="img-box r-img" style="background-image: url(/img/p2.jpg);"></div>  
+        <a class="black-hover" href="<%=c.url%>">
+          <div class="img-box r-img" style="background-image: url(<%=c.file%>);"></div>  
           <div class="tour-layer delay-1"></div>
           <div class="vertical-align">
             <div class="date color-white">Hawaii</div>
-            <h4 class="color-white"><b>夏威夷</b></h4>
+            <h4 class="color-white"><b><%=c.name%></b></h4>
           </div>
         </a>
       </div>
-      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
+      <%end%>
+      <%end%>
+      
+  <!--     <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
         <a class="black-hover" href="detail.html">
           <div class="img-box r-img" style="background-image: url(/img/p3.jpg);"></div> 
           <div class="tour-layer delay-1"></div>
@@ -140,7 +133,7 @@
             <h4 class="color-white"><b>大溪地</b></h4>
           </div>
         </a>
-      </div>                
+      </div>  -->               
     </div>
   </div>
 </div>

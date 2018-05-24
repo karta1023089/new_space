@@ -6,52 +6,30 @@
 				<div class="simple-tab type-2 tab-wrapper">
 					<div class="tab-nav-wrapper">
 						<div  class="nav-tab  clearfix">
-							<div class="nav-tab-item active">
-								五星酒店
+			        
+			        <%@the_group.each_with_index do |value,index|%>
+							<div class="nav-tab-item <%if index == 0%>active<%end%>">
+								<%=value%>
 							</div>
-							<div class="nav-tab-item">
+					<%end%>
+						<!-- 	<div class="nav-tab-item">
 								四星酒店
 							</div>
 							<div class="nav-tab-item">
 								民宿
-							</div>	                                                        
+							</div>	 -->                                                        
 						</div>
 					</div>
 					<div class="tabs-content tabs-wrap-style no-border clearfix">
-							<div class="tab-info active">
+					<%@the_group.each_with_index do |value,index|%>
+							<div class="tab-info <%if index == 0%>active<%end%>">
 							  <div class="row">
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
+							  	
+							  <%= render :partial=>"/home/projects/show", collection: @projects.where(:the_group => value), as: :project%>
 				
 							  </div>
 							</div>
-
-							<div class="tab-info">
-								<div class="row">
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
-							  
-							  </div>
-							</div>
-							<div class="tab-info">
-								<div class="row">
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h2.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h1.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"h3.jpg"}%>
-							  	<%= render :partial=>"/home/projects/show",locals:{pic:"p3.jpg"}%>
-							  
-							  </div>
-							</div>
-							
-				
+                    <%end%>
 					</div>
 				</div>
 			</div>

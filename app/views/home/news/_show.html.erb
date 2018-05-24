@@ -1,16 +1,16 @@
 <div class="col-sm-6">    
   <div class="blog-list-entry">
     <div class="blog-list-top">
-      <div class="img-box n-img" style="background-image: url(/img/<%= pic%>);"></div>   
+      <div class="img-box n-img" style="background-image: url(<%=content.cover%>);"></div>   
     </div>
-    <h4 class="blog-list-title"><a class="color-dark-2 link-dr-blue-2" href="#"><%= title%></a></h4>
+    <h4 class="blog-list-title"><a class="color-dark-2 link-dr-blue-2" href="<%=home_news_path(content)%>"><%=content.name%></a></h4>
     <div class="tour-info-line clearfix">
       <div class="tour-info fl">
         <img src="/img/calendar_icon_grey.png" alt="">
-        <span class="font-style-2 color-dark-2">03/07/2015</span>
+        <span class="font-style-2 color-dark-2"><%=content.show_date%></span>
       </div>
     </div>
-    <div class="blog-list-text color-grey-3 two-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
-    <a href="/home/news/1" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>了解更多</span></a>                
+    <div class="blog-list-text color-grey-3 two-line"><%= sanitize(content.content, :tags=>[]).first(30)%></div>
+    <a href="<%=home_news_path(content)%>" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>了解更多</span></a>                
   </div>
 </div>

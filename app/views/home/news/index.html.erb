@@ -5,14 +5,7 @@
       <div class="col-xs-12 col-md-9">
         <div class="blog-list">
           <div class="row">
-            <%= render :partial=>"/home/news/show",locals:{title:"五月夏威夷自由行優惠活動",pic:"p1.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"旅展季開跑囉！",pic:"p2.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"便宜機票5/22開搶！",pic:"p3.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"夏季旅遊注意事項",pic:"p4.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"五月夏威夷自由行優惠活動",pic:"p1.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"旅展季開跑囉！",pic:"p2.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"便宜機票5/22開搶！",pic:"p3.jpg"}%>
-            <%= render :partial=>"/home/news/show",locals:{title:"夏季旅遊注意事項",pic:"p4.jpg"}%>
+         <%= render :partial => "/home/news/show", collection: @contents, as: :content%>
             
           </div>
 
