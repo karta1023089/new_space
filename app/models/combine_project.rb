@@ -28,6 +28,8 @@
 #  the_group   :string
 #  cost        :integer
 #  addon       :string
+#  price       :string
+#  en_name     :string
 #
 
 class CombineProject < ApplicationRecord
