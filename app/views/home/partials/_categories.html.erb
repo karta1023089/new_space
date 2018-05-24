@@ -3,11 +3,11 @@
     <span class="border-line-top"></span>
     <span class="border-line-bottom"></span>
     <div class="tour-layer delay-1"></div> 
-    <div class="img-box p-img" style="background-image: url(/img/<%= pic%>);"></div>
+    <div class="img-box p-img" style="background-image: url(<%=ad.file%>);"></div>
     <div class="tour-caption">
       <div class="vertical-align">
 
-        <h3><%= title%></h3>  
+        <a href="<%= ad.url%>"><h3><%= ad.name%></h3></a>
       </div>
     </div>
   </div>
