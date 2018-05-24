@@ -26,9 +26,10 @@
 <div class="main-wraper">
       
   <div class="tab-tour-header row no-padd">
-    <%= render :partial=>"/home/partials/categories",locals:{title:"精緻海島",pic:"p2.jpg"}%>
-    <%= render :partial=>"/home/partials/categories",locals:{title:"品味海島",pic:"p7.jpg"}%>
-    <%= render :partial=>"/home/partials/categories",locals:{title:"風情海島",pic:"p4.jpg"}%>
+  <%@ads.each do |a|%>
+    <%= render :partial=>"/home/partials/categories", collection: @ads, as: :ad%>
+  <%end%>
+
   </div>      
 </div>
 
