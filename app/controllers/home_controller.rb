@@ -16,7 +16,7 @@ class HomeController < ApplicationController
 	def all_cat
 		@categories = Category.where(:parent_id => nil)
 		@cat1 = @categories.first(2)
-		@cat2 = @categories.where(:id => [3,14])
-		@cat3 = @categories.where(:id => [15,16])
+		@cat2 = @categories.where(:id => [3,4])
+		@cat3 = @categories.where(:id => [5,6])
 	end
 end
