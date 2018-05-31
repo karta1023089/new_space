@@ -26,10 +26,7 @@
 <div class="main-wraper">
       
   <div class="tab-tour-header row no-padd">
-  <%@ads.each do |a|%>
     <%= render :partial=>"/home/partials/categories", collection: @ads, as: :ad%>
-  <%end%>
-
   </div>      
 </div>
 
