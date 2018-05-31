@@ -2,6 +2,7 @@ class Home::NewsController < HomeController
 	skip_before_action :current_meta_tags, only: :show
 	def index
 		@contents = Content.order_by_created_at_desc.page(params[:page]).per(7)
+    @ads = MyAd.news_ad
 	end
 	def show
 		@content = Content.find(params[:id])
