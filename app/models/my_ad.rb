@@ -18,6 +18,7 @@ class MyAd < ApplicationRecord
 	  mount_uploader :file, ::ImageUploader
   enum use_type: {
     index_pic: 0,
-    main_ad: 1
+    main_ad: 1,
+    news_ad: 2
   }
 end

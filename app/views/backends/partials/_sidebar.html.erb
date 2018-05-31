@@ -65,11 +65,26 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a class="<%= active(controller_name, "contents") %>" href="<%= backends_contents_path %>">
-          <i class="fa fa-star"></i> <span>最新消息</span>
+      <li class="sub-menu dcjq-parent-li">
+        <a href="javascript:;" class="dcjq-parent ">
+          <i class="fa fa-tasks"></i>
+          <span>最新消息</span>
+          <span class="dcjq-icon"></span>
+        </a>
+        <ul class="sub">
+          <li class="<%= active(controller_name, "contents") %>">
+            <a href="<%= backends_contents_path %>">
+              <i class="fa fa-star"></i> <span>列表</span>
+            </a>
+          </li>
+          <li class="<%= active(controller_name, "news_ads") %>">
+         <a href="<%= backends_images_news_ads_path %>">
+          <i class="fa fa-star"></i> <span>最新消息廣告</span>
         </a>
       </li>
+        </ul>
+      </li> 
+   
       <li>
         <a class="<%= active(controller_name, "pages") %>" href="<%= backends_pages_path %>">
           <i class="fa fa-star"></i> <span>頁面</span>
