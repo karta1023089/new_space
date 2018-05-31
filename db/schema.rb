@@ -204,7 +204,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.string "addon"
   end
 
-  create_table "repair_items", force: :cascade do |t|
+  create_table "repair_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "name"
     t.text "content"
     t.date "happen_date"
@@ -214,7 +214,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "systems", force: :cascade do |t|
+  create_table "systems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string "title"
     t.string "description"
     t.string "keywords"
