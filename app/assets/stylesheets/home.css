@@ -1,9 +1,18 @@
 /*
-  *= require home/css/bootstrap.min.css
-  *= require home/css/jquery-ui.structure.min.css
-  *= require home/css/jquery-ui.min.css        
-  *= require home/css/style.css
-  *= require home/css/font-awesome.min.css
-  *= require home/css/custom.css 
+  *= require home/css/reset.css
+  *= require home/css/bootstrap.css
+  *= require home/css/font-awesome.css
+  *= require home/css/owl.carousel.css
+  *= require home/css/jquery.fancybox.css
+  *= require home/fonts/fi/flaticon.css
+  *= require home/css/flexslider.css
+  *= require home/css/main.css
+  *= require home/css/indent.css
+  *= require home/rs-plugin/css/settings.css
+  *= require home/rs-plugin/css/layers.css
+  *= require home/rs-plugin/css/navigation.css
+  *= require home/slick/slick/slick.css
+  *= require home/slick/slick/slick-theme.css   
+  *= require home/css/custom.css
   *= require backend_template/assets/toastr-master/toastr.css
 */

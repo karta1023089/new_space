@@ -4,8 +4,6 @@ class HomeController < ApplicationController
 		@slide = GroupImage.find(1)
 		@ads = MyAd.main_ad
 		@cover = MyAd.index_pic	
-		@projects = Project.all.sample(6)
-		
 	end
 	def about
 		@content = Page.find(1)
@@ -16,8 +14,5 @@ class HomeController < ApplicationController
 	private
 	def all_cat
 		@categories = Category.where(:parent_id => nil)
-		@cat1 = @categories.first(2)
-		@cat2 = @categories.where(:id => [3,4])
-		@cat3 = @categories.where(:id => [5,6])
 	end
 end

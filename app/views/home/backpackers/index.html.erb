@@ -1,44 +1,35 @@
-<%= render :partial=>"/home/common/banner_title",locals:{title:"自由行"}%>
-<div class="main-wraper pd-50 tabs-page">
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="simple-tab type-2 tab-wrapper">
-					<div class="tab-nav-wrapper">
-						<div  class="nav-tab  clearfix">
-						<%@the_group.each_with_index do |value,index|%>
-							<div class="nav-tab-item <%if index == 0%>active<%end%>">
-								<%=value%>
-							</div>
-						<%end%>
-							                                                     
-						</div>
-					</div>
-					<div class="tabs-content tabs-wrap-style no-border clearfix">
-							<!-- tab-1 -->
-							<%@the_group.each_with_index do |value,index|%>
-							<div class="tab-info <%if index == 0%>active<%end%>">
-							  <div class="row">
-							  	<%= render :partial=>"/home/backpackers/show", collection: @combines.where(:the_group => value), as: :combine%>
-									
-							  </div>
-							  <%end%>
-							  <!-- <div class="c_pagination clearfix padd-120 mt50">
-									<a href="#" class="c-button b-40 bg-red-3 hv-red-3-o fl">prev page</a>
-									<a href="#" class="c-button b-40 bg-red-3 hv-red-3-o fr">next page</a>
-									<ul class="cp_content color-4">
-										<li class="active"><a href="#">1</a></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">...</a></li>
-										<li><a href="#">10</a></li>
-									</ul>
-			  				</div> -->
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> 
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@the_category.name%></a>
+      <h2><%=@the_category.name%>自由行</h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+	<div class="container pt-60">
+		<div class="element-section mb-100 projects-list">
+	    <div class="tabs">
+	      <div class="menu-widget with-switch">
+	        <ul class="magic-line">
+	        <%@the_group.each_with_index do |value,index|%>
+	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
+	        <%end%>
+	        </ul>
+	      </div>
+	      <!-- tabs keeper-->
+	      <div class="tabs-keeper mt-30">
+	        <!-- tabs container-->
+	        <%@the_group.each_with_index do |value,index|%>
+	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
+	          <div class="row">
+	          	<%= render :partial=>"/home/backpackers/show", collection: @combines.where(:the_group => value), as: :combine%>
+	          </div>
+	        </div>
+	        <%end%>
+	       
+	      </div>
+	      <!-- /tabs keeper-->
+	    </div>  
+	  </div>  
+  </div>
 </div>

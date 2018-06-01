@@ -21,11 +21,11 @@
           </li>
         </ul>
       </li>  --> 
-      <li>
+      <!-- <li>
         <a class="<%= active(controller_name, "categories") %>" href="<%= backends_categories_path %>">
           <i class="fa fa-star"></i> <span>分類管理</span>
         </a>
-      </li>
+      </li> -->
       <li>
         <a class="<%= active(controller_name, "tickets") %>" href="<%= backends_tickets_path %>">
           <i class="fa fa-star"></i> <span>票券</span>
@@ -65,26 +65,11 @@
           </li>
         </ul>
       </li>
-      <li class="sub-menu dcjq-parent-li">
-        <a href="javascript:;" class="dcjq-parent ">
-          <i class="fa fa-tasks"></i>
-          <span>最新消息</span>
-          <span class="dcjq-icon"></span>
-        </a>
-        <ul class="sub">
-          <li class="<%= active(controller_name, "contents") %>">
-            <a href="<%= backends_contents_path %>">
-              <i class="fa fa-star"></i> <span>列表</span>
-            </a>
-          </li>
-          <li class="<%= active(controller_name, "news_ads") %>">
-         <a href="<%= backends_images_news_ads_path %>">
-          <i class="fa fa-star"></i> <span>最新消息廣告</span>
+      <li>
+        <a class="<%= active(controller_name, "contents") %>" href="<%= backends_contents_path %>">
+          <i class="fa fa-star"></i> <span>最新消息</span>
         </a>
       </li>
-        </ul>
-      </li> 
-   
       <li>
         <a class="<%= active(controller_name, "pages") %>" href="<%= backends_pages_path %>">
           <i class="fa fa-star"></i> <span>頁面</span>
@@ -97,7 +82,7 @@
       </li>
       <li>
         <a class="<%= active(controller_name, "main_ads") %>" href="<%= backends_images_main_ads_path %>">
-          <i class="fa fa-star"></i> <span>海島種類</span>
+          <i class="fa fa-star"></i> <span>廣告</span>
         </a>
       </li>
       <li>

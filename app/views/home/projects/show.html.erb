@@ -1,0 +1,105 @@
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
+  <div class="container">
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last"><%=@category.parent.name%></a>
+      <h2><%=@category.name%></h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+  <div class="container pt-60 project-page">
+    <div class="row">
+      <!-- content-->
+      <div class="col-md-12">
+        <div class="main single-product">
+          <!-- 圖片-->
+          <div class="images">
+            <a href="<%=@project.cover%>" class="fancy">
+              <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.cover%>);">
+                <div class="links"><i class="fa fa-expand"></i></div>
+              </div>
+            </a>
+            <div class="thumbnails clearfix">
+            	<div class="row row2">
+              <%if @project.image1.present?%>
+            		<div class="col-xs-4">
+            			<a href="<%=@project.image1%>" class="fancy">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image1%>);">
+			                <div class="links"><i class="fa fa-expand"></i></div>
+			              </div>
+		              </a>
+            		</div>
+              <%end%>		
+              <%if @project.image2.present?%>
+            		<div class="col-xs-4">
+            			<a href="<%=@project.image2%>" class="fancy">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image2%>);">
+			                <div class="links"><i class="fa fa-expand"></i></div>
+			              </div>
+		              </a>
+            		</div>
+              <%end%>	
+              <%if @project.image3.present?%>
+            		<div class="col-xs-4">
+            			<a href="<%=@project.image3%>" class="fancy">
+		                <div class="pic pic4-3 bg-center" style="background-image: url(<%=@project.image3%>);">
+			                <div class="links"><i class="fa fa-expand"></i></div>
+			              </div>
+		              </a>
+            		</div>	
+              <%end%>	
+            	</div>
+						</div>
+          </div>
+         	<!-- 行程-->
+          <div class="summary clearfix">
+            
+            <h2 class="product-title mt-0"><%=@project.name%></h2>
+            
+            <div class="review-status2">
+              <div><i class="fa fa-eye"></i>&nbsp;&nbsp;<%=@project.impressionist_count%>人看過</div>
+              <div>3日</div>
+            </div>
+            <div class="shop-price">$<%=@project.price%></div>
+            <div class="cws_divider mb-10"></div>
+            <div class="cms-box">
+            	<p><%=@project.intro%></p>
+            </div>
+
+            <a href="/home/contact?word=<%=@project.name%>#contact" class="cws-button small alt ">我有興趣</a>
+            
+          </div>
+          
+          <!-- 內容 -->
+          <div class="tabs mt-30 mb-50">
+            <div class="block-tabs-btn clearfix">
+              <div data-tabs-id="tabs1" class="tabs-btn active">詳述</div>
+            </div>
+           
+            <div class="tabs-keeper">
+              <!-- tabs container-->
+              <div data-tabs-id="cont-tabs1" class="container-tabs active">
+                <div class="cms-box">
+                	<%=raw @project.content%>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          <!-- 推薦-->
+          <div class="mt-50 mb-50">
+            <div class="title-carousel clearfix">
+              <h3 class="carousel-heading">推薦行程</h3>
+            </div>
+            <div class="cws_divider mb-50"></div>
+            <div class="row">
+              <%= render :partial=>"/home/projects/show", collection: @sugg, as: :project%>
+            </div>
+          </div>
+          <!-- ! post carousel-->
+        </div>
+        
+       
+      </div>
+    </div>
+  </div>
+</div>

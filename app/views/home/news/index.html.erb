@@ -1,31 +1,16 @@
-<%= render :partial=>"/home/common/banner_title",locals:{title:"最新消息"}%>
-<div class="detail-wrapper">
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-    <div class="row padd-90">
-      <div class="col-xs-12 col-md-9">
-        <div class="blog-list">
-          <div class="row">
-         <%= render :partial => "/home/news/show", collection: @contents, as: :content%>
-            
-          </div>
-
-          <div class="c_pagination clearfix mt50">
-            <!-- <a href="#" class="c-button b-40 bg-dr-blue-2 hv-dr-blue-2-o fl">prev page</a>
-            <a href="#" class="c-button b-40 bg-dr-blue-2 hv-dr-blue-2-o fr">next page</a>
-            <ul class="cp_content color-3">
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">...</a></li>
-              <li><a href="#">10</a></li>
-            </ul> -->
-            <%= paginate @contents %>
-          </div>
-        </div>                    
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">最新消息</a>
+      <h2>最新消息</h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+  <div class="container page news-list">
+    <div class="row">
+      <div class="col-md-12 mb-60">
+        <%= render :partial => "/home/news/show", collection: @contents, as: :content%>
       </div>
-      <!-- 廣告 -->
-      <%= render :partial=>"/home/news/custom_pic"%>
     </div>
   </div>
 </div>

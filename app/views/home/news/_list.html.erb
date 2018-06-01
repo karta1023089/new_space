@@ -1,0 +1,14 @@
+<div class="news-area">
+  <div class="n-title">最新消息</div>
+  <ul>
+  <%Content.order("id DESC").first(4).each do |c|%>
+    <li>
+      <a href="/home/news/<%=c.id%>">
+        <p><%=c.name%></p>
+        <span><%=c.show_date%></span>
+      </a>
+    </li>
+  <%end%>
+    
+  </ul>    
+</div>

@@ -1,153 +1,124 @@
-<div class="top-baner">
-  <div class="arrows">
-    <div class="swiper-container main-slider-6" data-autoplay="0" data-loop="1" data-speed="900" data-center="0" data-slides-per-view="1">
-      <div class="swiper-wrapper">
-      <%@slide.images.each_with_index do |i,index|%>
-        <div class="swiper-slide <%if index == 0%>active<%end%>" data-val="<%=index+1%>">
-            <div class="clip">
-              <div class="bg bg-bg-chrome act" style="background-image:url(<%=i.file%>)"></div>
-            </div>      
-        </div>
+
+<div class="content-body">
+      <!-- slide -->
+      <div class="tp-banner-container">
+        <div class="banner-slide">
+        <%@slide.images.each do |i|%>
+          <div class="slide-item">
+            <div class="bg-center s-img" style="background-image: url(<%=i.file%>);"></div>
+          </div>
         <%end%>
-        
-      </div>    
-      <div class="pagination pagination-hidden poin-style-1"></div>
-        <div class="arrow-wrapp arr-s-4">
-        <div class="cont-1170">
-          <div class="swiper-arrow-left sw-arrow"><span class="fa fa-angle-left"></span></div>
-          <div class="swiper-arrow-right sw-arrow"><span class="fa fa-angle-right"></span></div>
         </div>
-      </div>      
-    </div>
-  </div>        
-</div>
+      </div>
+      <!-- service -->
+      <section class="page-section pb-0">
+        <div class="container">
+          <div class="row">
+            <!-- 服務一覽 -->
+            <div class="col-md-8">
+              <h3 class="title-section"><span>樺一旅社服務一覽</span> </h3>
+              <div class="cws_divider mb-25 mt-5"></div>
+              <p class="mb-50">更多好康豐富的旅行情報都在樺一旅社</p>
+              <div class="features-tours-full-width style4-4">
+                <div class="features-tours-wrap clearfix">
+                <%@cover.each do |c|%>
+                  <div class="features-tours-item">
+                    <a href="<%=c.url%>">
+                    <div class="features-media"><img src="<%=c.file%>"  alt>
+                      <div class="features-info-bot">
+                        <h4 class="title"><%=c.name%></h4>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                  <%end%>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- 最新消息 -->
+            <div class="col-md-4">
+              <img src="/img/b1.png" class="width100 mt-md-0 mt-minus-70 mb-25 hidden-sm hidden-xs">
+              <%= render :partial=>"/home/news/list"%>
 
-
-<div class="main-wraper">
+            </div>
+          </div>
       
-  <div class="tab-tour-header row no-padd">
-    <%= render :partial=>"/home/partials/categories", collection: @ads, as: :ad%>
-  </div>      
-</div>
+        </div>
+      </section>
 
-<div class="main-wraper padd-90">
-  <div class="container">
+      <!-- 行程 -->
+      <section class="small-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h6 class="title-section-top font-4">最新優惠</h6>
+              <h2 class="title-section"><span>熱門行程</h2>
+              <div class="cws_divider mb-25 mt-5"></div>
+              <p>時下最划算、最經典、最不可錯過的優惠組合！還在煩惱連假不知道要去哪嗎？現在就點選任一划算旅程吧！</p>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs"><img class="width100" src="/img/b2.png"></div>
+          </div>
+          <div class="tabs tour-tab">
+            <div class="block-tabs-btn clearfix">
+            <%@categories.each do |c|%>
+              <div data-tabs-id="tabs<%=c.id%>" class="tabs-btn <%if @categories.first == c%>active<%end%>"><%=c.name%></div>
+            <%end%>
+              
+            </div>
+            <!-- tabs keeper-->
+            <div class="tabs-keeper">
+              <!-- tabs container-->
+              <%@categories.each do |c|%>
+              <div data-tabs-id="cont-tabs<%=c.id%>" class="container-tabs <%if @categories.first == c%>active<%end%>">
+                <div class="row">
+                <%c.children.each do |cc|%>
 
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="second-title ">
-              <h4 class="subtitle color-dr-blue-2">優質行程</h4>
-              <h2>WODESY 豪德希嚴選</h2>
+                  <%= render :partial =>"/home/projects/show", collection: cc.projects.first(2), as: :project%> 
+                <%end%>                 
+                </div>
+              </div>
+              <%end%>
+            </div>
+            <!-- /tabs keeper-->
+          </div>
+          <div class="row mt-50">
+            <div class="col-sm-5">
+              <div class="ad-block">
+                <a href="<%=@ads.first.url%>"><div class="bg-center mb-10 ad-img" style="background-image: url(<%=@ads.first.file%>);">
+                </div></a>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="ad-block">
+                <a href="<%=@ads.second.url%>">
+                <div class="bg-center mb-10 ad-img" style="background-image: url(<%=@ads.second.file%>);">
+                </div></a>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </section>
+     
+     
+      <section class="small-section cws_prlx_section bg-gray-40"><img src="/img/bg1.jpg" alt class="cws_prlx_layer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h2 class="title-section-top alt">關於</h2>
+              <h2 class="title-section alt mb-20">樺一旅行社</h2>
+              <p class="color-white block-black">樺一旅行社有限公司，成立於1992年2月1日，為一專業旅遊服務公司。由總經理彭鴻湘先生領導服務團隊。以航空票務為根基，擴展至全面性的旅遊產品服務。2000年9月更與環洋旅行社股份有限公司(www.acits.com.tw)相互投資，進而推展至旅遊產品總代理業務及多家航空公司TC業務代理。鑒於觀光局鼓勵國人國內旅遊，加入環島鐵路聯營中心，推廣國內外旅遊不遺餘力。</p>
+              <div class="cws_divider short mb-30 mt-30 border-white"></div>
+            </div>
+            <div class="col-md-7">
+              <div class="video-area">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/yib7tvIrL6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                <%=raw current_system.youtube%>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <%= render :partial=>"/home/projects/show", collection: @projects, as: :project%>
-         
-        </div>  
-  </div>
+      </section>
       
-</div>
-<div class="main-wraper padd-90">
-  <img class="center-image" src="img/p6.jpg" alt="">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <div class="second-title style2">
-          <h4 class="subtitle color-white underline">專業 WODESY 豪德希</h4>
-          <h3 class="color-white mb30">看見更好玩的世界，規劃最適合您的旅行體驗</h3>
-          <a class="c-button b-40 bg-blue-2 hv-blue-2-o"><span>聯絡我們</span></a>
-        </div>
-      </div>
     </div>
-    
-  </div>
-</div>
-<!-- GAL-ITEM-->
-<div class="main-wraper mb100">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <div class="second-title">
-          <h4 class="subtitle color-dr-blue-2">任您挑選</h4>
-          <h2>主題行程</h2>
-        </div>
-      </div>
-    </div>
-    <div class="isotope-container row row10">
-      <div class="grid-sizer col-mob-12 col-xs-6 col-sm-3"></div>
-      <%@cover.each do |c|%>
-      <%if @cover.first == c%>
-      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-6">
-        <a class="black-hover" href="<%=c.url%>">
-          <div class="img-box r-img" style="background-image: url(<%=c.file%>);"></div>   
-          <div class="tour-layer delay-1"></div>
-          <div class="vertical-align">
-            <div class="date color-white">New Zealand</div>
-            <h4 class="color-white"><b><%=c.name%></b></h4>
-          </div>
-        </a>
-      </div>
-      <%else%>
-      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
-        <a class="black-hover" href="<%=c.url%>">
-          <div class="img-box r-img" style="background-image: url(<%=c.file%>);"></div>  
-          <div class="tour-layer delay-1"></div>
-          <div class="vertical-align">
-            <div class="date color-white">Hawaii</div>
-            <h4 class="color-white"><b><%=c.name%></b></h4>
-          </div>
-        </a>
-      </div>
-      <%end%>
-      <%end%>
-      
-  <!--     <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
-        <a class="black-hover" href="detail.html">
-          <div class="img-box r-img" style="background-image: url(/img/p3.jpg);"></div> 
-          <div class="tour-layer delay-1"></div>
-          <div class="vertical-align">
-            <div class="date color-white">Mauritius</div>
-            <h4 class="color-white"><b>模里西斯</b></h4>
-          </div>
-        </a>
-      </div>
-      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
-        <a class="black-hover" href="detail.html">
-          <div class="img-box r-img" style="background-image: url(/img/p4.jpg);"></div> 
-          <div class="tour-layer delay-1"></div>
-          <div class="vertical-align">
-            <div class="date color-white">Palawan</div>
-            <h4 class="color-white"><b>巴拉望</b></h4>
-          </div>
-        </a>
-      </div>
-      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
-        <a class="black-hover" href="detail.html">
-          <div class="img-box r-img" style="background-image: url(/img/p5.jpg);"></div> 
-          <div class="tour-layer delay-1"></div>
-          <div class="vertical-align">
-            <div class="date color-white">Tahiti</div>
-            <h4 class="color-white"><b>大溪地</b></h4>
-          </div>
-        </a>
-      </div>  -->               
-    </div>
-  </div>
-</div>
-<div class="main-wraper padd-90">
-  <img class="center-image" src="img/p4.jpg" alt="">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <div class="second-title style2">
-          <h4 class="subtitle color-white underline">關於 WODESY 豪德希</h4>
-          <h3 class="color-white mb30">海島旅遊專家，享受愜意海島時光</h3>
-          <a href="/home/contact" class="c-button b-40 bg-blue-2 hv-blue-2-o"><span>聯絡我們</span></a>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-

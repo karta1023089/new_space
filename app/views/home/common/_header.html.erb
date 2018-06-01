@@ -1,85 +1,42 @@
-<header class="color-1 hovered menu-3">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-12">
-            <div class="nav"> 
-            <a href="/" class="logo">
-              <img src="/img/logo.png" alt="Wodesy">
-            </a>
-            <div class="nav-menu-icon">
-          <a href="#"><i></i></a>
-        </div>
-          <nav class="menu">
-          <ul>
-          <!-- <li class="type-1">
-            <a href="/">首頁</a>
-          </li> -->
-          <li class="type-1"><a href="#">精緻海島<span class="fa fa-angle-down"></span></a>
-            <ul class="dropmenu">
-              <%@cat1.each do |c|%>
-              <li>
-                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                 <%c.children.each do |cc|%>
-                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
-                  <%end%>     
-                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>         
-                </ul>
-              </li>
-              <%end%>
-            </ul>
-          </li>
-          <li class="type-1"><a href="#">品味海島<span class="fa fa-angle-down"></span></a>
-            <ul class="dropmenu">
-              <%@cat2.each do |c|%>
-              <li>
-                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                 <%c.children.each do |cc|%>
-                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
-                  <%end%>     
-                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>        
-                </ul>
-              </li>
-              <%end%>
-              
-            </ul>
-          </li>
-          <li class="type-1"><a href="#">風情海島<span class="fa fa-angle-down"></span></a>
-            <ul class="dropmenu">
-               <%@cat3.each do |c|%>
-              <li>
-                <a><%=c.name%><span class="fa fa-chevron-right"></span></a>
-                 <ul class="dropmenu">
-                 <%c.children.each do |cc|%>
-                  <li><a href="/home/projects?category=<%=cc.id%>"><%=cc.name%></a></li>
-                  <%end%>     
-                  <li><a href="/home/backpackers?category=<%=c.id%>">自由行</a></li>        
-                </ul>
-              </li>
-              <%end%>
+<header>     
+  
+  <nav class="main-nav js-stick">
+    <div class="full-wrapper relative clearfix container">
+      
+      <div class="nav-logo-wrap local-scroll"><a href="/" class="logo"><img src="/img/logo2.png"></a></div>
+      <div class="inner-nav desktop-nav">
+        <ul class="clearlist">
+          
+          <li><a href="/" class="mn-has-sub <%if controller_name == "home" && action_name == "index"%>active<%end%>">首頁</a></li>
+          <%@categories.each do |c|%>
+          <li class="slash">/</li>
+          <li><a  class="mn-has-sub <%if controller_name == "projects" %><%if @category.parent.id == c.id%>active<%end%><%end%>"><%=c.name%><i class="fa fa-angle-down button_open"></i></a>
+            <ul class="mn-sub">
 
+            <%c.children.each do |cc|%>
+              <li><a href="<%= home_projects_path(:category => cc.id) %>"><%=cc.name%></a></li>
+            <%end%>
+              <li><a href="<%= home_backpackers_path(:category => c.id) %>"><%=c.name%>自由行</a></li>
             </ul>
           </li>
-          <li >
-            <a href="/home/tickets">機票</a>
+          <%end%>
+          <li class="slash">/</li>
+          
+          <li><a class="<%if controller_name == "home" && action_name == "doc"%>active<%end%>" href="<%= home_doc_path  %>">申請卡式台胞證</a></li>
+          <li class="slash">/</li>
+          <li><a class="<%if controller_name == "tickets"%>active<%end%>" href="<%= home_tickets_path %>">票券</a></li>
+          <li class="slash">/</li>
+          <li><a class="<%if controller_name == "news"%>active<%end%>" href="<%= home_news_index_path %>">最新消息</a></li>
+          <li class="slash">/</li>
+          <li><a class="<%if action_name == "contact"%>active<%end%>" href="/home/contact">與我聯絡</a></li>
+         
+          <li class="search"><a class="<%if action_name == "about"%>active<%end%>" href="<%= home_about_path  %>" class="mn-has-sub">關於樺一</a>   
           </li>
-          <li >
-            <a href="/home/doc">全球簽證</a>
-          </li>
-          <li >
-            <a href="/home/news">最新消息</a>
-          </li>
-          <li >
-            <a href="/home/contact">聯絡我們</a>
-          </li>
-          <li >
-            <a href="/home/about">關於我們</a>
-          </li>
+          <!-- End Search-->
         </ul>
-       </nav>
-       </div>
-         </div>
       </div>
-   </div>
+      <!-- End Main Menu-->
+    </div>
+  </nav>
+  <!-- End Navigation panel-->
 </header>

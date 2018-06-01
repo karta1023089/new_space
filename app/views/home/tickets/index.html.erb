@@ -1,30 +1,35 @@
-<%= render :partial=>"/home/common/banner_title",locals:{title:"機票"}%>
-<div class="main-wraper pd-50 tabs-page">
+<section style="background-image:url('/img/bb1.png');" class="breadcrumbs">
   <div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="simple-tab type-2 tab-wrapper">
-					<div class="tab-nav-wrapper">
-						<div  class="nav-tab  clearfix">
-						<%@the_group.each_with_index do |value,index|%>
-							<div class="nav-tab-item <%if index == 0%>active<%end%>">
-								<%=value%>
-							</div>
-						<%end%> 
-							                                                        
-						</div>
-					</div>
-					<div class="tabs-content tabs-wrap-style no-border  clearfix">
-					<%@the_group.each_with_index do |value,index|%>
-							<div class="tab-info <%if index == 0%>active<%end%>">
-							  <div class="list-content fight-list clearfix">
-		  						<%= render :partial=>"/home/tickets/show",collection: @tickets.where(:the_group => value), as: :ticket%>
-  							  </div>   						 						  						
-  						    </div>
-  					<%end%>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> 
+    <div class="text-left breadcrumbs-item"><a href="/">首頁</a><i>/</i><a href="#" class="last">票券</a>
+      <h2>票券</h2>
+    </div>
+  </div>
+</section>
+<div class="content-body">
+	<div class="container pt-60">
+		<div class="element-section mb-100 projects-list">
+	    <div class="tabs">
+	      <div class="menu-widget with-switch">
+	        <ul class="magic-line">
+	        <%@the_group.each_with_index do |value,index|%>
+	          <li <%if index == 0%>class="current_item"<%end%>><a class="tabs-btn" data-tabs-id="tabs<%=index%>"><%=value%></a></li>
+	        <%end%>     
+	        </ul>
+	      </div>
+	      <!-- tabs keeper-->
+	      <div class="tabs-keeper mt-30">
+	      <%@the_group.each_with_index do |value,index|%>
+	        <!-- tabs container-->
+	        <div data-tabs-id="cont-tabs<%=index%>" class="container-tabs <%if index == 0%>active<%end%>">
+	          <div class="row">
+	          	<%= render :partial=>"/home/tickets/show", collection: @tickets.where(:the_group => value), as: :ticket, locals:{col: "4"}%>
+	          </div>
+	        </div>
+	      <%end%>
+	        
+	      </div>
+	      <!-- /tabs keeper-->
+	    </div>  
+	  </div>  
+  </div>
 </div>

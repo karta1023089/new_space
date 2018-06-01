@@ -139,9 +139,7 @@ class Backends::TicketsController < BackendsController
     :article3,
     :article4,
     :article5,
-    :article6,  
-    :go_date,
-    :back_date   
+    :article6,     
     )  
   end
 end

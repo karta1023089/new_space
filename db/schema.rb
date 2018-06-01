@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180524035523) do
+ActiveRecord::Schema.define(version: 20180504054648) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.integer "category_type"
     t.integer "parent_id"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "combine_projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "combine_projects", force: :cascade do |t|
     t.text "tour"
     t.text "traffic"
     t.text "hotel"
@@ -59,11 +59,9 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.string "the_group"
     t.integer "cost"
     t.string "addon"
-    t.string "price"
-    t.string "en_name"
   end
 
-  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "email"
     t.string "name"
     t.text "content"
@@ -75,7 +73,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "contents", force: :cascade do |t|
     t.string "cover"
     t.string "name"
     t.date "show_date"
@@ -85,7 +83,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.text "content"
   end
 
-  create_table "group_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "group_images", force: :cascade do |t|
     t.string "remark"
     t.string "width"
     t.string "height"
@@ -96,7 +94,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.string "name"
   end
 
-  create_table "id_cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "id_cards", force: :cascade do |t|
     t.string "name"
     t.string "cover"
     t.text "content"
@@ -104,10 +102,9 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "make_day"
-    t.string "the_group"
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "images", force: :cascade do |t|
     t.string "item_type"
     t.integer "item_id"
     t.string "file"
@@ -123,7 +120,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.index ["item_type"], name: "index_images_on_item_type"
   end
 
-  create_table "impressions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "impressions", force: :cascade do |t|
     t.string "impressionable_type"
     t.integer "impressionable_id"
     t.integer "user_id"
@@ -142,14 +139,14 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.index ["controller_name", "action_name", "request_hash"], name: "controlleraction_request_index"
     t.index ["controller_name", "action_name", "session_hash"], name: "controlleraction_session_index"
     t.index ["impressionable_type", "impressionable_id", "ip_address"], name: "poly_ip_index"
-    t.index ["impressionable_type", "impressionable_id", "params"], name: "poly_params_request_index", length: { params: 255 }
+    t.index ["impressionable_type", "impressionable_id", "params"], name: "poly_params_request_index"
     t.index ["impressionable_type", "impressionable_id", "request_hash"], name: "poly_request_index"
     t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
-    t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index", length: { message: 255 }
+    t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
     t.index ["user_id"], name: "index_impressions_on_user_id"
   end
 
-  create_table "my_ads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "my_ads", force: :cascade do |t|
     t.string "file"
     t.integer "priority"
     t.datetime "deleted_at"
@@ -161,7 +158,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.integer "use_type", default: 0
   end
 
-  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "pages", force: :cascade do |t|
     t.string "name"
     t.text "content"
     t.datetime "deleted_at"
@@ -170,7 +167,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "products", force: :cascade do |t|
     t.string "cover"
     t.string "image1"
     t.string "image2"
@@ -186,7 +183,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "projects", force: :cascade do |t|
     t.string "cover"
     t.string "image1"
     t.string "image2"
@@ -204,17 +201,7 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.string "addon"
   end
 
-  create_table "repair_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.string "name"
-    t.text "content"
-    t.date "happen_date"
-    t.datetime "deleted_at"
-    t.integer "repair_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "systems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "systems", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "keywords"
@@ -229,12 +216,12 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.text "youtube"
   end
 
-  create_table "taggings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.bigint "tag_id"
+  create_table "taggings", force: :cascade do |t|
+    t.integer "tag_id"
     t.string "taggable_type"
-    t.bigint "taggable_id"
+    t.integer "taggable_id"
     t.string "tagger_type"
-    t.bigint "tagger_id"
+    t.integer "tagger_id"
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"
@@ -250,13 +237,13 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.index ["tagger_type", "tagger_id"], name: "index_taggings_on_tagger_type_and_tagger_id"
   end
 
-  create_table "tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.string "name", collation: "utf8_bin"
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "tickets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "tickets", force: :cascade do |t|
     t.string "name"
     t.string "cover"
     t.string "image1"
@@ -276,17 +263,14 @@ ActiveRecord::Schema.define(version: 20180524035523) do
     t.text "article5"
     t.text "article6"
     t.string "the_group"
-    t.date "go_date"
-    t.date "backe_date"
-    t.string "url"
   end
 
-  create_table "versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  create_table "versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
     t.string "event", null: false
     t.string "whodunnit"
-    t.text "object", limit: 4294967295
+    t.text "object", limit: 1073741823
     t.datetime "created_at"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
