@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 		@ads = MyAd.main_ad
 		@cover = MyAd.index_pic	
 		@projects = Project.all.sample(6)
+		
 	end
 	def about
 		@content = Page.find(1)
