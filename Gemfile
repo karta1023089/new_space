@@ -37,7 +37,7 @@ gem 'mysql2'
 gem 'yaml_db'
 
 # plugins
-
+gem 'psych'
 # 語言設定
 gem "rails-i18n"
 
